@@ -340,6 +340,6 @@ int main()
     }
     Color(15,0);
     gotoligcol(40,0);
-    printf("\n\n\n\n\n\n");
+    printf("\n\n\n\n");
     return 0;
 }
