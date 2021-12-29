@@ -1,0 +1,44 @@
+# depslib dependency file v1.0
+1640787613 source:c:\users\gaiab\desktop\ing1\algo\monopoly-2021-2022-gaiamartin\monopoly - preparation\main.c
+	<stdio.h>
+	<stdlib.h>
+	"bibli_Monopoly.h"
+
+1640732563 source:c:\users\gaiab\desktop\ing1\algo\monopoly-2021-2022-gaiamartin\monopoly - preparation\menu principal.c
+	<stdio.h>
+	<stdlib.h>
+
+1640787495 c:\users\gaiab\desktop\ing1\algo\monopoly-2021-2022-gaiamartin\monopoly - preparation\bibli_monopoly.h
+
+1640733238 source:c:\users\gaiab\desktop\ing1\algo\monopoly-2021-2022-gaiamartin\monopoly - preparation\nbr joueurs.c
+	<stdio.h>
+	<stdlib.h>
+
+1640785109 source:c:\users\gaiab\desktop\ing1\algo\monopoly-2021-2022-gaiamartin\monopoly - preparation\noms joueurs.c
+	<stdio.h>
+	<stdlib.h>
+	<time.h>
+
+1640787495 source:c:\users\gaiab\desktop\ing1\algo\monopoly-2021-2022-gaiamartin\monopoly - preparation\regles du jeu.c
+	<stdio.h>
+	<stdlib.h>
+
+1640745681 source:c:\users\gaiab\desktop\ing1\algo\monopoly-2021-2022-gaiamartin\monopoly - preparation\quicommence.c
+	<stdio.h>
+	<stdlib.h>
+	<time.h>
+
+1640736346 source:c:\users\gaiab\desktop\ing1\algo\monopoly-2021-2022-gaiamartin\monopoly - preparation\partie.c
+	<stdio.h>
+	<stdlib.h>
+
+1640797708 source:c:\users\gaiab\desktop\ing1\algo\monopoly-2021-2022-gaiamartin\monopoly - preparation\case1 - nouvelle partie.c
+	<stdio.h>
+	<stdlib.h>
+	<time.h>
+	"bibli_Monopoly.h"
+
+1640788486 source:c:\users\gaiab\desktop\ing1\algo\monopoly-2021-2022-gaiamartin\monopoly - preparation\case4 - regles du jeu.c
+	<stdio.h>
+	<stdlib.h>
+
