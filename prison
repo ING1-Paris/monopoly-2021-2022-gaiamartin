@@ -5,7 +5,7 @@ int main()
 {
     int caseJoueur;//Case actuelle du joueur
     int prison;//Case prison
-    int argent;//argent disponible du joueur
+    float argent;//argent disponible du joueur
     //affichage
     printf("VOUS ETES EN PRISON!\n\n");
     printf("Vous pourrez sortir si et seulement si:\n");
@@ -25,9 +25,11 @@ int main()
         case(1):
             printf("Vous sortez de prison et depensez 50 euros\n");
             argent=argent-50;
+            printf("Vous possedez desormais %f euros\n", argent);
             //jet des dés
             printf("Vous lancez desormais les des\n");
             caseJoueur=caseJoueur+de1+de2;
+
         break;
 
         case(2):
@@ -35,14 +37,80 @@ int main()
             //jet des dés
 
             if(de1 == de2)
-        {
-          printf("Vous avez fait un double! VOUS SORTEZ DE PRISON\n");
-          caseJoueur=caseJoueur+de1+de2;
-        }
-        break;
+            {
+                printf("Vous avez fait un double! VOUS SORTEZ DE PRISON\n");
+                caseJoueur=caseJoueur+de1+de2;
+            }
+            else
+            {
+                printf("Dommage...Vous n avez pas fait de doubles\n\n");
+                printf("Souhaitez vous sortir en payant une amende de 50 euros?\n");
+                printf("1. Oui, payer 50 euros\n");
+                printf("2. Non, tenter ma chance aux des\n");
+                scanf("%d", &choix);
+                switch(choix)
+                {
+                case(1):
+                    printf("Vous sortez de prison et depensez 50 euros\n");
+                    argent=argent-50;
+                    printf("Vous possedez desormais %f euros\n", argent);
+                    //jet des dés
+                    printf("Vous lancez desormais les des\n");
+                    caseJoueur=caseJoueur+de1+de2;
+                break;
+
+                case(2):
+                    printf("Vous lancez alors les des\n");
+                    //jet des dés
+
+                    if(de1 == de2)
+                    {
+                        printf("Vous avez fait un double! VOUS SORTEZ DE PRISON\n");
+                        caseJoueur=caseJoueur+de1+de2;
+                    }
+                    else
+                    {
+                        printf("Dommage...Vous n avez pas fait de doubles\n\n");
+                        printf("Souhaitez vous sortir en payant une amende de 50 euros?\n");
+                        printf("1. Oui, payer 50 euros\n");
+                        printf("2. Non, tenter ma chance aux des\n");
+                        scanf("%d", &choix);
+                        switch(choix)
+                        {
+                            case(1):
+                                printf("Vous sortez de prison et depensez 50 euros\n");
+                                argent=argent-50;
+                                printf("Vous possedez desormais %f euros\n", argent);
+                                //jet des dés
+                                printf("Vous lancez desormais les des\n");
+                                caseJoueur=caseJoueur+de1+de2;
+                            break;
+
+                            case(2):
+                                printf("Vous lancez alors les des\n");
+                                //jet des dés
+
+                                if(de1 == de2)
+                                {
+                                    printf("Vous avez fait un double! VOUS SORTEZ DE PRISON\n");
+                                    caseJoueur=caseJoueur+de1+de2;
+                                }
+                                else
+                                {
+                                    printf("Vous n avez pas fait de double.\nVous etes oblige de payer une amende de 50 euros\n\n");
+                                    argent=argent-50;
+                                    //jet des dés
+                                    printf("Vous possedez desormais %f euros\n", argent);
+                                    printf("Vous lancez desormais les des\n");
+                                    caseJoueur=caseJoueur+de1+de2;
+                                }
+                        }
+                            break;
+                        }
+
+            }
     }
-
-
+    }
 
     return 0;
 }
