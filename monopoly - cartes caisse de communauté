@@ -1,0 +1,82 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+
+int main()
+{
+    srand((unsigned int) time (0)); // Initialisation fonction srand
+    int numeroCarteCaisseDeCommunaute;
+    numeroCarteCaisseDeCommunaute = rand() % 16; // Tire une carte entre 0 et 15 soit 16 cartes
+
+    if (numeroCarteCaisseDeCommunaute == 0)
+    {
+        printf("ok\n");
+    }
+    if (numeroCarteCaisseDeCommunaute == 1)
+    {
+        printf("ok\n");
+    }
+    if (numeroCarteCaisseDeCommunaute == 2)
+    {
+        printf("ok\n");
+    }
+    if (numeroCarteCaisseDeCommunaute == 3)
+    {
+        printf("ok\n");
+    }
+    if (numeroCarteCaisseDeCommunaute == 4)
+    {
+        printf("ok\n");
+    }
+    if (numeroCarteCaisseDeCommunaute == 5)
+    {
+        printf("ok\n");
+    }
+    if (numeroCarteCaisseDeCommunaute == 6)
+    {
+        printf("ok\n");
+    }
+    if (numeroCarteCaisseDeCommunaute == 7)
+    {
+        printf("ok\n");
+    }
+    if (numeroCarteCaisseDeCommunaute == 8)
+    {
+        printf("ok\n");
+    }
+    if (numeroCarteCaisseDeCommunaute == 9)
+    {
+        printf("ok\n");
+    }
+    if (numeroCarteCaisseDeCommunaute == 10)
+    {
+        printf("ok\n");
+    }
+    if (numeroCarteCaisseDeCommunaute == 11)
+    {
+        printf("ok\n");
+    }
+    if (numeroCarteCaisseDeCommunaute == 12)
+    {
+        printf("ok\n");
+    }
+    if (numeroCarteCaisseDeCommunaute == 13)
+    {
+        printf("ok\n");
+    }
+    if (numeroCarteCaisseDeCommunaute == 14)
+    {
+        printf("ok\n");
+    }
+    if (numeroCarteCaisseDeCommunaute == 15)
+    {
+        printf("ok\n");
+    }
+    if (numeroCarteCaisseDeCommunaute == 16)
+    {
+        printf("ok\n");
+    }
+
+    return 0;
+}
+
