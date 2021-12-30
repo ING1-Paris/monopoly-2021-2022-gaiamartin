@@ -1,0 +1,86 @@
+#include <time.h>
+
+void main()
+{
+srand((unsigned int) time (0)); // Initialisation fonction srand 
+int numeroCarteChance;
+
+numeroCarteChance = rand() % 16 // Tire une carte entre 0 et 15 soit 16 cartes 
+}
+
+CARTES CHANCES (16) :
+
+int main()
+{
+int pionX;
+float argentJX=1500;
+   if (numeroCarteChance == 0){
+    printf("Mamie est morte, vous touchez 150 euros d'heritage !\n");
+    argentJX=argentJX-200;
+   }
+   if (numeroCarteChance == 1){
+    printf("Rendez vous Boulevard des Paillettes pour un verre en terrasse\n");
+    pionX =  ;// Case Boulevard des Paillettes
+   }
+   if (numeroCarteChance == 2){
+    printf("Bon Anniversaire ! Chaque joueur doit vous donner 20 euros\n");
+    argentJX = argentJX+(nbJoueur-1)*20;
+    //Faire perdre 20 euros aux autres joueurs !!
+   }
+   if (numeroCarteChance == 3){
+    printf("Vous touchez votre bonus de l'annee de 200 euros !\n");
+    argentJX=argentJX+200;
+   }
+   if (numeroCarteChance == 4){
+    printf("Vous partez en voyage ! Rendez-vous dans la gare la plus proche.\n");
+    if (pionX<=...&&pionX>=...){  
+        pionX =   //Selon position grille le pion ira vers telle gare
+    }
+   }
+   if (numeroCarteChance == 5){
+    printf("Alcool au volant le soir du 31 ! Soudoyez le policier de 40 euros pour garder votre permis.\n");
+    argentJX=argentJX-40;
+   }
+   if (numeroCarteChance == 6){
+    printf("Facture EDF du mois de 60 euros ! Fallait pas installer autant de decorations de noel...\n");
+    argentJX=argentJX-50;
+   }
+   if (numeroCarteChance == 7){
+    printf("Bonne resolution de l'annee ! Vous prenez un abonnement a la salle de sport et vous payez 75 euros");
+    argentJX=argentJX+80;
+   }
+   if (numeroCarteChance == 8){
+    printf("Vous venez d'etre debite des 80 euros depenses en boite de nuit samedi dernier, oui oui c'est bien vous...");
+    argentJX=argentJX-80;
+   }
+   if (numeroCarteChance == 9){
+    printf("Vos comptes offshore ont ete decouverts, trop tard pour s'enfuir et direction la prison !");
+    pionX= ;
+   }
+   if (numeroCarteChance == 10){
+    printf("Vous etes liberes de prison pour bonne conduite");
+    // ETAT A VERIFIER ...
+   }
+   if (numeroCarteChance == 11){
+    printf("Votre enfant reclame une console pour noel : depensez 30 euros avant qu'il ne se mette a crier");
+    argentJX=argentJX-30;
+   }
+   if (numeroCarteChance == 12){
+    printf("Vous avez fait tomber votre porte-feuille ! Reculez de 3 cases pour le retrouver.");
+    pionX= ;
+   }   
+   if (numeroCarteChance == 13){
+    printf("Vous avez fait beaucoup d'heure sup ce mois ci et touchez une prime de 80 euros");
+    argentJX=argentJX+80;
+   }
+   if (numeroCarteChance == 14){
+    printf("Papi est tombé dans les escaliers ! Les frais d'hospitalisation sont de 65 euros\n");
+   } 
+   if (numeroCarteChance == 15){
+    printf("Hop ! Un billet de 50 euros trouvé par terre : vous le gardez bien évidemment"\n);
+   }
+   if (numeroCarteChance == 16){
+    printf("Radin que vous êtes : vous vous faites rembourser votre tenue du 31 et gagnez 25 euros\n");
+   } 
+      return 0;
+}
