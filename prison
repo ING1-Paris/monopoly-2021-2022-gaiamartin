@@ -20,7 +20,8 @@ int main()
     printf("1. Oui, payer 50 euros\n");
     printf("2. Non, tenter ma chance aux des\n");
     scanf("%d", &choix);
-    switch(choix)
+    printf("\n");
+    switch(choix) //tour 1
     {
         case(1):
             printf("Vous sortez de prison et depensez 50 euros\n");
@@ -41,13 +42,14 @@ int main()
                 printf("Vous avez fait un double! VOUS SORTEZ DE PRISON\n");
                 caseJoueur=caseJoueur+de1+de2;
             }
-            else
+            else //tour 2
             {
                 printf("Dommage...Vous n avez pas fait de doubles\n\n");
                 printf("Souhaitez vous sortir en payant une amende de 50 euros?\n");
                 printf("1. Oui, payer 50 euros\n");
                 printf("2. Non, tenter ma chance aux des\n");
                 scanf("%d", &choix);
+                printf("\n");
                 switch(choix)
                 {
                 case(1):
@@ -70,11 +72,12 @@ int main()
                     }
                     else
                     {
-                        printf("Dommage...Vous n avez pas fait de doubles\n\n");
+                        printf("Dommage...Vous n avez pas fait de doubles\n\n"); //tour 3
                         printf("Souhaitez vous sortir en payant une amende de 50 euros?\n");
                         printf("1. Oui, payer 50 euros\n");
                         printf("2. Non, tenter ma chance aux des\n");
                         scanf("%d", &choix);
+                        printf("\n");
                         switch(choix)
                         {
                             case(1):
