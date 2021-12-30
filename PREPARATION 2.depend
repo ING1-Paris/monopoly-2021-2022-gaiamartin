@@ -1,0 +1,9 @@
+# depslib dependency file v1.0
+1640371596 source:c:\users\vinci\documents\ing1\informatique\projet monopoly\preparation 2\main.c
+	<stdio.h>
+	<stdlib.h>
+
+1640371596 source:c:\users\vinci\documents\ing1\informatique\projet monopoly\preparation\main.c
+	<stdio.h>
+	<stdlib.h>
+
