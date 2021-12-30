@@ -8,8 +8,6 @@ int numeroCarteChance;
 numeroCarteChance = rand() % 16 // Tire une carte entre 0 et 15 soit 16 cartes 
 }
 
-CARTES CHANCES (16) :
-
 int main()
 {
 int pionX;
