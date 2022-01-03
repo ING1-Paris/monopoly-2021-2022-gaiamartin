@@ -1,0 +1,314 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+
+int main()
+{
+   typedef struct cases
+    {
+        char nom[50];
+        int prix;
+        int hypotheque;
+        char proprio[50];
+        int maison;
+        int hotel;
+        int loyer0M;
+        int loyer1M;
+        int loyer2M;
+        int loyer3M;
+        int loyer4M;
+        int loyer1H;
+
+    }propriete;
+
+    //case 1
+    propriete p1;
+    strcpy(p1.nom, "Case départ");
+
+    //case 2
+    propriete p2;
+    strcpy(p2.nom, "Avenue du Marechal Gueule de Bois");
+    p2.prix=60;
+    p2.hypotheque=30;
+    strcpy(p2.proprio, "Aucun proprietaire");
+    p2.maison=50;
+    p2.hotel=100;
+    p2.loyer0M=2;
+    p2.loyer1M=10;
+    p2.loyer2M=30;
+    p2.loyer3M=90;
+    p2.loyer4M=160;
+    p2.loyer1H=250;
+
+    //case 3
+    propriete p3;
+    strcpy(p3.nom, "Boulevard des Millesimes");
+    p3.prix=60;
+    p3.hypotheque=30;
+    strcpy(p3.proprio, "Aucun proprietaire");
+    p3.maison=50;
+    p3.hotel=100;
+    p3.loyer0M=4;
+    p3.loyer1M=20;
+    p3.loyer2M=60;
+    p3.loyer3M=180;
+    p3.loyer4M=320;
+    p3.loyer1H=450;
+
+    //case 4
+    propriete p4;
+    strcpy(p4.nom, "Impot sur le revenu");
+
+    //case 5
+    propriete p5;
+    strcpy(p5.nom, "Gare de la sante");
+    p5.prix=200;
+    p5.hypotheque=100;
+    strcpy(p4.proprio, "Aucun proprietaire");
+
+    //case 6
+    propriete p6;
+    strcpy(p6.nom, "Chance");
+
+    //case 7
+    propriete p7;
+    strcpy(p7.nom, "Allee du Champagne");
+    p7.prix=120;
+    p7.hypotheque=60;
+    strcpy(p7.proprio, "Aucun proprietaire");
+    p7.maison=50;
+    p7.hotel=100;
+    p7.loyer0M=6;
+    p7.loyer1M=30;
+    p7.loyer2M=90;
+    p7.loyer3M=2700;
+    p7.loyer4M=400;
+    p7.loyer1H=550;
+
+    //case 8
+    propriete p8;
+    strcpy(p8.nom, "Aller en prison");
+
+    //case 9
+    propriete p9;
+    strcpy(p9.nom, "Avenue de la Bonaventure");
+    p9.prix=140;
+    p9.hypotheque=70;
+    strcpy(p9.proprio, "Aucun proprietaire");
+    p9.maison=100;
+    p9.hotel=200;
+    p9.loyer0M=8;
+    p9.loyer1M=40;
+    p9.loyer2M=100;
+    p9.loyer3M=300;
+    p9.loyer4M=450;
+    p9.loyer1H=600;
+
+    //case 10
+    propriete p10;
+    strcpy(p10.nom, "Passage du Bisou de Minuit");
+    p10.prix=160;
+    p10.hypotheque=80;
+    strcpy(p10.proprio, "Aucun proprietaire");
+    p10.maison=100;
+    p10.hotel=200;
+    p10.loyer0M=10;
+    p10.loyer1M=50;
+    p10.loyer2M=150;
+    p10.loyer3M=450;
+    p10.loyer4M=625;
+    p10.loyer1H=750;
+
+    //case 11
+    propriete p11;
+    strcpy(p11.nom, "Gare de l amour");
+    p11.prix=200;
+    p11.hypotheque=100;
+    strcpy(p11.proprio, "Aucun proprietaire");
+
+    //case 12
+    propriete p12;
+    strcpy(p12.nom, "Caisse de communaute");
+
+    //case 13
+    propriete p13;
+    strcpy(p13.nom, "Boulevard des Paillettes");
+    p13.prix=180;
+    p13.hypotheque=90;
+    strcpy(p13.proprio, "Aucun proprietaire");
+    p13.maison=100;
+    p13.hotel=200;
+    p13.loyer0M=12;
+    p13.loyer1M=60;
+    p13.loyer2M=180;
+    p13.loyer3M=500;
+    p13.loyer4M=700;
+    p13.loyer1H=900;
+
+    //case 14
+    propriete p14;
+    strcpy(p14.nom, "Rue des meilleurs voeux");
+    p14.prix=200;
+    p14.hypotheque=100;
+    strcpy(p14.proprio, "Aucun proprietaire");
+    p14.maison=100;
+    p14.hotel=200;
+    p14.loyer0M=14;
+    p14.loyer1M=70;
+    p14.loyer2M=200;
+    p14.loyer3M=550;
+    p14.loyer4M=700;
+    p14.loyer1H=950;
+
+    //case 15
+    propriete p15;
+    strcpy(p15.nom, "Stationnement gratuit");
+
+    //case 16
+    propriete p16;
+    strcpy(p16.nom, "Boulevard des Resolutions");
+    p16.prix=220;
+    p16.hypotheque=110;
+    strcpy(p16.proprio, "Aucun proprietaire");
+    p16.maison=150;
+    p16.hotel=300;
+    p16.loyer0M=16;
+    p16.loyer1M=80;
+    p16.loyer2M=220;
+    p16.loyer3M=600;
+    p16.loyer4M=800;
+    p16.loyer1H=1000;
+
+    //case 17
+    propriete p17;
+    strcpy(p17.nom, "Chance");
+
+    //case 18
+    propriete p18;
+    strcpy(p18.nom, "Rue du Regime");
+    p18.prix=240;
+    p18.hypotheque=110;
+    strcpy(p18.proprio, "Aucun proprietaire");
+    p18.maison=150;
+    p18.hotel=300;
+    p18.loyer0M=18;
+    p18.loyer1M=90;
+    p18.loyer2M=250;
+    p18.loyer3M=700;
+    p18.loyer4M=975;
+    p18.loyer1H=1050;
+
+    //case 19
+    propriete p19;
+    strcpy(p19.nom, "Gare de la fortune");
+    p19.prix=200;
+    p19.hypotheque=100;
+    strcpy(p19.proprio, "Aucun proprietaire");
+
+    //case 20
+    propriete p20;
+    strcpy(p20.nom, "Allee du Changement");
+    p20.prix=260;
+    p20.hypotheque=130;
+    strcpy(p20.proprio, "Aucun proprietaire");
+    p20.maison=150;
+    p20.hotel=300;
+    p20.loyer0M=20;
+    p20.loyer1M=100;
+    p20.loyer2M=300;
+    p20.loyer3M=750;
+    p20.loyer4M=825;
+    p20.loyer1H=1100;
+
+    //case 21
+    propriete p21;
+    strcpy(p21.nom, "Chemin de la sobriete");
+    p21.prix=280;
+    p21.hypotheque=140;
+    strcpy(p21.proprio, "Aucun proprietaire");
+    p21.maison=150;
+    p21.hotel=300;
+    p21.loyer0M=22;
+    p21.loyer1M=110;
+    p21.loyer2M=330;
+    p21.loyer3M=800;
+    p21.loyer4M=975;
+    p21.loyer1H=1150;
+
+    //case 22
+    propriete p22;
+    strcpy(p22.nom, "Prison");
+
+    //case 23
+    propriete p23;
+    strcpy(p23.nom, "Passage de la Nouvelle Annee");
+    p23.prix=300;
+    p23.hypotheque=150;
+    strcpy(p23.proprio, "Aucun proprietaire");
+    p23.maison=200;
+    p23.hotel=400;
+    p23.loyer0M=24;
+    p23.loyer1M=120;
+    p23.loyer2M=360;
+    p23.loyer3M=850;
+    p23.loyer4M=1025;
+    p23.loyer1H=1200;
+
+    //case 24
+    propriete p24;
+    strcpy(p24.nom, "Caisse de communaute");
+
+    //case 25
+    propriete p25;
+    strcpy(p25.nom, "Boulevard du Reveillon");
+    p25.prix=320;
+    p25.hypotheque=160;
+    strcpy(p25.proprio, "Aucun proprietaire");
+    p25.maison=200;
+    p25.hotel=400;
+    p25.loyer0M=28;
+    p25.loyer1M=150;
+    p25.loyer2M=450;
+    p25.loyer3M=1000;
+    p25.loyer4M=1200;
+    p25.loyer1H=1400;
+
+    //case 26
+    propriete p26;
+    strcpy(p26.nom, "Gare de la chance");
+    p26.prix=200;
+    p26.hypotheque=100;
+    strcpy(p26.proprio, "Aucun proprietaire");
+
+    //case 27
+    propriete p27;
+    strcpy(p27.nom, "Rue du Decompte");
+    p27.prix=350;
+    p27.hypotheque=125;
+    strcpy(p27.proprio, "Aucun proprietaire");
+    p27.maison=200;
+    p27.hotel=400;
+    p27.loyer0M=35;
+    p27.loyer1M=175;
+    p27.loyer2M=500;
+    p27.loyer3M=1100;
+    p27.loyer4M=1300;
+    p27.loyer1H=1500;
+
+    //case 28
+    propriete p28;
+    strcpy(p28.nom, "Rue du Trente et Un");
+    p28.prix=400;
+    p28.hypotheque=200;
+    strcpy(p28.proprio, "Aucun proprietaire");
+    p28.maison=200;
+    p28.hotel=400;
+    p28.loyer0M=50;
+    p28.loyer1M=200;
+    p28.loyer2M=600;
+    p28.loyer3M=1400;
+    p28.loyer4M=1700;
+    p28.loyer1H=2000;
+    
+}
