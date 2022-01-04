@@ -1,0 +1,35 @@
+int main()
+{
+    int d1= 0;
+    int d2= 0;
+    int doublee=0;
+    int resultat;
+    srand((unsigned int) time (0));
+    printf("Lancement des des\n");
+    while(doublee<3)
+        {
+            d1=1+rand()%6;
+            d2=1+rand()%6;
+            resultat=d1+d2;
+            printf ("%d+%d=%d\n", d1, d2, resultat);
+            if (d1!=d2){
+                printf("Avancer de %d cases\n", resultat);
+                return resultat;
+            }
+            else
+            {
+                printf("DOUBLE !\n");
+                doublee=+1;
+            }
+        }
+            if (doublee=3)
+            {
+                printf("3 doubles, ALLER EN PRISON !\n");
+                return 0;
+            }
+            else
+            {
+            return resultat;
+            }
+
+}
