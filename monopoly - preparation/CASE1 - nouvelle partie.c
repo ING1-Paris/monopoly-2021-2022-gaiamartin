@@ -2,12 +2,14 @@
 #include <stdlib.h>
 #include <time.h>
 #include <string.h>
+#include <windows.h>
 #include "bibli_Monopoly.h"
 #define MAX_LENGTH 20
 
-int case1(){
 
-printf("**************************************************** NOUVELLE PARTIE ***************************************************\n\n");
+int case1(){
+system("cls");
+printf("\n\n\n**************************************************** NOUVELLE PARTIE ***************************************************\n\n");
 
             //// initialisation du nombre de joueurs /////////////////////////////////////////////////////////////////////////////
                 int nbJoueurs = 0;
@@ -39,7 +41,9 @@ printf("**************************************************** NOUVELLE PARTIE ***
                 int position;
                 }joueur;
 
-                struct joueur j1, j2, j3, j4, j5, j6;
+                struct joueur j1, j2, j3, j4, j5, j6, startPlayer;
+                system("cls");
+                printf("\n\n\n");
                 printf("***************************** noms des joueurs ************************************************************************\n\n");
                 printf("    VEUILLEZ SAISIR LES NOMS DES JOUEURS  : \n");
 
@@ -124,25 +128,44 @@ printf("**************************************************** NOUVELLE PARTIE ***
 
 
                 srand(time(NULL));
-                int startPlayer = rand()%nbJoueurs+1;
+                int quiCommence = rand()%nbJoueurs+1;
+                int jsuivant;
 
-                if (startPlayer == 1){
+                if (quiCommence== 1){
                     printf("\n\n    %s ! A vous de commencer !\n\n", j1.nom);
+                    startPlayer.nom == j1.nom;
+                    startPlayer.position == j1.position;
+                    jsuivant = j2.nom;
                 }
-                if (startPlayer == 2){
+                if (quiCommence == 2){
                     printf("\n\n    %s ! A vous de commencer !\n\n", j2.nom);
+                    startPlayer.nom == j2.nom;
+                    startPlayer.position == j2.position;
+                    jsuivant = j3.nom;
                 }
-                if (startPlayer == 3){
+                if (quiCommence == 3){
                     printf("\n\n    %s ! A vous de commencer !\n\n", j3.nom);
+                    startPlayer.nom == j3.nom;
+                    startPlayer.position == j3.position;
+                    jsuivant = j4.nom;
                 }
-                if (startPlayer == 4){
+                if (quiCommence == 4){
                     printf("\n\n    %s ! A vous de commencer !\n\n", j4.nom);
+                    startPlayer.nom == j4.nom;
+                    startPlayer.position == j4.position;
+                    jsuivant = j5.nom;
                 }
-                if (startPlayer == 5){
+                if (quiCommence == 5){
                     printf("\n\n    %s ! A vous de commencer !\n\n", j5.nom);
+                    startPlayer.nom == j5.nom;
+                    startPlayer.position == j5.position;
+                    jsuivant = j6.nom;
                 }
-                if (startPlayer == 6){
+                if (quiCommence == 6){
                     printf("\n\n    %s ! A vous de commencer !\n\n", j6.nom);
+                    startPlayer.nom == j6.nom;
+                    startPlayer.position == j6.position;
+                    jsuivant = j1.nom;
                 }
             //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -150,191 +173,77 @@ printf("**************************************************** NOUVELLE PARTIE ***
 
                 printf("    Chaque joueur recoit la somme initiale de 1 500 euros\n\n");
 
-                j1.argent == 1500;
+                j1.argent = 1500;
+                j1.position = 1;
                 i++;
-                j2.argent == 1500;
+                j2.argent = 1500;
+                j2.position = 1;
                 i++;
                 if(i<=nbJoueurs){
-                    j3.argent == 1500;
+                    j3.argent = 1500;
+                    j3.position = 1;
                 }
                 i++;
                 if(i<=nbJoueurs){
-                    j4.argent == 1500;
+                    j4.argent = 1500;
+                    j4.position = 1;
                 }
                 i++;
                 if(i<=nbJoueurs){
-                    j5.argent == 1500;
+                    j5.argent = 1500;
+                    j5.position = 1;
                 }
                 i++;
                 if(i<=nbJoueurs){
-                    j6.argent == 1500;
+                    j6.argent = 1500;
+                    j6.position = 1;
                 }
             /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+            //// affichage plateau /////////////////////////////////////////////////////////////////////////////////////////////////
+            Sleep(2000);
+            system("cls");
+            grille();
+
+            /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
 
             //// lancer les des /////////////////////////////////////////////////////////////////////////////////////////////////
-                int dd;
-               /* printf("    Appuyez sur le zero pour lancer les des !\n");
-                scanf("%d", &dd);
-                if (dd == 0){*/
-                int d1= 0;
-                int d2= 0;
-                int doublee=0;
-                int resultat;
-                d1=1+rand()%6;
-                d2=1+rand()%6;
-                resultat=d1+d2;
-                if (d1 == 1){
-                    printf("    *************\n");
-                    printf("    *           *\n");
-                    printf("    *           *\n");
-                    printf("    *     *     *\n");
-                    printf("    *           *\n");
-                    printf("    *           *\n");
-                    printf("    *************\n");
-
-                }
-                if (d1 == 2){
-                    printf("    *************\n");
-                    printf("    *           *\n");
-                    printf("    *   *       *\n");
-                    printf("    *           *\n");
-                    printf("    *       *   *\n");
-                    printf("    *           *\n");
-                    printf("    *************\n");
-                }
-                if (d1 == 3){
-                    printf("    *************\n");
-                    printf("    *           *\n");
-                    printf("    *   *       *\n");
-                    printf("    *     *     *\n");
-                    printf("    *       *   *\n");
-                    printf("    *           *\n");
-                    printf("    *************\n");
-                }
-                if (d1 == 4){
-                    printf("    *************\n");
-                    printf("    *           *\n");
-                    printf("    *   *   *   *\n");
-                    printf("    *           *\n");
-                    printf("    *   *   *   *\n");
-                    printf("    *           *\n");
-                    printf("    *************\n");
-                }
-                if (d1 == 5){
-                    printf("    *************\n");
-                    printf("    *           *\n");
-                    printf("    *   *   *   *\n");
-                    printf("    *     *     *\n");
-                    printf("    *   *   *   *\n");
-                    printf("    *           *\n");
-                    printf("    *************\n");
-                }
-                if (d1 == 6){
-                    printf("\n    *************\n");
-                    printf("    *           *\n");
-                    printf("    *   * * *   *\n");
-                    printf("    *   * * *   *\n");
-                    printf("    *   * * *   *\n");
-                    printf("    *           *\n");
-                    printf("    *************\n\n");
-                }
-                if (d2 == 1){
-                    printf("\n    *************\n");
-                    printf("    *           *\n");
-                    printf("    *           *\n");
-                    printf("    *     *     *\n");
-                    printf("    *           *\n");
-                    printf("    *           *\n");
-                    printf("    *************\n\n");
-
-                }
-                if (d2 == 2){
-                    printf("\n    *************\n");
-                    printf("    *           *\n");
-                    printf("    *   *       *\n");
-                    printf("    *           *\n");
-                    printf("    *       *   *\n");
-                    printf("    *           *\n");
-                    printf("    *************\n\n");
-
-                }
-                if (d2 == 3){
-                    printf("\n    *************\n");
-                    printf("    *           *\n");
-                    printf("    *   *       *\n");
-                    printf("    *     *     *\n");
-                    printf("    *       *   *\n");
-                    printf("    *           *\n");
-                    printf("    *************\n\n");
-
-                }
-                if (d2 == 4){
-                    printf("\n    *************\n");
-                    printf("    *           *\n");
-                    printf("    *   *   *   *\n");
-                    printf("    *           *\n");
-                    printf("    *   *   *   *\n");
-                    printf("    *           *\n");
-                    printf("    *************\n\n");
-                }
-                if (d2 == 5){
-                    printf("\n    *************\n");
-                    printf("    *           *\n");
-                    printf("    *   *   *   *\n");
-                    printf("    *     *     *\n");
-                    printf("    *   *   *   *\n");
-                    printf("    *           *\n");
-                    printf("    *************\n\n");
-                }
-                if (d2 == 6){
-                    printf("\n    *************\n");
-                    printf("    *           *\n");
-                    printf("    *   * * *   *\n");
-                    printf("    *   * * *   *\n");
-                    printf("    *   * * *   *\n");
-                    printf("    *           *\n");
-                    printf("    *************\n\n");
-
-                }
-                if (d1==d2){
-                    printf("    DOUBLE !\n");
-                    doublee=+1;
-                    if (doublee = 3)
-                        printf("    PRISON !");
-                    }
-                    else{
-                        printf("    VOUS AVANCEZ DE %d CASES\n\n", resultat);
-                        return resultat;
-                    }
+               // fctnDD();
             /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+            //// jeu ////////////////////////////////////////////////////////////////////////////////////////////////////////////
+            while (nbJoueurs != 1){
+                int nbCasesAvancees = fctnDD();
+                startPlayer.position = startPlayer.position + nbCasesAvancees;
+                printf(" \nposition : %d", startPlayer.position);
+
+            }
 
             //// carte chance ///////////////////////////////////////////////////////////////////////////////////////////////////
 
+                int carteC = 0;
+                srand(time(NULL));
+                quiCommence = rand()%nbJoueurs+1;
 
-                printf("salut");
-
-               // int carteC = 0;
-                /*srand(time(NULL));
-                startPlayer = rand()%nbJoueurs+1;*/
-
-               // if (startPlayer == 1){
-                //carteChance(j1.argent, j1.position, nbJoueurs);
-                /*}
-                if (startPlayer == 2){
+                if (quiCommence == 1){
+                carteChance(j1.argent, j1.position, nbJoueurs);
+                }
+                if (quiCommence == 2){
                     carteChance(j2.argent, j2.position, nbJoueurs);
                 }
-                if (startPlayer == 3){
+                if (quiCommence == 3){
                     carteChance(j3.argent, j3.position, nbJoueurs);
                 }
-                if (startPlayer == 4){
+                if (quiCommence == 4){
                     carteChance(j4.argent, j4.position, nbJoueurs);
                 }
-                if (startPlayer == 5){
+                if (quiCommence == 5){
                     carteChance(j5.argent, j5.position, nbJoueurs);
                 }
-                if (startPlayer ==6){
+                if (quiCommence ==6){
                     carteChance(j6.argent, j6.position, nbJoueurs);
-                }*/
+                }
     return 0;
 
 }
