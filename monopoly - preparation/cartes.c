@@ -387,30 +387,7 @@ void carteChance(int argentJ, int positionJ, int nbJoueurs){
             printf("                ******************************\n");
             argentJ = argentJ + 50;
        }
-       if (numeroCarteChance == 16){
-            printf("\n                ******************************\n");
-            printf("                *                            *\n");
-            printf("                *   C A R T E   C H A N C E  *\n");
-            printf("                *                            *\n");
-            printf("                ******************************\n");
-            printf("                *                            *\n");
-            printf("                *                            *\n");
-            printf("                *     RADIN QUE VOUS ETES,   *\n");
-            printf("                *                            *\n");
-            printf("                *      VOUS VOUS FAITES      *\n");
-            printf("                *                            *\n");
-            printf("                *   REMBOURSER VOTRE TENUE   *\n");
-            printf("                *                            *\n");
-            printf("                *           DU 31,           *\n");
-            printf("                *                            *\n");
-            printf("                *  VOUS RECUPEREZ 25 euros ! *\n");
-            printf("                *                            *\n");
-            printf("                *                            *\n");
-            printf("                *                            *\n");
-            printf("                ******************************\n");
-            argentJ = argentJ + 25;
-
-        }
+    
         return 0;
 }
 
