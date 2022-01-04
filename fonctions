@@ -1,0 +1,18 @@
+
+
+void menuJoueur(){
+    HANDLE hConsole = GetStdHandle(STD_OUTPUT_HANDLE);
+
+    SetConsoleTextAttribute(hConsole,15);
+    printf("\n=====| Menu Joueur |=====\n"
+           "que souhaitez vous faire ?\n"
+           "1/ Lancer les des\n"
+           "2/ Acheter une propriete\n"
+           "3/ Acheter une maison\n"
+           "4/ Acheter un hotel\n"
+           "5/ Hypothequer une propriete\n"
+           "6/ Vendre des biens\n"
+           "7/ Menu Principal\n"
+           "=========================\n>");
+    SetConsoleTextAttribute(hConsole,15);
+}
