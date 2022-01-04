@@ -162,3 +162,43 @@ int main()
 
     return 0;
 }
+
+/*int main()
+{
+    int r1;
+    int r2;
+    char n1[10];
+    char n2[10];
+    int nbJ=0;
+    printf("saisissez votre nom\n");
+    scanf("%s", n1);
+    printf("saisissez un nombre\n");
+    scanf("%d", &r1);
+    printf("saisissez votre nom\n");
+    scanf("%s", n2);
+    printf("saisissez un nombre\n");
+    scanf("%d", &r2);
+
+    if(r1 == 1)
+    {
+        nbJ++;
+        if(nbJ == 1)
+        {
+            gotoligcol(37,71);
+            printf("%s", n1);
+        }
+        if(nbJ == 2)
+        {
+            gotoligcol(38,71);
+            printf("%s", n2);
+
+            if(r2 == 1)
+            {
+                gotoligcol(38,71);
+                printf("%s", n2);
+            }
+        }
+
+    }
+    return 0;
+}*/
