@@ -1,0 +1,12 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    int argent=1500;
+    if (argent <= 0)
+    {
+        printf("Vous avez fait faillite\n");
+    }
+    return 0;
+}
