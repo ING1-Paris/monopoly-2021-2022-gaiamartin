@@ -311,4 +311,5 @@ int main()
     p28.loyer4M=1700;
     p28.loyer1H=2000;
     
+    printf("%s\n", p28.maison);
 }
