@@ -1,0 +1,164 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <windows.h>
+
+void gotoligcol( int lig, int col )
+{
+    COORD mycoord;
+    mycoord.X = col;
+    mycoord.Y = lig;
+    SetConsoleCursorPosition( GetStdHandle( STD_OUTPUT_HANDLE ), mycoord );
+}
+
+int main()
+{
+    int r;
+    char n[10];
+    printf("saisissez votre nom\n");
+    scanf("%s", n);
+    printf("saisissez un nombre\n");
+    scanf("%d", &r);
+
+    if(r==1)
+    {
+        gotoligcol(37,71);
+        printf("%s", n);
+    }
+    if(r==2)
+    {
+        gotoligcol(37,61);
+        printf("%s", n);
+    }
+    if(r==3)
+    {
+        gotoligcol(37,51);
+        printf("%s", n);
+    }
+    if(r==4)
+    {
+        gotoligcol(37,41);
+        printf("%s", n);
+    }
+    if(r==5)
+    {
+        gotoligcol(37,31);
+        printf("%s", n);
+    }
+    if(r==6)
+    {
+        gotoligcol(37,21);
+        printf("%s", n);
+    }
+    if(r==7)
+    {
+        gotoligcol(37,11);
+        printf("%s", n);
+    }
+    if(r==8)
+    {
+        gotoligcol(37,1);
+        printf("%s", n);
+    }
+    if(r==9)
+    {
+        gotoligcol(31,3);
+        printf("%s", n);
+    }
+    if(r==10)
+    {
+        gotoligcol(26,3);
+        printf("%s", n);
+    }
+    if(r==11)
+    {
+        gotoligcol(21,3);
+        printf("%s", n);
+    }
+    if(r==12)
+    {
+        gotoligcol(16,3);
+        printf("%s", n);
+    }
+    if(r==13)
+    {
+        gotoligcol(11,3);
+        printf("%s", n);
+    }
+    if(r==14)
+    {
+        gotoligcol(6,3);
+        printf("%s", n);
+    }
+    if(r==15)
+    {
+        gotoligcol(2,1);
+        printf("%s", n);
+    }
+    if(r==16)
+    {
+        gotoligcol(2,11);
+        printf("%s", n);
+    }
+    if(r==17)
+    {
+        gotoligcol(2,21);
+        printf("%s", n);
+    }
+    if(r==18)
+    {
+        gotoligcol(2,31);
+        printf("%s", n);
+    }
+    if(r==19)
+    {
+        gotoligcol(2,41);
+        printf("%s", n);
+    }
+    if(r==20)
+    {
+        gotoligcol(2,51);
+        printf("%s", n);
+    }
+    if(r==21)
+    {
+        gotoligcol(2,61);
+        printf("%s", n);
+    }
+    if(r==22)
+    {
+        gotoligcol(2,71);
+        printf("%s", n);
+    }
+    if(r==23)
+    {
+        gotoligcol(6,73);
+        printf("%s", n);
+    }
+    if(r==24)
+    {
+        gotoligcol(11,73);
+        printf("%s", n);
+    }
+    if(r==25)
+    {
+        gotoligcol(16,73);
+        printf("%s", n);
+    }
+    if(r==26)
+    {
+        gotoligcol(21,73);
+        printf("%s", n);
+    }
+    if(r==27)
+    {
+        gotoligcol(26,73);
+        printf("%s", n);
+    }
+    if(r==28)
+    {
+        gotoligcol(31,73);
+        printf("%s", n);
+    }
+
+    return 0;
+}
