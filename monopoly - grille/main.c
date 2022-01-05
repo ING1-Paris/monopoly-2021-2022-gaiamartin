@@ -339,6 +339,8 @@ int main()
         printf("  ");
     }
     Color(15,0);
+    gotoligcol(36,74);
+    printf("GO!");
     gotoligcol(40,0);
     printf("\n\n\n\n");
     return 0;
