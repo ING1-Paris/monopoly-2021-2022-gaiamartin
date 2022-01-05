@@ -16,3 +16,19 @@ void menuJoueur(){
            "=========================\n>");
     SetConsoleTextAttribute(hConsole,15);
 }
+
+//acheter propriété
+int acheterProp(int j){
+    if (joueur[j].argent>propriete[joueur[j].position].prix){
+        joueur[j].argent-=propriete[joueur[j].position].prix;
+        strcpy(propriete[joueur[j].position].proprietaire, joueur[j].nom);
+        printf("/n Transaction effectue !/n");
+        printf("%s a achete %s.", joueur[j].nom, propriete[joueur[j].position].nom);
+        return 1;
+    }
+    else{
+            printf("Vous n'avez pas assez d'argent pour effectuer cette transaction !/n");
+            return 0;
+
+    }
+}
