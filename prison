@@ -6,144 +6,337 @@
 #define true 1
 #define false 0
 
-int main()
+void blindagePrison()
 {
-
     int caseJoueur;//Case actuelle du joueur
     int argent=1500;//argent disponible du joueur
     bool prison=true;
+    int compteur=0;
+    int de1=1;
+    int de2=2;
+    int cartePrison;
+    int choix;
 
-    if(prison == true)
+
+
+    if (prison == true)
     {
-        printf("VOUS ETES EN PRISON!\n\n");
-        printf("Vous pourrez sortir si et seulement si:\n");
-        printf("- Vous lancez un double sur un de vos 3 tours suivants\n");
-        printf("- Vous utilisez une carte sortir de prison gratuitement\n");
-        printf("- Vous payez une amende de 50 euros\n\n");
+        compteur++;
 
-        int de1=1;
-        int de2=2;
-        int choix1;
-        int choix2;
-        int choix3;
-        int cartePrison;
-
-        printf("1. Utiliser ma carte sortir de prison gratuitement\n");
-        printf("2. Payer 50 euros\n");
-        printf("3. Tenter ma chance aux des\n");
-        scanf("%d", &choix1);
-        printf("\n");
-
-        switch(choix1) //tour 1
+        switch(compteur)
         {
             case(1):
-               printf("Vous etes bien sorti de prison!\n");
-               cartePrison--;
-            break;
+                printf("VOUS ETES EN PRISON!\n\n");
+                printf("Vous pourrez sortir si et seulement si:\n");
+                printf("- Vous lancez un double sur un de vos 3 tours suivants\n");
+                printf("- Vous utilisez une carte sortir de prison gratuitement\n");
+                printf("- Vous payez une amende de 50 euros\n\n");
+                printf("1. Utiliser ma carte sortir de prison gratuitement\n");
+                printf("2. Payer 50 euros\n");
+                printf("3. Tenter ma chance aux des\n");
+                fflush(stdin);
+                scanf("%d", &choix);
+                printf("\n");
 
-            case(2):
-                printf("Vous sortez de prison et depensez 50 euros\n");
-                argent=argent-50;
-                printf("Vous possedez desormais %d euros\n", argent);
-                //jet des dés
-                caseJoueur=caseJoueur+de1+de2;
-            break;
-
-            case(3):
-                //jet des dés
-
-                if(de1 == de2)
+                if (choix == 1)
                 {
-                    printf("Vous avez fait un double! VOUS SORTEZ DE PRISON\n");
+                    printf("Vous etes bien sorti de prison!\n");
+                    cartePrison--;
+                }
+
+                if (choix == 2)
+                {
+                    printf("Vous sortez de prison et depensez 50 euros\n");
+                    argent=argent-50;
+                    printf("Vous possedez desormais %d euros\n", argent);
+                    //jet des dés
                     caseJoueur=caseJoueur+de1+de2;
                 }
-                else //tour 2
+                if (choix == 3)
                 {
-                    printf("Dommage...Vous n avez pas fait de doubles\nReessayez au tour suivant\n\n");
+                    if(de1 == de2)
+                    {
+                        printf("Vous avez fait un double! VOUS SORTEZ DE PRISON\n");
+                        caseJoueur=caseJoueur+de1+de2;
+                    }
+                    else
+                    {
+                        printf("Dommage...Vous n avez pas fait de doubles\nReessayez au tour suivant\n\n");
+                    }
                 }
-
-
+                else
+                {
+                    printf("ERREUR");
+                }
+                break;
+                case(2):
+                    printf("VOUS ETES EN PRISON!\n\n");
+                    printf("Vous pourrez sortir si et seulement si:\n");
+                    printf("- Vous lancez un double sur un de vos 3 tours suivants\n");
+                    printf("- Vous utilisez une carte sortir de prison gratuitement\n");
+                    printf("- Vous payez une amende de 50 euros\n\n");
                     printf("1. Utiliser ma carte sortir de prison gratuitement\n");
                     printf("2. Payer 50 euros\n");
                     printf("3. Tenter ma chance aux des\n");
-                    scanf("%d", &choix2);
+                    scanf("%d", &choix);
                     printf("\n");
-                    switch(choix2)
+
+                    if (choix == 1)
                     {
-                        case(1):
-                           printf("Vous etes bien sorti de prison!\n");
-                           cartePrison--;
-                        break;
-                    case(2):
+                        printf("Vous etes bien sorti de prison!\n");
+                        cartePrison--;
+                    }
+
+                    if (choix == 2)
+                    {
                         printf("Vous sortez de prison et depensez 50 euros\n");
                         argent=argent-50;
                         printf("Vous possedez desormais %d euros\n", argent);
                         //jet des dés
-                        printf("Vous lancez desormais les des\n");
                         caseJoueur=caseJoueur+de1+de2;
-                    break;
-
-                    case(3):
-                        //jet des dés
-
+                    }
+                    if (choix == 3)
+                    {
                         if(de1 == de2)
                         {
                             printf("Vous avez fait un double! VOUS SORTEZ DE PRISON\n");
                             caseJoueur=caseJoueur+de1+de2;
                         }
-                        else
+                        else //tour 2
                         {
-                            printf("Dommage...Vous n avez pas fait de doubles\nReessayez au tour suivant\n"); //tour 3
-                            printf("1. Utiliser ma carte sortir de prison gratuitement\n");
-                            printf("2. Payer 50 euros\n");
-                            printf("3. Tenter ma chance aux des\n");
-                            scanf("%d", &choix3);
-                            printf("\n");
-                            switch(choix3)
-                            {
-                                case(1):
-                                   printf("Vous etes bien sorti de prison!\n");
-                                   cartePrison--;
-                                break;
-                                case(2):
-                                    printf("Vous sortez de prison et depensez 50 euros\n");
-                                    argent=argent-50;
-                                    printf("Vous possedez desormais %d euros\n", argent);
-                                    //jet des dés
-                                    printf("Vous lancez desormais les des\n");
-                                    caseJoueur=caseJoueur+de1+de2;
-                                break;
+                            printf("Dommage...Vous n avez pas fait de doubles\nReessayez au tour suivant\n\n");
+                        }
+                    }
+                    else
+                    {
+                        printf("ERREUR");
+                    }
+                    break;
 
-                                case(3):
-                                    //jet des dés
+                case(3):
+                    printf("VOUS ETES EN PRISON!\n\n");
+                    printf("Vous pourrez sortir si et seulement si:\n");
+                    printf("- Vous lancez un double sur un de vos 3 tours suivants\n");
+                    printf("- Vous utilisez une carte sortir de prison gratuitement\n");
+                    printf("- Vous payez une amende de 50 euros\n\n");
+                    printf("1. Utiliser ma carte sortir de prison gratuitement\n");
+                    printf("2. Payer 50 euros\n");
+                    printf("3. Tenter ma chance aux des\n");
+                    scanf("%d", &choix);
+                    printf("\n");
 
-                                    if(de1 == de2)
-                                    {
-                                        printf("Vous avez fait un double! VOUS SORTEZ DE PRISON\n");
-                                        caseJoueur=caseJoueur+de1+de2;
-                                    }
-                                    else
-                                    {
-                                        printf("Vous n avez pas fait de double.\nVous etes oblige de payer une amende de 50 euros\n\n");
-                                        argent=argent-50;
-                                        //jet des dés
-                                        printf("Vous possedez desormais %d euros\n", argent);
-                                        printf("Vous lancez desormais les des\n");
-                                        caseJoueur=caseJoueur+de1+de2;
-                                    }
-                            }
-                                break;
-                            }
+                    if (choix == 1)
+                    {
+                        printf("Vous etes bien sorti de prison!\n");
+                        cartePrison--;
+                    }
 
+                    if (choix == 2)
+                    {
+                        printf("Vous sortez de prison et depensez 50 euros\n");
+                        argent=argent-50;
+                        printf("Vous possedez desormais %d euros\n", argent);
+                        //jet des dés
+                        caseJoueur=caseJoueur+de1+de2;
+                    }
+                    if (choix == 3)
+                    {
+                        if(de1 == de2)
+                        {
+                            printf("Vous avez fait un double! VOUS SORTEZ DE PRISON\n");
+                            caseJoueur=caseJoueur+de1+de2;
+                        }
+                        else //tour 2
+                        {
+                            printf("Vous n avez pas fait de double.\nVous etes oblige de payer une amende de 50 euros\n\n");
+                            argent=argent-50;
+                            //jet des dés
+                            printf("Vous possedez desormais %d euros\n", argent);
+                            printf("Vous lancez desormais les des\n");
+                            caseJoueur=caseJoueur+de1+de2;
+                        }
+                    }
+                    else
+                    {
+                        printf("ERREUR");
+                    }
+                    break;
                 }
-
-        }
     }
     if (prison == false)
     {
-        printf("ok\n");
+        //code normal
     }
-
-
-    return 0;
 }
+
+
+
+
+
+int main()
+{
+    int caseJoueur;//Case actuelle du joueur
+    int argent=1500;//argent disponible du joueur
+    bool prison=true;
+    int compteur=0;
+    int de1=1;
+    int de2=2;
+    int cartePrison;
+    int choix;
+
+
+
+    if (prison == true)
+    {
+        compteur++;
+
+        switch(compteur)
+        {
+            case(1):
+                printf("VOUS ETES EN PRISON!\n\n");
+                printf("Vous pourrez sortir si et seulement si:\n");
+                printf("- Vous lancez un double sur un de vos 3 tours suivants\n");
+                printf("- Vous utilisez une carte sortir de prison gratuitement\n");
+                printf("- Vous payez une amende de 50 euros\n\n");
+                printf("1. Utiliser ma carte sortir de prison gratuitement\n");
+                printf("2. Payer 50 euros\n");
+                printf("3. Tenter ma chance aux des\n");
+                fflush(stdin);
+                scanf("%d", &choix);
+                printf("\n");
+
+                if (choix == 1)
+                {
+                    printf("Vous etes bien sorti de prison!\n");
+                    cartePrison--;
+                }
+
+                if (choix == 2)
+                {
+                    printf("Vous sortez de prison et depensez 50 euros\n");
+                    argent=argent-50;
+                    printf("Vous possedez desormais %d euros\n", argent);
+                    //jet des dés
+                    caseJoueur=caseJoueur+de1+de2;
+                }
+                if (choix == 3)
+                {
+                    if(de1 == de2)
+                    {
+                        printf("Vous avez fait un double! VOUS SORTEZ DE PRISON\n");
+                        caseJoueur=caseJoueur+de1+de2;
+                    }
+                    else
+                    {
+                        printf("Dommage...Vous n avez pas fait de doubles\nReessayez au tour suivant\n\n");
+                    }
+                }
+                else
+                {
+                    printf("ERREUR\n");
+                    blindagePrison();
+                }
+                break;
+                case(2):
+                    printf("VOUS ETES EN PRISON!\n\n");
+                    printf("Vous pourrez sortir si et seulement si:\n");
+                    printf("- Vous lancez un double sur un de vos 3 tours suivants\n");
+                    printf("- Vous utilisez une carte sortir de prison gratuitement\n");
+                    printf("- Vous payez une amende de 50 euros\n\n");
+                    printf("1. Utiliser ma carte sortir de prison gratuitement\n");
+                    printf("2. Payer 50 euros\n");
+                    printf("3. Tenter ma chance aux des\n");
+                    scanf("%d", &choix);
+                    printf("\n");
+
+                    if (choix == 1)
+                    {
+                        printf("Vous etes bien sorti de prison!\n");
+                        cartePrison--;
+                    }
+
+                    if (choix == 2)
+                    {
+                        printf("Vous sortez de prison et depensez 50 euros\n");
+                        argent=argent-50;
+                        printf("Vous possedez desormais %d euros\n", argent);
+                        //jet des dés
+                        caseJoueur=caseJoueur+de1+de2;
+                    }
+                    if (choix == 3)
+                    {
+                        if(de1 == de2)
+                        {
+                            printf("Vous avez fait un double! VOUS SORTEZ DE PRISON\n");
+                            caseJoueur=caseJoueur+de1+de2;
+                        }
+                        else //tour 2
+                        {
+                            printf("Dommage...Vous n avez pas fait de doubles\nReessayez au tour suivant\n\n");
+                        }
+                    }
+                    else
+                    {
+                        printf("ERREUR\n");
+                        blindagePrison();
+                    }
+                    break;
+
+                case(3):
+                    printf("VOUS ETES EN PRISON!\n\n");
+                    printf("Vous pourrez sortir si et seulement si:\n");
+                    printf("- Vous lancez un double sur un de vos 3 tours suivants\n");
+                    printf("- Vous utilisez une carte sortir de prison gratuitement\n");
+                    printf("- Vous payez une amende de 50 euros\n\n");
+                    printf("1. Utiliser ma carte sortir de prison gratuitement\n");
+                    printf("2. Payer 50 euros\n");
+                    printf("3. Tenter ma chance aux des\n");
+                    scanf("%d", &choix);
+                    printf("\n");
+
+                    if (choix == 1)
+                    {
+                        printf("Vous etes bien sorti de prison!\n");
+                        cartePrison--;
+                    }
+
+                    if (choix == 2)
+                    {
+                        printf("Vous sortez de prison et depensez 50 euros\n");
+                        argent=argent-50;
+                        printf("Vous possedez desormais %d euros\n", argent);
+                        //jet des dés
+                        caseJoueur=caseJoueur+de1+de2;
+                    }
+                    if (choix == 3)
+                    {
+                        if(de1 == de2)
+                        {
+                            printf("Vous avez fait un double! VOUS SORTEZ DE PRISON\n");
+                            caseJoueur=caseJoueur+de1+de2;
+                        }
+                        else //tour 2
+                        {
+                            printf("Vous n avez pas fait de double.\nVous etes oblige de payer une amende de 50 euros\n\n");
+                            argent=argent-50;
+                            //jet des dés
+                            printf("Vous possedez desormais %d euros\n", argent);
+                            printf("Vous lancez desormais les des\n");
+                            caseJoueur=caseJoueur+de1+de2;
+                        }
+                    }
+                    else
+                    {
+                        printf("ERREUR\n");
+                        blindagePrison();
+                    }
+                    break;
+                }
+    compteur=0;
+    }
+    if (prison == false)
+    {
+        //code normal
+    }
+    return 0;
+    }
