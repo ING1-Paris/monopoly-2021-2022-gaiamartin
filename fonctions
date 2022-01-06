@@ -35,3 +35,42 @@ int main()
     }
     return 0;
 }
+
+
+//hypothequer
+void hypothequer(//joueur ){
+char choix;
+printf("Quelle propriete souhaitez vous hyphotequer ? Taper q pour quitter/n");
+choix = getchar();
+int propH=0;
+int i=0;
+if (choix='q'){
+    return;
+}
+while(propH=0){
+    for (i=0; i<28; i++){
+        if (choix[i].nom=choix){
+        i=propH;
+        }
+    else{
+        printf("Cette propriete n existe pas, veuillez ressayer/n");
+    }
+    }
+}
+if (p[propH].proprio!=//joueur){
+    printf("Cette propriete ne vous appartient pas !/n");
+}
+else if (p[propH].hypo=true){
+    printf("Cette propriete est deja hypothequer !/n");
+}
+else if (p[propH].nbMaison!=0){
+    printf("IMPOSSIBLE, enlevez les maisons pour hypothequer !/n");
+}
+else{
+    p[propH.hypo=true];
+    printf("La propriete %c est hypothequee, vous revevez %d!/n", p[propH].nom, p[propH].hypotheque);
+    //joueur[].argent=+p[propH].hypotheque;
+}
+
+
+}
