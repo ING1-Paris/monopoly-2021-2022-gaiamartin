@@ -289,14 +289,18 @@ void blindage()
     p[27].loyer1H=2000;
 
 /////MENU///////////////////////////////////////////////////////
-    int choix1;
+        int choix1;
     int voir;
     printf("\n");
     printf("\n=====| Menu Joueur |=====\n"
            "Que souhaitez vous faire ?\n"
            "1/ Consulter les proprietes d une case\n"
-           "2/ Hypothequer une propriete\n"
-           "3/ Retourner au menu Principal\n");
+           "2/ Acheter une propriete\n"
+           "3/ Acheter une maison\n"
+           "4/ Acheter un hotel\n""
+           "5/ Hypothequer une propriete\n"
+           "6/ Retourner au menu Principal\n");
+
     fflush(stdin);
     scanf("%d", &choix1);
     int i=0;
@@ -603,11 +607,20 @@ void blindage()
         }
         break;
         case(2):
+            //
+        break;
+        case(3):
+            //
+        break;
+        case(4):
+            //
+        break;
+        case(5):
             printf("Quelle case souhaitez vous hypothequer?\n");
             fflush(stdin);
             scanf("%d", &choix2);
         break;
-        case(3):
+        case(6):
             //retourner au menu principal
         break;
         default:
