@@ -22,6 +22,7 @@ void blindage()
         int loyer4M;
         int loyer1H;
         bool hypo;
+        int nbMaison;
 
     }propriete;
 
@@ -45,6 +46,7 @@ void blindage()
     p[1].loyer4M=160;
     p[1].loyer1H=250;
     p[1].hypo=false;
+    p[1].nbMaison=0;
 
     //case 3
     strcpy(p[2].nom, "Boulevard des Millesimes");
@@ -60,6 +62,7 @@ void blindage()
     p[2].loyer4M=320;
     p[2].loyer1H=450;
     p[2].hypo=false;
+    p[2].nbMaison=0;
 
     //case 4;
     strcpy(p[3].nom, "Impot sur le revenu");
@@ -88,6 +91,7 @@ void blindage()
     p[6].loyer4M=400;
     p[6].loyer1H=550;
     p[6].hypo=false;
+    p[6].nbMaison=0;
 
     //case 8
     strcpy(p[7].nom, "Aller en prison");
@@ -106,6 +110,7 @@ void blindage()
     p[8].loyer4M=450;
     p[8].loyer1H=600;
     p[8].hypo=false;
+    p[8].nbMaison=0;
 
     //case 10
     strcpy(p[9].nom, "Passage du Bisou de Minuit");
@@ -121,6 +126,7 @@ void blindage()
     p[9].loyer4M=625;
     p[9].loyer1H=750;
     p[9].hypo=false;
+    p[9].nbMaison=0;
 
     //case 11
     strcpy(p[10].nom, "Gare de l amour");
@@ -128,6 +134,7 @@ void blindage()
     p[10].hypotheque=100;
     strcpy(p[10].proprio, "Banque");
     p[10].hypo=false;
+    
 
     //case 12
     strcpy(p[11].nom, "Caisse de communaute");
@@ -146,6 +153,7 @@ void blindage()
     p[12].loyer4M=700;
     p[12].loyer1H=900;
     p[12].hypo=false;
+    p[12].nbMaison=0;
 
     //case 14
     strcpy(p[13].nom, "Rue des meilleurs voeux");
@@ -161,6 +169,7 @@ void blindage()
     p[13].loyer4M=700;
     p[13].loyer1H=950;
     p[13].hypo=false;
+    p[13].nbMaison=0;
 
     //case 15
     strcpy(p[14].nom, "Stationnement gratuit");
@@ -179,6 +188,7 @@ void blindage()
     p[15].loyer4M=800;
     p[15].loyer1H=1000;
     p[15].hypo=false;
+    p[15].nbMaison=0;
 
     //case 17
     strcpy(p[16].nom, "Chance");
@@ -197,6 +207,7 @@ void blindage()
     p[17].loyer4M=975;
     p[17].loyer1H=1050;
     p[17].hypo=false;
+    p[17].nbMaison=0;
 
     //case 19
     strcpy(p[18].nom, "Gare de la fortune");
@@ -219,6 +230,7 @@ void blindage()
     p[19].loyer4M=825;
     p[19].loyer1H=1100;
     p[19].hypo=false;
+    p[19].nbMaison=0;
 
     //case 21
     strcpy(p[20].nom, "Chemin de la sobriete");
@@ -234,6 +246,7 @@ void blindage()
     p[20].loyer4M=975;
     p[20].loyer1H=1150;
     p[20].hypo=false;
+    p[20].nbMaison=0;
 
     //case 22
     strcpy(p[21].nom, "Prison");
@@ -252,6 +265,7 @@ void blindage()
     p[22].loyer4M=1025;
     p[22].loyer1H=1200;
     p[22].hypo=false;
+    p[22].nbMaison=0;
 
     //case 24
     strcpy(p[23].nom, "Caisse de communaute");
@@ -270,6 +284,7 @@ void blindage()
     p[24].loyer4M=1200;
     p[24].loyer1H=1400;
     p[24].hypo=false;
+    p[24].nbMaison=0;
 
     //case 26
     strcpy(p[25].nom, "Gare de la chance");
@@ -277,6 +292,7 @@ void blindage()
     p[25].hypotheque=100;
     strcpy(p[25].proprio, "Banque");
     p[25].hypo=false;
+    
 
     //case 27
     strcpy(p[26].nom, "Rue du Decompte");
@@ -292,6 +308,7 @@ void blindage()
     p[26].loyer4M=1300;
     p[26].loyer1H=1500;
     p[26].hypo=false;
+    p[26].nbMaison=0;
 
     //case 28
     strcpy(p[27].nom, "Rue du Trente et Un");
@@ -307,6 +324,7 @@ void blindage()
     p[27].loyer4M=1700;
     p[27].loyer1H=2000;
     p[27].hypo=false;
+    p[27].nbMaison=0;
 
 /////MENU///////////////////////////////////////////////////////
         int choix1;
