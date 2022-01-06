@@ -4,7 +4,6 @@
 #include <string.h>
 #include <windows.h>
 #include "bibli_Monopoly.h"
-#define MAX_LENGTH 20
 
 
 int case1(){
@@ -41,7 +40,7 @@ printf("\n\n\n**************************************************** NOUVELLE PART
                 int position;
                 }joueur;
 
-                struct joueur j1, j2, j3, j4, j5, j6, startPlayer;
+                struct joueur j1, j2, j3, j4, j5, j6, J, startPlayer, s2, s3, s4, s5, s6;
                 system("cls");
                 printf("\n\n\n");
                 printf("***************************** noms des joueurs ************************************************************************\n\n");
@@ -129,47 +128,85 @@ printf("\n\n\n**************************************************** NOUVELLE PART
 
                 srand(time(NULL));
                 int quiCommence = rand()%nbJoueurs+1;
-                int jsuivant;
+                int jsuivant, quiFinit;
+
 
                 if (quiCommence== 1){
                     printf("\n\n    %s ! A vous de commencer !\n\n", j1.nom);
-                    startPlayer.nom == j1.nom;
-                    startPlayer.position == j1.position;
-                    jsuivant = j2.nom;
+                    startPlayer= j1;
+                    s2 = j2;
+                    if(nbJoueurs >2)
+                        s3 = j3;
+                    if(nbJoueurs >= 4)
+                        s4 = j4;
+                    if(nbJoueurs >= 5)
+                        s5 = j5;
+                    if(nbJoueurs >= 6)
+                        s6 = j6;
                 }
                 if (quiCommence == 2){
                     printf("\n\n    %s ! A vous de commencer !\n\n", j2.nom);
-                    startPlayer.nom == j2.nom;
-                    startPlayer.position == j2.position;
-                    jsuivant = j3.nom;
+                    startPlayer = j2;
+                    if(nbJoueurs >2)
+                        s2 = j3;
+                    if(nbJoueurs >= 3)
+                        s3 = j4;
+                    if(nbJoueurs >= 4)
+                        s4 = j5;
+                    if(nbJoueurs >= 5)
+                        s5 = j6;
+                    if(nbJoueurs >= 6)
+                        s6 = j1;
                 }
                 if (quiCommence == 3){
                     printf("\n\n    %s ! A vous de commencer !\n\n", j3.nom);
-                    startPlayer.nom == j3.nom;
-                    startPlayer.position == j3.position;
-                    jsuivant = j4.nom;
+                    startPlayer = j3;
+                    if(nbJoueurs >3)
+                        s2 = j4;
+                    if(nbJoueurs >= 4)
+                        s3 = j5;
+                    if(nbJoueurs >= 5)
+                        s4 = j6;
+                    if(nbJoueurs >= 6){
+                        s5 = j1;
+                        s6 = j2;
+                    }
                 }
                 if (quiCommence == 4){
                     printf("\n\n    %s ! A vous de commencer !\n\n", j4.nom);
-                    startPlayer.nom == j4.nom;
-                    startPlayer.position == j4.position;
-                    jsuivant = j5.nom;
+                    startPlayer = j4;
+                    if(nbJoueurs > 4)
+                        s2 = j5;
+                    if(nbJoueurs >=5)
+                        s3 = j6;
+                    if(nbJoueurs >= 6)
+                        s4 = j1;
+                        s5 = j2;
+                        s6 = j3;
                 }
                 if (quiCommence == 5){
                     printf("\n\n    %s ! A vous de commencer !\n\n", j5.nom);
-                    startPlayer.nom == j5.nom;
-                    startPlayer.position == j5.position;
-                    jsuivant = j6.nom;
+                    startPlayer = j5;
+                    if(nbJoueurs > 5)
+                        s2 = j6;
+                    if(nbJoueurs >=6)
+                        s3 = j1;
+                        s4 = j2;
+                        s5 = j3;
+                        s6 = j4;
                 }
                 if (quiCommence == 6){
                     printf("\n\n    %s ! A vous de commencer !\n\n", j6.nom);
-                    startPlayer.nom == j6.nom;
-                    startPlayer.position == j6.position;
-                    jsuivant = j1.nom;
+                    startPlayer = j6;
+                    s2 = j1;
+                    s3 = j2;
+                    s4 = j3;
+                    s5 = j4;
+                    s6 = j5;
                 }
             //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-            //// distribution somme initiale /////////////////////////////////////////////////////////////////////////////////////
+            //// initialisation structures joueurs ///////////////////////////////////////////////////////////////////////////////
 
                 printf("    Chaque joueur recoit la somme initiale de 1 500 euros\n\n");
 
@@ -204,47 +241,44 @@ printf("\n\n\n**************************************************** NOUVELLE PART
             Sleep(2000);
             system("cls");
             grille();
-
-            /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
-
-            //// lancer les des /////////////////////////////////////////////////////////////////////////////////////////////////
-               // fctnDD();
             /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
             //// jeu ////////////////////////////////////////////////////////////////////////////////////////////////////////////
-            while (nbJoueurs != 1){
-                int nbCasesAvancees = fctnDD();
-                startPlayer.position = startPlayer.position + nbCasesAvancees;
-                printf(" \nposition : %d", startPlayer.position);
 
+            //premier tour
+
+            premierTour( startPlayer.nom, startPlayer.position, startPlayer.argent, nbJoueurs);
+            premierTour( s2.nom, s2.position, s2.argent, nbJoueurs);
+            if (nbJoueurs > 2){
+                premierTour(s3.nom, s3.position, s3.argent, nbJoueurs);
+                if (nbJoueurs > 3)
+                    premierTour(s4.nom, s4.position, s4.argent, nbJoueurs);
+                    if (nbJoueurs > 4)
+                        premierTour(s5.nom, s5.position, s5.argent, nbJoueurs);
+                        if (nbJoueurs > 5)
+                            premierTour(s6.nom, s6.position, s6.argent, nbJoueurs);
             }
+
+
+            while (nbJoueurs != 1){
+
+                fctnJeu( startPlayer.nom, startPlayer.position, startPlayer.argent, nbJoueurs);
+                fctnJeu( s2.nom, s2.position, s2.argent, nbJoueurs);
+                if (nbJoueurs > 2){
+                    fctnJeu(s3.nom, s3.position, s3.argent, nbJoueurs);
+                    if (nbJoueurs > 3)
+                        fctnJeu(s4.nom, s4.position, s4.argent, nbJoueurs);
+                        if (nbJoueurs > 4)
+                            fctnJeu(s5.nom, s5.position, s5.argent, nbJoueurs);
+                            if (nbJoueurs > 5)
+                                fctnJeu(s6.nom, s6.position, s6.argent, nbJoueurs);
+                }
 
             //// carte chance ///////////////////////////////////////////////////////////////////////////////////////////////////
 
-                int carteC = 0;
-                srand(time(NULL));
-                quiCommence = rand()%nbJoueurs+1;
 
-                if (quiCommence == 1){
-                carteChance(j1.argent, j1.position, nbJoueurs);
-                }
-                if (quiCommence == 2){
-                    carteChance(j2.argent, j2.position, nbJoueurs);
-                }
-                if (quiCommence == 3){
-                    carteChance(j3.argent, j3.position, nbJoueurs);
-                }
-                if (quiCommence == 4){
-                    carteChance(j4.argent, j4.position, nbJoueurs);
-                }
-                if (quiCommence == 5){
-                    carteChance(j5.argent, j5.position, nbJoueurs);
-                }
-                if (quiCommence ==6){
-                    carteChance(j6.argent, j6.position, nbJoueurs);
-                }
-    return 0;
+                return 0;
 
+            }
 }
 
