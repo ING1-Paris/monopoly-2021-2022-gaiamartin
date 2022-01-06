@@ -5,7 +5,7 @@
 int menu()
 {
     int choix;
-    Sleep(2000);
+    Sleep(1500);
     do
     {
        //// menu principal ////////////////////////////////////////////////////////////////////////////////////////////////
@@ -91,7 +91,7 @@ int menu()
             }
             default:
             {
-                printf("    ERREUR\n    veuillez selectionner une des options proposees :\n /   \t1\t/\t2\t/\t3\t/\t4\t/\t5\t/\t6\t/\n\n ");
+                printf("    ERREUR\n    veuillez selectionner une des options proposees :\n /   \t1\t/\t2\t/\t3\t/\t4\t/\t5\t/\t6\t/\n ");
                 fflush(stdin);
                 menu();
             }
