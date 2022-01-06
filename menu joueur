@@ -1,9 +1,10 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include "bibliAfficherCases.h"
 
 
-int main()
+void blindage()
 {
     //DECLARATION STRUCTURES DES CASES DU JEU
    typedef struct cases
@@ -288,18 +289,20 @@ int main()
     p[27].loyer1H=2000;
 
 /////MENU///////////////////////////////////////////////////////
-    int choix;
+    int choix1;
     int voir;
+    printf("\n");
     printf("\n=====| Menu Joueur |=====\n"
            "Que souhaitez vous faire ?\n"
            "1/ Consulter les proprietes d une case\n"
            "2/ Hypothequer une propriete\n"
            "3/ Retourner au menu Principal\n");
     fflush(stdin);
-    scanf("%d", &choix);
+    scanf("%d", &choix1);
     int i=0;
+    int choix2;
 
-    switch(choix)
+    switch(choix1)
     {
     case(1):
         printf("Quelle case souhaitez vous consulter?\n");
@@ -593,7 +596,23 @@ int main()
             printf("loyer 4 maisons: %d\n", p[27].loyer4M);
             printf("loyer 1 hotel: %d\n", p[27].loyer1H);
         }
+        else
+        {
+            printf("ERREUR : CETTE CASE N EXISTE PAS");
+            blindage();
+        }
         break;
-}
-return 0;
+        case(2):
+            printf("Quelle case souhaitez vous hypothequer?\n");
+            fflush(stdin);
+            scanf("%d", &choix2);
+        break;
+        case(3):
+            //retourner au menu principal
+        break;
+        default:
+            printf("ERREUR\n");
+            blindage();
+    }
+
 }
