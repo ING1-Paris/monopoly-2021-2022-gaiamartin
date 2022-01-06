@@ -19,11 +19,11 @@ void menuJoueur(){
 
 //acheter propriété
 int acheterProp(int j){
-    if (joueur[j].argent>propriete[joueur[j].position].prix){
-        joueur[j].argent-=propriete[joueur[j].position].prix;
-        strcpy(propriete[joueur[j].position].proprietaire, joueur[j].nom);
+    if (joueur[j].argent>p[joueur[j].position].prix){
+        joueur[j].argent-=p[joueur[j].position].prix;
+        strcpy(p[joueur[j].position].proprietaire, joueur[j].nom);
         printf("/n Transaction effectue !/n");
-        printf("%s a achete %s.", joueur[j].nom, propriete[joueur[j].position].nom);
+        printf("%s a achete %s.", joueur[j].nom, p[joueur[j].position].nom);
         return 1;
     }
     else{
