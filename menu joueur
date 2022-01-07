@@ -645,7 +645,22 @@ void blindage()
         }
         break;
         case(2):
-            //
+            j[k].argent=2000;
+            p[j[k].position].prix=500;
+            j[k].position=3;
+            k=0;
+            if ((j[k].argent) >= (p[j[k].position].prix))
+            {
+                j[k].argent -= p[j[k].position].prix;
+                strcpy(p[j[k].position].proprio, j[k].nom);
+                printf("Transaction effectuee !\n");
+                printf("%s possede desormais %s\n", j[k].nom, p[j[k].position].nom);
+            }
+            else
+            {
+                printf("Vous n'avez pas assez d'argent pour effectuer cette transaction !\n");
+                return 0;
+            }
         break;
         case(3):
             //
