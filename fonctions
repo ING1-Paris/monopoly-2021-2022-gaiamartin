@@ -114,3 +114,48 @@ else{
 
 
 }
+
+
+//PAYER LOYER
+void payerLoyer(int nbJoueurs, j[i] ){
+{
+    for (int k=0; k<nbJoueurs; k++){
+        if(p[k].nom=p[j[i].position].proprio){
+            
+                if(j[k].nom!=j[i].nom){
+                    switch(p[j[i].position].nbMaison){
+                    case 0:
+                            j[i].argent=-p[j[i].position].loyer0M;
+                            j[k].argent=+p[j[i].position].loyer0M;
+                            break;
+                    }
+                    case 1:
+                            j[i].argent=-p[j[i].position].loyer1M;
+                            j[k].argent=+p[j[i].position].loyer1M;
+                            break;
+                    }
+                    case 2:
+                            j[i].argent=-p[j[i].position].loyer2M;
+                            j[k].argent=+p[j[i].position].loyer2M;
+                            break;
+                    }
+                    case 3:
+                            j[i].argent=-p[j[i].position].loyer3M;
+                            j[k].argent=+p[j[i].position].loyer3M;
+                            break;
+                    }
+                    case 4:
+                            j[i].argent=-p[j[i].position].loyer4M;
+                            j[k].argent=+p[j[i].position].loyer4M;
+                            break;
+                    }
+                    case 5:
+                            j[i].argent=-p[j[i].position].loyer5M;
+                            j[k].argent=+p[j[i].position].loyer5M;
+                            break;
+                    }
+                }
+        }
+    }
+}
+}
