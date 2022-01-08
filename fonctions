@@ -73,3 +73,44 @@ else{
 
 
 }
+
+
+
+//deshypothéquer
+
+void deshypothequer(//joueur ){
+char choix;
+printf("Quelle propriete souhaitez vous deshyphotequer ? Taper q pour quitter/n");
+choix = getchar();
+int propH=0;
+int prix;
+if (choix='q'){
+    return;
+}
+while(propH=0){
+    for (i=0; i<28; i++){
+        if (choix[i].nom=choix){
+        i=propH;
+        }
+    else{
+        printf("Cette propriete n existe pas, veuillez ressayer/n");
+    }
+    }
+}
+if (p[propH].proprio!=//joueur){
+    printf("Cette propriete ne vous appartient pas !/n");
+}
+else if (p[propH].hypo=false){
+    printf("Cette propriete n'est pas hypothequer !/n");
+}
+
+}
+prix=p[propH].hypotheque*1,1;
+else{
+    p[propH.hypo=false];
+    printf("La propriete %s est deshypothequee, vous payez %s/n", p[propH].nom, prix);
+    //joueur[].argent=-prix;
+}
+
+
+}
