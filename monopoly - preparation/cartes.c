@@ -94,49 +94,29 @@ void carteChance(int argentJ, int positionJ, int nbJoueurs){
             printf("                ******************************\n");
            // positionJ =  ;// Case Boulevard des Paillettes
        }
-       if (numeroCarteChance == 3){
-           gotoligcol(25,100);
-            printf("                ******************************\n");
-            gotoligcol(26,100);
+        if (numeroCarteChance == 3){
+            printf("\n                ******************************\n");
             printf("                *                            *\n");
-            gotoligcol(27,100);
             printf("                *   C A R T E   C H A N C E  *\n");
-            gotoligcol(28,100);
             printf("                *                            *\n");
-            gotoligcol(29,100);
             printf("                ******************************\n");
-            gotoligcol(30,100);
             printf("                *                            *\n");
-            gotoligcol(31,100);
             printf("                *                            *\n");
-            gotoligcol(32,100);
-            printf("                *     BON ANNIVERSAIRE !!!   *\n");
-            gotoligcol(33,100);
+            printf("                *    VOUS AVEZ VOLE VOTRE    *\n");
             printf("                *                            *\n");
-            gotoligcol(34,100);
             printf("                *                            *\n");
-            gotoligcol(35,100);
-            printf("                *     CHAQUE JOUEUR DOIT     *\n");
-            gotoligcol(36,100);
+            printf("                *     TENUE DU NOUVEL AN     *\n");
             printf("                *                            *\n");
-            gotoligcol(37,100);
             printf("                *                            *\n");
-            gotoligcol(38,100);
-            printf("                *    VOUS DONNER 20 euros    *\n");
-            gotoligcol(39,100);
+            printf("                *    ET DEVEZ PAYE 50 euros  *\n");
             printf("                *                            *\n");
-            gotoligcol(40,100);
             printf("                *                            *\n");
-            gotoligcol(41,100);
+            printf("                *         D'AMENDE           *\n");
             printf("                *                            *\n");
-            gotoligcol(42,100);
             printf("                *                            *\n");
-            gotoligcol(43,100);
-            printf("                *                            *\n");
-            gotoligcol(44,100);
             printf("                ******************************\n");
-            argentJ = argentJ+((nbJoueurs-1)*20);
-            //Faire perdre 20 euros aux autres joueurs !!
+            argentJ = argentJ - 50 ;
+          
        }
        if (numeroCarteChance == 4){
            gotoligcol(25,100);
