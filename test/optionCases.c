@@ -385,16 +385,25 @@ struct joueur j1, j2, j3, j4, j5, j6, s2, s3, s4, s5, s6 ;*/
     int n;
     int numMaison;
     printf("\n");
-    printf("***********Que souhaitez vous faire ?************\n"
-           "*   1/ Consulter les proprietes d une case      *\n"
-           "*   2/ Acheter une propriete                    *\n"
-           "*   3/ Acheter une maison                       *\n"
-           "*   4/ Acheter un hotel                         *\n"
-           "*   5/ Hypothequer une propriete                *\n"
-           "*   6/ Retourner a la partie                    *\n"
-           "*************************************************\n");
+    gotoligcol(22,100);
+    printf("***********Que souhaitez vous faire ?************");
+    gotoligcol(23,100);
+    printf("*   1/ Consulter les proprietes d une case      *");
+    gotoligcol(24,100);
+    printf("*   2/ Acheter une propriete                    *");
+    gotoligcol(25,100);
+    printf("*   3/ Acheter une maison                       *");
+    gotoligcol(26,100);
+    printf("*   4/ Acheter un hotel                         *");
+    gotoligcol(27,100);
+    printf("*   5/ Hypothequer une propriete                *");
+    gotoligcol(28,100);
+    printf("*   6/ Retourner a la partie                    *");
+    gotoligcol(29,100);
+    printf("*************************************************");
 
     fflush(stdin);
+    gotoligcol(30,100);
     scanf("%d", &choix1);
     int choix2;
 
@@ -402,45 +411,65 @@ struct joueur j1, j2, j3, j4, j5, j6, s2, s3, s4, s5, s6 ;*/
     {
     case(1):*/
     if (choix1 == 1){
+        gotoligcol(31,100);
         printf("Quelle case souhaitez vous consulter?\n");
         fflush(stdin);
+        gotoligcol(32,100);
         scanf("%d", &voir);
         if ((voir == 1)||(voir == 4)||(voir == 6)||(voir == 8)||(voir == 12)||(voir == 15)||(voir == 17)||(voir == 22)||(voir == 24))
         {
-            printf("nom: %s\n", p[voir-1].nom);
+            gotoligcol(33,100);
+            printf("nom: %s", p[voir-1].nom);
         }
         else if ((voir == 2)||(voir == 3)||(voir == 7)||(voir == 9)||(voir == 10)||(voir == 13)||(voir == 14)||(voir == 16)||(voir == 18)||(voir == 20)||(voir == 21)||(voir == 23)||(voir == 25)||(voir == 27)||(voir == 28))
         {
+            gotoligcol(33,100);
             printf("nom: %s\n", p[voir-1].nom);
+            gotoligcol(34,100);
             printf("prix: %d\n", p[voir-1].prix);
-            printf("hypotheque: %d\n", p[voir-1].hypotheque);
-            printf("proprietaire: %s\n", p[voir-1].proprio);
-            printf("prix maison a l unite: %d\n", p[voir-1].maison);
-            printf("prix hotel a l unite: %d\n", p[voir-1].hotel);
-            printf("loyer 0 maisons: %d\n", p[voir-1].loyer0M);
-            printf("loyer 1 maison: %d\n", p[voir-1].loyer1M);
-            printf("loyer 2 maisons: %d\n", p[voir-1].loyer2M);
-            printf("loyer 3 maisons: %d\n", p[voir-1].loyer3M);
-            printf("loyer 4 maisons: %d\n", p[voir-1].loyer4M);
-            printf("loyer 1 hotel: %d\n", p[voir-1].loyer1H);
+            gotoligcol(35,100);
+            printf("hypotheque: %d", p[voir-1].hypotheque);
+            gotoligcol(36,100);
+            printf("proprietaire: %s", p[voir-1].proprio);
+            gotoligcol(37,100);
+            printf("prix maison a l unite: %d", p[voir-1].maison);
+            gotoligcol(38,100);
+            printf("prix hotel a l unite: %d", p[voir-1].hotel);
+            gotoligcol(39,100);
+            printf("loyer 0 maisons: %d", p[voir-1].loyer0M);
+            gotoligcol(40,100);
+            printf("loyer 1 maison: %d", p[voir-1].loyer1M);
+            gotoligcol(41,100);
+            printf("loyer 2 maisons: %d", p[voir-1].loyer2M);
+            gotoligcol(42,100);
+            printf("loyer 3 maisons: %d", p[voir-1].loyer3M);
+            gotoligcol(43,100);
+            printf("loyer 4 maisons: %d", p[voir-1].loyer4M);
+            gotoligcol(44,100);
+            printf("loyer 1 hotel: %d", p[voir-1].loyer1H);
         }
 
 
         else if ((voir == 5)||(voir == 11)||(voir == 19)||(voir == 26))
         {
-            printf("nom: %s\n", p[voir-1].nom);
-            printf("prix: %d\n", p[voir-1].prix);
-            printf("hypotheque: %d\n", p[voir-1].hypotheque);
-            printf("proprietaire: %s\n", p[voir-1].proprio);
+            gotoligcol(33,100);
+            printf("nom: %s", p[voir-1].nom);
+            gotoligcol(34,100);
+            printf("prix: %d", p[voir-1].prix);
+            gotoligcol(35,100);
+            printf("hypotheque: %d", p[voir-1].hypotheque);
+            gotoligcol(36,100);
+            printf("proprietaire: %s", p[voir-1].proprio);
         }
 
         else
         {
+            gotoligcol(33,100);
             printf("ERREUR : CETTE CASE N EXISTE PAS");
             int optionCase( nom, position, argent);
         }
         optionCase(nom, position, argent, s2, s3, s4, s5, s6 );
-        //break;
+       
         }
         //case(2):
         if (choix1 ==2){
