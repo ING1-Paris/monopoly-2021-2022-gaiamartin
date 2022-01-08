@@ -11,28 +11,6 @@
 int main()
 {
     //DECLARATION STRUCTURES DES CASES DU JEU
-   typedef struct cases
-    {
-        int num;
-        char nom[50];
-        int prix;
-        int hypotheque;
-        char proprio[50];
-        int maison;
-        int hotel;
-        int loyer0M;
-        int loyer1M;
-        int loyer2M;
-        int loyer3M;
-        int loyer4M;
-        int loyer1H;
-        int nbMaison;
-        int nbHotel;
-
-    }propriete;
-
-    struct cases p[27];
-
         typedef struct cases//initialisation structure cases
         {
             int num;
@@ -470,7 +448,7 @@ for (t=0; t<28; t++)
     }
 }
 
-if (p[propH].proprio != j1.nom) //on vérifie que la propriété appartienne au joueur
+if (p[propH].proprio != j[0].nom) //on vérifie que la propriété appartienne au joueur
 {
     printf("Cette propriete ne vous appartient pas !/n");
 }
@@ -490,8 +468,12 @@ else if (p[propH].nbHotel != 0) //on vérifie qu'il n'y ait pas d hotels sur la 
     printf("IMPOSSIBLE, enlevez les hotels pour hypothequer !/n");
 }
 
-else{
-    p[propH.hypo=true];
+else
+{
+    p[propH].hypo=true;
     printf("La propriete %c est hypothequee, vous recevez %d du Banquier!/n", p[propH].nom, p[propH].hypotheque);
-    j1.argent += p[propH].hypotheque;
+    j[0].argent += p[propH].hypotheque;
+}
+}
+return 0;
 }
