@@ -1,0 +1,67 @@
+# depslib dependency file v1.0
+1641650392 source:c:\users\gaiab\desktop\ing1\algo\monopoly-2021-2022-gaiamartin\test\main.c
+	<stdio.h>
+	<stdlib.h>
+	"bibi_Monopoly.h"
+
+1641329558 source:c:\users\gaiab\desktop\ing1\algo\monopoly-2021-2022-gaiamartin\test\test limite chaine carac.c
+
+1641650435 c:\users\gaiab\desktop\ing1\algo\monopoly-2021-2022-gaiamartin\test\bibi_monopoly.h
+
+1641650590 source:c:\users\gaiab\desktop\ing1\algo\monopoly-2021-2022-gaiamartin\test\case1.c
+	<stdio.h>
+	<stdlib.h>
+	<time.h>
+	<string.h>
+	<windows.h>
+	"bibi_Monopoly.h"
+
+1641601252 source:c:\users\gaiab\desktop\ing1\algo\monopoly-2021-2022-gaiamartin\test\blindage.c
+	<stdio.h>
+	<stdlib.h>
+
+1641601283 source:c:\users\gaiab\desktop\ing1\algo\monopoly-2021-2022-gaiamartin\test\grille.c
+	<stdio.h>
+	<stdlib.h>
+	<windows.h>
+
+1641614234 source:c:\users\gaiab\desktop\ing1\algo\monopoly-2021-2022-gaiamartin\test\premier_tour.c
+	<string.h>
+	<windows.h>
+	"bibi_Monopoly.h"
+
+1641604288 source:c:\users\gaiab\desktop\ing1\algo\monopoly-2021-2022-gaiamartin\test\jeu.c
+	<stdio.h>
+	<stdlib.h>
+	<time.h>
+	<string.h>
+	<windows.h>
+	"bibi_Monopoly.h"
+
+1641604783 source:c:\users\gaiab\desktop\ing1\algo\monopoly-2021-2022-gaiamartin\test\dés.c
+
+1641601433 source:c:\users\gaiab\desktop\ing1\algo\monopoly-2021-2022-gaiamartin\test\gotoligcol.c
+	<stdio.h>
+	<stdlib.h>
+	<windows.h>
+
+1641609365 source:c:\users\gaiab\desktop\ing1\algo\monopoly-2021-2022-gaiamartin\test\cartes.c
+	<stdio.h>
+	<stdlib.h>
+	<time.h>
+
+1641601546 source:c:\users\gaiab\desktop\ing1\algo\monopoly-2021-2022-gaiamartin\test\case4.c
+	<stdio.h>
+	<stdlib.h>
+
+1641613662 source:c:\users\gaiab\desktop\ing1\algo\monopoly-2021-2022-gaiamartin\test\menu.c
+	<stdio.h>
+	<stdlib.h>
+	"bibi_Monopoly.h"
+
+1641652510 source:c:\users\gaiab\desktop\ing1\algo\monopoly-2021-2022-gaiamartin\test\optioncases.c
+	<stdlib.h>
+	<string.h>
+	<stdio.h>
+	<stdbool.h>
+
