@@ -385,14 +385,14 @@ struct joueur j1, j2, j3, j4, j5, j6, s2, s3, s4, s5, s6 ;*/
     int n;
     int numMaison;
     printf("\n");
-    printf("\n=====| OPTIONS CASES |=====\n"
-           "Que souhaitez vous faire ?\n"
-           "1/ Consulter les proprietes d une case\n"
-           "2/ Acheter une propriete\n"
-           "3/ Acheter une maison\n"
-           "4/ Acheter un hotel\n"
-           "5/ Hypothequer une propriete\n"
-           "6/ Retourner a la partie\n");
+    printf("***********Que souhaitez vous faire ?************\n"
+           "*   1/ Consulter les proprietes d une case      *\n"
+           "*   2/ Acheter une propriete                    *\n"
+           "*   3/ Acheter une maison                       *\n"
+           "*   4/ Acheter un hotel                         *\n"
+           "*   5/ Hypothequer une propriete                *\n"
+           "*   6/ Retourner a la partie                    *\n"
+           "*************************************************\n");
 
     fflush(stdin);
     scanf("%d", &choix1);
