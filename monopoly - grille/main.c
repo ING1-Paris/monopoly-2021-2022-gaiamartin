@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <windows.h>
 
-void gotoligcol( int lig, int col )
+void gotoligcol( int lig, int col ) //fonction fournie sur Campus pour déplacer le curseur sur la console à la ligne lig et à la colonne col
 {
     COORD mycoord;
     mycoord.X = col;
@@ -10,7 +10,7 @@ void gotoligcol( int lig, int col )
     SetConsoleCursorPosition( GetStdHandle( STD_OUTPUT_HANDLE ), mycoord );
 }
 
-void Color(int couleurDuTexte,int couleurDeFond)
+void Color(int couleurDuTexte,int couleurDeFond) //fonction fournie sur Campus pour changer la couleur du texte dans la console et la couleur du fond pour la ligne
 {
     HANDLE H=GetStdHandle(STD_OUTPUT_HANDLE);
     SetConsoleTextAttribute(H,couleurDeFond*16+couleurDuTexte);
@@ -19,7 +19,8 @@ void Color(int couleurDuTexte,int couleurDeFond)
 int main()
 {
     int i=0, j=0;
-    gotoligcol(1,5); //afficher les numéros
+    //affichage des numéros avec la fonction gotoligcol
+    gotoligcol(1,5); //aller à la ligne 1 et à la  colonne 15
     for (i=15; i<23; i++)
     {
         printf("%d", i);
@@ -56,7 +57,8 @@ int main()
     gotoligcol(32,78);
     printf("28");
     gotoligcol(0,0);
-    for (i=0; i<2; i++) //afficher les lignes
+    //afficher les lignes de la grille
+    for (i=0; i<2; i++)
     {
         for (j=0; j<80; j++)
         {
@@ -107,7 +109,8 @@ int main()
             printf("%c", 0xC4);
         }
     }
-    for (i=0; i<3; i++)//afficher les colonnes
+    //afficher les colonnes de la grille
+    for (i=0; i<3; i++)
     {
        for (j=1; j<40; j++)
         {
@@ -155,7 +158,8 @@ int main()
             printf("%c", 0xB3);
         }
     }
-    gotoligcol(0,0); //harmoniser les jonctions
+    //harmoniser les jonctions avec des caractères de la table ASCII
+    gotoligcol(0,0);
     printf("%c", 0xDA);
     gotoligcol(0,80);
     printf("%c", 0xBF);
@@ -265,6 +269,8 @@ int main()
     printf("%c", 0xC1);
     gotoligcol(40,70);
     printf("%c", 0xC1);
+    //colorier le dessus des cases achetables
+    //en rouge
     Color(4,4);
     gotoligcol(36,61);
     printf("         ");
@@ -272,6 +278,7 @@ int main()
     printf("         ");
     gotoligcol(36,11);
     printf("         ");
+    // en rose
     Color(13,13);
     gotoligcol(4,11);
     printf("         ");
@@ -281,6 +288,7 @@ int main()
     printf("         ");
     gotoligcol(4,61);
     printf("         ");
+    //en bleu du cote gauche
     Color(3,3);
     for (i=6; i<10; i++)
     {
@@ -302,6 +310,7 @@ int main()
         gotoligcol(i,8);
         printf("  ");
     }
+    //en turquoise du cote droit
     Color(11,11);
     for (i=6; i<10; i++)
     {
@@ -323,6 +332,7 @@ int main()
         gotoligcol(i,71);
         printf("  ");
     }
+    //en vert pour les gares
     Color(10,10);
     gotoligcol(4,41);
     printf("         ");
@@ -338,10 +348,11 @@ int main()
         gotoligcol(i,8);
         printf("  ");
     }
+    //remise en écriture blanche sur fond noir
     Color(15,0);
     gotoligcol(36,74);
     printf("GO!");
-    gotoligcol(40,0);
-    printf("\n\n\n\n");
+    gotoligcol(42,0);
+    printf("\n\n\n\n");*/
     return 0;
 }
