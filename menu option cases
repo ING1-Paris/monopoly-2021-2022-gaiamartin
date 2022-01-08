@@ -29,7 +29,7 @@
 
     }propriete;
 
-    propriete p[27];
+    propriete p[28];
 
 int optionCase( char nom[8], int position, int argent){
     int k;
