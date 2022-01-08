@@ -21,7 +21,7 @@ void menuJoueur(){
 
 int main() 
 {
-   if ((j[k].argent) >= (p[j[k].position].prix))
+   if ((j[k].argent) >= (p[j[k].position].prix))            //On verifie que le joueur a l'argent nécéssaire pour acheter la propriété
     {
         j[k].argent -= p[j[k].position].prix;
         strcpy(p[j[k].position].proprio, j[k].nom);
@@ -49,7 +49,7 @@ if (choix='q'){
 }
 while(propH=0){
     for (i=0; i<28; i++){
-        if (choix[i].nom=choix){
+        if (choix[i].nom=choix){                //On verifie que la saisi corresponde a une propriété
         i=propH;
         }
     else{
