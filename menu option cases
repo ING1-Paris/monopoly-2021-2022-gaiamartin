@@ -32,7 +32,6 @@
     propriete p[27];
 
 int optionCase( char nom[8], int position, int argent){
-
     int k;
     k = position;
     char banque = "banque";
@@ -363,6 +362,8 @@ int optionCase( char nom[8], int position, int argent){
     p[27].hypo=false;
     p[27].nbMaison=0;
 
+    printf("salut");
+
 ////////////////////////////////////////////////////////////////
 typedef struct joueur{
                 char nom[14];
@@ -407,299 +408,39 @@ struct joueur startPlayer;
         printf("Quelle case souhaitez vous consulter?\n");
         fflush(stdin);
         scanf("%d", &voir);
-        if (voir == 1)
+        if ((voir == 1)||(voir == 4)||(voir == 6)||(voir == 8)||(voir == 12)||(voir == 15)||(voir == 17)||(voir == 22)||(voir == 24))
         {
-            printf("nom: %s\n", p[0].nom);
+            printf("nom: %s\n", p[voir].nom);
         }
-        else if (voir == 2)
+        else if ((voir == 2)||(voir == 3)||(voir == 7)||(voir == 9)||(voir == 10)||(voir == 13)||(voir == 14)||(voir == 16)||(voir == 18)||(voir == 20)||(voir == 21)||(voir == 23)||(voir == 25)||(voir == 27)||(voir == 28))
         {
-            printf("nom: %s\n", p[1].nom);
-            printf("prix: %d\n", p[1].prix);
-            printf("hypotheque: %d\n", p[1].hypotheque);
-            printf("proprietaire: %s\n", p[1].proprio);
-            printf("prix maison a l unite: %d\n", p[1].maison);
-            printf("prix hotel a l unite: %d\n", p[1].hotel);
-            printf("loyer 0 maisons: %d\n", p[1].loyer0M);
-            printf("loyer 1 maison: %d\n", p[1].loyer1M);
-            printf("loyer 2 maisons: %d\n", p[1].loyer2M);
-            printf("loyer 3 maisons: %d\n", p[1].loyer3M);
-            printf("loyer 4 maisons: %d\n", p[1].loyer4M);
-            printf("loyer 1 hotel: %d\n", p[1].loyer1H);
+            printf("nom: %s\n", p[voir].nom);
+            printf("prix: %d\n", p[voir].prix);
+            printf("hypotheque: %d\n", p[voir].hypotheque);
+            printf("proprietaire: %s\n", p[voir].proprio);
+            printf("prix maison a l unite: %d\n", p[voir].maison);
+            printf("prix hotel a l unite: %d\n", p[voir].hotel);
+            printf("loyer 0 maisons: %d\n", p[voir].loyer0M);
+            printf("loyer 1 maison: %d\n", p[voir].loyer1M);
+            printf("loyer 2 maisons: %d\n", p[voir].loyer2M);
+            printf("loyer 3 maisons: %d\n", p[voir].loyer3M);
+            printf("loyer 4 maisons: %d\n", p[voir].loyer4M);
+            printf("loyer 1 hotel: %d\n", p[voir].loyer1H);
         }
-        else if (voir == 3)
+
+
+        else if ((voir == 5)||(voir == 11)||(voir == 19)||(voir == 26))
         {
-            printf("nom: %s\n", p[2].nom);
-            printf("prix: %d\n", p[2].prix);
-            printf("hypotheque: %d\n", p[2].hypotheque);
-            printf("proprietaire: %s\n", p[2].proprio);
-            printf("prix maison a l unite: %d\n", p[2].maison);
-            printf("prix hotel a l unite: %d\n", p[2].hotel);
-            printf("loyer 0 maisons: %d\n", p[2].loyer0M);
-            printf("loyer 1 maison: %d\n", p[2].loyer1M);
-            printf("loyer 2 maisons: %d\n", p[2].loyer2M);
-            printf("loyer 3 maisons: %d\n", p[2].loyer3M);
-            printf("loyer 4 maisons: %d\n", p[2].loyer4M);
-            printf("loyer 1 hotel: %d\n", p[2].loyer1H);
+            printf("nom: %s", p[voir].nom);
+            printf("prix: %d", p[voir].prix);
+            printf("hypotheque: %d", p[voir].hypotheque);
+            printf("proprietaire: %s", p[voir].proprio);
         }
-        else if (voir == 4)
-        {
-           printf("nom: %s\n", p[3].nom);
-        }
-        else if (voir == 5)
-        {
-            printf("nom: %s", p[4].nom);
-            printf("prix: %d", p[4].prix);
-            printf("hypotheque: %d", p[4].hypotheque);
-            printf("proprietaire: %s", p[4].proprio);
-        }
-        else if (voir == 6)
-        {
-            printf("nom: %s", p[5].nom);
-        }
-        else if (voir == 7)
-        {
-            printf("nom: %s\n", p[6].nom);
-            printf("prix: %d\n", p[6].prix);
-            printf("hypotheque: %d\n", p[6].hypotheque);
-            printf("proprietaire: %s\n", p[6].proprio);
-            printf("prix maison a l unite: %d\n", p[6].maison);
-            printf("prix hotel a l unite: %d\n", p[6].hotel);
-            printf("loyer 0 maisons: %d\n", p[6].loyer0M);
-            printf("loyer 1 maison: %d\n", p[6].loyer1M);
-            printf("loyer 2 maisons: %d\n", p[6].loyer2M);
-            printf("loyer 3 maisons: %d\n", p[6].loyer3M);
-            printf("loyer 4 maisons: %d\n", p[6].loyer4M);
-            printf("loyer 1 hotel: %d\n", p[6].loyer1H);
-        }
-        else if (voir == 8)
-        {
-           printf("nom: %s", p[7].nom);
-        }
-        else if (voir == 9)
-        {
-            printf("nom: %s\n", p[8].nom);
-            printf("prix: %d\n", p[8].prix);
-            printf("hypotheque: %d\n", p[8].hypotheque);
-            printf("proprietaire: %s\n", p[8].proprio);
-            printf("prix maison a l unite: %d\n", p[8].maison);
-            printf("prix hotel a l unite: %d\n", p[8].hotel);
-            printf("loyer 0 maisons: %d\n", p[8].loyer0M);
-            printf("loyer 1 maison: %d\n", p[8].loyer1M);
-            printf("loyer 2 maisons: %d\n", p[8].loyer2M);
-            printf("loyer 3 maisons: %d\n", p[8].loyer3M);
-            printf("loyer 4 maisons: %d\n", p[8].loyer4M);
-            printf("loyer 1 hotel: %d\n", p[8].loyer1H);
-        }
-        else if (voir == 10)
-        {
-            printf("nom: %s\n", p[9].nom);
-            printf("prix: %d\n", p[9].prix);
-            printf("hypotheque: %d\n", p[9].hypotheque);
-            printf("proprietaire: %s\n", p[9].proprio);
-            printf("prix maison a l unite: %d\n", p[9].maison);
-            printf("prix hotel a l unite: %d\n", p[9].hotel);
-            printf("loyer 0 maisons: %d\n", p[9].loyer0M);
-            printf("loyer 1 maison: %d\n", p[9].loyer1M);
-            printf("loyer 2 maisons: %d\n", p[9].loyer2M);
-            printf("loyer 3 maisons: %d\n", p[9].loyer3M);
-            printf("loyer 4 maisons: %d\n", p[9].loyer4M);
-            printf("loyer 1 hotel: %d\n", p[9].loyer1H);
-        }
-        else if (voir == 11)
-        {
-            printf("nom: %s", p[10].nom);
-            printf("prix: %d", p[10].prix);
-            printf("hypotheque: %d", p[10].hypotheque);
-            printf("proprietaire: %s", p[10].proprio);
-        }
-        else if (voir == 12)
-        {
-            printf("nom: %s\n", p[11].nom);
-        }
-        else if (voir == 13)
-        {
-            printf("nom: %s\n", p[12].nom);
-            printf("prix: %d\n", p[12].prix);
-            printf("hypotheque: %d\n", p[12].hypotheque);
-            printf("proprietaire: %s\n", p[12].proprio);
-            printf("prix maison a l unite: %d\n", p[12].maison);
-            printf("prix hotel a l unite: %d\n", p[12].hotel);
-            printf("loyer 0 maisons: %d\n", p[12].loyer0M);
-            printf("loyer 1 maison: %d\n", p[12].loyer1M);
-            printf("loyer 2 maisons: %d\n", p[12].loyer2M);
-            printf("loyer 3 maisons: %d\n", p[12].loyer3M);
-            printf("loyer 4 maisons: %d\n", p[12].loyer4M);
-            printf("loyer 1 hotel: %d\n", p[12].loyer1H);
-        }
-        else if (voir == 14)
-        {
-            printf("nom: %s\n", p[13].nom);
-            printf("prix: %d\n", p[13].prix);
-            printf("hypotheque: %d\n", p[13].hypotheque);
-            printf("proprietaire: %s\n", p[13].proprio);
-            printf("prix maison a l unite: %d\n", p[13].maison);
-            printf("prix hotel a l unite: %d\n", p[13].hotel);
-            printf("loyer 0 maisons: %d\n", p[13].loyer0M);
-            printf("loyer 1 maison: %d\n", p[13].loyer1M);
-            printf("loyer 2 maisons: %d\n", p[13].loyer2M);
-            printf("loyer 3 maisons: %d\n", p[13].loyer3M);
-            printf("loyer 4 maisons: %d\n", p[13].loyer4M);
-            printf("loyer 1 hotel: %d\n", p[13].loyer1H);
-        }
-        else if (voir == 15)
-        {
-            printf("nom: %s\n", p[14].nom);
-        }
-        else if (voir == 16)
-        {
-            printf("nom: %s\n", p[15].nom);
-            printf("prix: %d\n", p[15].prix);
-            printf("hypotheque: %d\n", p[15].hypotheque);
-            printf("proprietaire: %s\n", p[15].proprio);
-            printf("prix maison a l unite: %d\n", p[15].maison);
-            printf("prix hotel a l unite: %d\n", p[15].hotel);
-            printf("loyer 0 maisons: %d\n", p[15].loyer0M);
-            printf("loyer 1 maison: %d\n", p[15].loyer1M);
-            printf("loyer 2 maisons: %d\n", p[15].loyer2M);
-            printf("loyer 3 maisons: %d\n", p[15].loyer3M);
-            printf("loyer 4 maisons: %d\n", p[15].loyer4M);
-            printf("loyer 1 hotel: %d\n", p[15].loyer1H);
-        }
-        else if (voir == 17)
-        {
-            printf("nom: %s\n", p[16].nom);
-        }
-        else if (voir == 18)
-        {
-            printf("nom: %s\n", p[17].nom);
-            printf("prix: %d\n", p[17].prix);
-            printf("hypotheque: %d\n", p[17].hypotheque);
-            printf("proprietaire: %s\n", p[17].proprio);
-            printf("prix maison a l unite: %d\n", p[17].maison);
-            printf("prix hotel a l unite: %d\n", p[17].hotel);
-            printf("loyer 0 maisons: %d\n", p[17].loyer0M);
-            printf("loyer 1 maison: %d\n", p[17].loyer1M);
-            printf("loyer 2 maisons: %d\n", p[17].loyer2M);
-            printf("loyer 3 maisons: %d\n", p[17].loyer3M);
-            printf("loyer 4 maisons: %d\n", p[17].loyer4M);
-            printf("loyer 1 hotel: %d\n", p[17].loyer1H);
-        }
-        else if (voir == 19)
-        {
-            printf("nom: %s", p[18].nom);
-            printf("prix: %d", p[18].prix);
-            printf("hypotheque: %d", p[18].hypotheque);
-            printf("proprietaire: %s", p[18].proprio);
-        }
-        else if (voir == 20)
-        {
-           printf("nom: %s\n", p[19].nom);
-            printf("prix: %d\n", p[19].prix);
-            printf("hypotheque: %d\n", p[19].hypotheque);
-            printf("proprietaire: %s\n", p[19].proprio);
-            printf("prix maison a l unite: %d\n", p[19].maison);
-            printf("prix hotel a l unite: %d\n", p[19].hotel);
-            printf("loyer 0 maisons: %d\n", p[19].loyer0M);
-            printf("loyer 1 maison: %d\n", p[19].loyer1M);
-            printf("loyer 2 maisons: %d\n", p[19].loyer2M);
-            printf("loyer 3 maisons: %d\n", p[19].loyer3M);
-            printf("loyer 4 maisons: %d\n", p[19].loyer4M);
-            printf("loyer 1 hotel: %d\n", p[19].loyer1H);
-        }
-        else if (voir == 21)
-        {
-            printf("nom: %s\n", p[20].nom);
-            printf("prix: %d\n", p[20].prix);
-            printf("hypotheque: %d\n", p[20].hypotheque);
-            printf("proprietaire: %s\n", p[20].proprio);
-            printf("prix maison a l unite: %d\n", p[20].maison);
-            printf("prix hotel a l unite: %d\n", p[20].hotel);
-            printf("loyer 0 maisons: %d\n", p[20].loyer0M);
-            printf("loyer 1 maison: %d\n", p[20].loyer1M);
-            printf("loyer 2 maisons: %d\n", p[20].loyer2M);
-            printf("loyer 3 maisons: %d\n", p[20].loyer3M);
-            printf("loyer 4 maisons: %d\n", p[20].loyer4M);
-            printf("loyer 1 hotel: %d\n", p[20].loyer1H);
-        }
-        else if (voir == 22)
-        {
-            printf("nom: %s\n", p[21].nom);
-        }
-        else if (voir == 23)
-        {
-            printf("nom: %s\n", p[23].nom);
-            printf("prix: %d\n", p[23].prix);
-            printf("hypotheque: %d\n", p[23].hypotheque);
-            printf("proprietaire: %s\n", p[23].proprio);
-            printf("prix maison a l unite: %d\n", p[23].maison);
-            printf("prix hotel a l unite: %d\n", p[23].hotel);
-            printf("loyer 0 maisons: %d\n", p[23].loyer0M);
-            printf("loyer 1 maison: %d\n", p[23].loyer1M);
-            printf("loyer 2 maisons: %d\n", p[23].loyer2M);
-            printf("loyer 3 maisons: %d\n", p[23].loyer3M);
-            printf("loyer 4 maisons: %d\n", p[23].loyer4M);
-            printf("loyer 1 hotel: %d\n", p[23].loyer1H);
-        }
-        else if (voir == 24)
-        {
-            printf("nom: %s\n", p[22].nom);
-        }
-        else if (voir == 25)
-        {
-            printf("nom: %s\n", p[24].nom);
-            printf("prix: %d\n", p[24].prix);
-            printf("hypotheque: %d\n", p[24].hypotheque);
-            printf("proprietaire: %s\n", p[24].proprio);
-            printf("prix maison a l unite: %d\n", p[24].maison);
-            printf("prix hotel a l unite: %d\n", p[24].hotel);
-            printf("loyer 0 maisons: %d\n", p[24].loyer0M);
-            printf("loyer 1 maison: %d\n", p[24].loyer1M);
-            printf("loyer 2 maisons: %d\n", p[24].loyer2M);
-            printf("loyer 3 maisons: %d\n", p[24].loyer3M);
-            printf("loyer 4 maisons: %d\n", p[24].loyer4M);
-            printf("loyer 1 hotel: %d\n", p[24].loyer1H);
-        }
-        else if (voir == 26)
-        {
-            printf("nom: %s", p[25].nom);
-            printf("prix: %d", p[25].prix);
-            printf("hypotheque: %d", p[25].hypotheque);
-            printf("proprietaire: %s", p[25].proprio);
-        }
-        else if (voir == 27)
-        {
-            printf("nom: %s\n", p[26].nom);
-            printf("prix: %d\n", p[26].prix);
-            printf("hypotheque: %d\n", p[26].hypotheque);
-            printf("proprietaire: %s\n", p[26].proprio);
-            printf("prix maison a l unite: %d\n", p[26].maison);
-            printf("prix hotel a l unite: %d\n", p[26].hotel);
-            printf("loyer 0 maisons: %d\n", p[26].loyer0M);
-            printf("loyer 1 maison: %d\n", p[26].loyer1M);
-            printf("loyer 2 maisons: %d\n", p[26].loyer2M);
-            printf("loyer 3 maisons: %d\n", p[26].loyer3M);
-            printf("loyer 4 maisons: %d\n", p[26].loyer4M);
-            printf("loyer 1 hotel: %d\n", p[26].loyer1H);
-        }
-        else if (voir == 28)
-        {
-            printf("nom: %s\n", p[27].nom);
-            printf("prix: %d\n", p[27].prix);
-            printf("hypotheque: %d\n", p[27].hypotheque);
-            printf("proprietaire: %s\n", p[27].proprio);
-            printf("prix maison a l unite: %d\n", p[27].maison);
-            printf("prix hotel a l unite: %d\n", p[27].hotel);
-            printf("loyer 0 maisons: %d\n", p[27].loyer0M);
-            printf("loyer 1 maison: %d\n", p[27].loyer1M);
-            printf("loyer 2 maisons: %d\n", p[27].loyer2M);
-            printf("loyer 3 maisons: %d\n", p[27].loyer3M);
-            printf("loyer 4 maisons: %d\n", p[27].loyer4M);
-            printf("loyer 1 hotel: %d\n", p[27].loyer1H);
-        }
+
         else
         {
             printf("ERREUR : CETTE CASE N EXISTE PAS");
-            blindage();
+            int optionCase( nom, position, argent);
         }
         optionCase(nom, position, argent);
         //break;
