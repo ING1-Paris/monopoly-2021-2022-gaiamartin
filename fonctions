@@ -67,7 +67,7 @@ else if (p[propH].nbMaison!=0){
 }
 else{
     p[propH.hypo=true];
-    printf("La propriete %c est hypothequee, vous revevez %d!/n", p[propH].nom, p[propH].hypotheque);
+    printf("La propriete %s est hypothequee, vous revevez %s!/n", p[propH].nom, p[propH].hypotheque);
     //joueur[].argent=+p[propH].hypotheque;
 }
 
