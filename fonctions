@@ -47,15 +47,14 @@ int i=0;
 if (choix='q'){
     return;
 }
-while(propH=0){
     for (i=0; i<28; i++){
-        if (choix[i].nom=choix){                //On verifie que la saisi corresponde a une propriété
+        if (p[i].nom=choix){                //On verifie que la saisi corresponde a une propriété
         i=propH;
         }
     else{
         printf("Cette propriete n existe pas, veuillez ressayer/n");
     }
-    }
+    
 }
 if (p[propH].proprio!=//joueur){
     printf("Cette propriete ne vous appartient pas !/n");
