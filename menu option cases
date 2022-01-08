@@ -9,7 +9,12 @@
 #define false 0
 
  //DECLARATION STRUCTURES DES CASES DU JEU
-   typedef struct cases
+    //Nous avons décidé d'utiliser des structures dans notre code puisque cette mise en forme permet
+    //de réduire le nombre de lignes
+    //de code et de le simplifier.
+    //Ainsi, nos données sont accessibles sous une meme variable malgré qu'elle ne soient pas de même type
+    
+   typedef struct cases//initialisation structure cases
     {
         int num;
         char nom[50];
@@ -365,6 +370,7 @@ int optionCase( char nom[8], int position, int argent){
     printf("salut");
 
 ////////////////////////////////////////////////////////////////
+//initialisation structure joueur
 typedef struct joueur{
                 char nom[14];
                 int argent;
@@ -403,14 +409,14 @@ struct joueur startPlayer;
 
     /*switch(choix1)
     {
-    case(1):*/
+    case(1): //si l'on choisit de consulter les propriétés d'une case
     if (choix1 == 1){
         printf("Quelle case souhaitez vous consulter?\n");
         fflush(stdin);
         scanf("%d", &voir);
         if ((voir == 1)||(voir == 4)||(voir == 6)||(voir == 8)||(voir == 12)||(voir == 15)||(voir == 17)||(voir == 22)||(voir == 24))
         {
-            printf("nom: %s\n", p[voir].nom);
+            printf("nom: %s\n", p[voir].nom); //case départ, impot sur le revenu, parc gratuit, chance, caisse de communauté
         }
         else if ((voir == 2)||(voir == 3)||(voir == 7)||(voir == 9)||(voir == 10)||(voir == 13)||(voir == 14)||(voir == 16)||(voir == 18)||(voir == 20)||(voir == 21)||(voir == 23)||(voir == 25)||(voir == 27)||(voir == 28))
         {
@@ -425,7 +431,7 @@ struct joueur startPlayer;
             printf("loyer 2 maisons: %d\n", p[voir].loyer2M);
             printf("loyer 3 maisons: %d\n", p[voir].loyer3M);
             printf("loyer 4 maisons: %d\n", p[voir].loyer4M);
-            printf("loyer 1 hotel: %d\n", p[voir].loyer1H);
+            printf("loyer 1 hotel: %d\n", p[voir].loyer1H); //propriétés achetables
         }
 
 
@@ -434,7 +440,7 @@ struct joueur startPlayer;
             printf("nom: %s", p[voir].nom);
             printf("prix: %d", p[voir].prix);
             printf("hypotheque: %d", p[voir].hypotheque);
-            printf("proprietaire: %s", p[voir].proprio);
+            printf("proprietaire: %s", p[voir].proprio); //gares achetables
         }
 
         else
@@ -445,7 +451,7 @@ struct joueur startPlayer;
         optionCase(nom, position, argent);
         //break;
         }
-        //case(2):
+        //case(2)://si l'on choisit d'acheter une propriété
         if (choix1 ==2){
             if ((p[k].num != 1)||(p[k].num != 4)||(p[k].num != 6)||(p[k].num != 8)||(p[k].num != 12)||(p[k].num != 15)||(p[k].num != 17)||(p[k].num != 22)||(p[k].num != 24))
             {
@@ -475,46 +481,45 @@ struct joueur startPlayer;
         optionCase(nom, position, argent);
         //break;
         }
-        //case(3):
+        //case(3): //si l'on choisit d'acheter une maison
         if (choix1 == 3){
             printf("Sur quel numero de case souhaitez vous placer la maison?\n");
             fflush(stdin);
             scanf("%d", &numMaison);
             printf("%s\n", p[k].proprio);
-            if (p[k].proprio == nom)
+            if (p[k].proprio == nom) //on vérifie que le joueur possède bien la propriété
             {
-                if ((argent) >= (p[numMaison].prix)){
-                    argent -= p[numMaison].prix;
+                if ((argent) >= (p[numMaison].prix)){ //on vérifie que le joueur peut acheter la maison
+                    argent -= p[numMaison].prix; //on met à jour le solde du joueur
                     strcpy(p[numMaison].proprio, nom);
                     printf("Transaction effectuee !\n");
                     printf("%s possede desormais %s\n", nom, p[numMaison].nom);
                 }
-                else
+                else //si le joueur ne possède pas assez d'argent
                 {
                     printf("Vous n'avez pas assez d'argent pour effectuer cette transaction !\n");
                     return 0;
                 }
             }
-            else
+            else //si le joueur ne possède pas la propriété
                 printf("Vous ne pouvez pas acheter de maison sur cette propriete car elle ne vous appartient pas\n");
         optionCase(nom, position, argent);
         //break;
         }
-        /*case(4):
-            //
+        /*case(4)://si l'on choisit d'acheter un hotel
         break;
-        case(5):
+        case(5)://si l'on choisit d'hypothéquer une propriété
             printf("Quelle case souhaitez vous hypothequer?\n");
             fflush(stdin);
             scanf("%d", &choix2);
             //fctnHypotheque(nom, position, argent, nbJoueurs);
             optionCase(j2.nom, j2.position, j2.argent);
         break;
-        case(6):
+        case(6)://si l'on choisit de retourner à la partie
            // fctnJeu(nom, position, argent, nbJoueurs);
         break;
         default:
             printf("ERREUR\n");
             optionCase(j2.nom, j2.position, j2.argent);
-    }*/
+    }
 }
