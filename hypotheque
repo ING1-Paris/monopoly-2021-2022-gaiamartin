@@ -1,0 +1,490 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    //DECLARATION STRUCTURES DES CASES DU JEU
+   typedef struct cases
+    {
+        int num;
+        char nom[50];
+        int prix;
+        int hypotheque;
+        char proprio[50];
+        int maison;
+        int hotel;
+        int loyer0M;
+        int loyer1M;
+        int loyer2M;
+        int loyer3M;
+        int loyer4M;
+        int loyer1H;
+        int nbMaison;
+        int nbHotel;
+
+    }propriete;
+
+    struct cases p[27];
+
+        typedef struct cases//initialisation structure cases
+        {
+            int num;
+            char nom[50];
+            int prix;
+            int hypotheque;
+            char proprio[50];
+            int maison;
+            int hotel;
+            int loyer0M;
+            int loyer1M;
+            int loyer2M;
+            int loyer3M;
+            int loyer4M;
+            int loyer1H;
+            bool hypo;
+            int nbMaison;
+            int nbHotel;
+
+        }propriete;
+
+        propriete p[28];
+
+
+        int optionCase(char nom[8], int position, int argent){
+        int k;
+        k = position;
+        char banque = "banque";
+
+        //case 1
+        p[1].num=1;
+        strcpy(p[1].nom, "Case depart");
+        p[1].prix=0;
+
+        //case 2
+        p[2].num=2;
+        strcpy(p[2].nom, "Avenue du Marechal Gueule de Bois");
+        p[2].prix=60;
+        p[2].hypotheque=30;
+        strcpy(p[2].proprio, "Banque");
+        p[2].maison=50;
+        p[2].hotel=100;
+        p[2].loyer0M=2;
+        p[2].loyer1M=10;
+        p[2].loyer2M=30;
+        p[2].loyer3M=90;
+        p[2].loyer4M=160;
+        p[2].loyer1H=250;
+        p[2].hypo=false;
+        p[2].nbMaison=0;
+        p[2].nbHotel=0;
+
+        //case 3
+        p[3].num=3;
+        strcpy(p[3].nom, "Boulevard des Millesimes");
+        p[3].prix=60;
+        p[3].hypotheque=30;
+        strcpy(p[3].proprio, "Banque");
+        p[3].maison=50;
+        p[3].hotel=100;
+        p[3].loyer0M=4;
+        p[3].loyer1M=20;
+        p[3].loyer2M=60;
+        p[3].loyer3M=180;
+        p[3].loyer4M=320;
+        p[3].loyer1H=450;
+        p[3].hypo=false;
+        p[3].nbMaison=0;
+        p[3].nbHotel=0;
+
+        //case 4;
+        p[4].num=4;
+        strcpy(p[4].nom, "Impot sur le revenu");
+
+        //case 5
+        p[5].num=5;
+        strcpy(p[5].nom, "Gare de la sante");
+        p[5].prix=200;
+        p[5].hypotheque=100;
+        strcpy(p[5].proprio, "Banque");
+        p[5].hypo=false;
+
+        //case 6
+        p[6].num=6;
+        strcpy(p[6].nom, "Chance");
+
+        //case 7
+        p[7].num=7;
+        strcpy(p[7].nom, "Allee du Champagne");
+        p[7].prix=120;
+        p[7].hypotheque=60;
+        strcpy(p[7].proprio, "Banque");
+        p[7].maison=50;
+        p[7].hotel=100;
+        p[7].loyer0M=6;
+        p[7].loyer1M=30;
+        p[7].loyer2M=90;
+        p[7].loyer3M=2700;
+        p[7].loyer4M=400;
+        p[7].loyer1H=550;
+        p[7].hypo=false;
+        p[7].nbMaison=0;
+        p[7].nbHotel=0;
+
+        //case 8
+        p[8].num=8;
+        strcpy(p[8].nom, "Aller en prison");
+
+        //case 9
+        p[9].num=9;
+        strcpy(p[9].nom, "Avenue de la Bonaventure");
+        p[9].prix=140;
+        p[9].hypotheque=70;
+        strcpy(p[9].proprio, "Banque");
+        p[9].maison=100;
+        p[9].hotel=200;
+        p[9].loyer0M=8;
+        p[9].loyer1M=40;
+        p[9].loyer2M=100;
+        p[9].loyer3M=300;
+        p[9].loyer4M=450;
+        p[9].loyer1H=600;
+        p[9].hypo=false;
+        p[9].nbMaison=0;
+        p[9].nbHotel=0;
+
+        //case 10
+        p[10].num=10;
+        strcpy(p[10].nom, "Passage du Bisou de Minuit");
+        p[10].prix=160;
+        p[10].hypotheque=80;
+        strcpy(p[10].proprio, "Banque");
+        p[10].maison=100;
+        p[10].hotel=200;
+        p[10].loyer0M=10;
+        p[10].loyer1M=50;
+        p[10].loyer2M=150;
+        p[10].loyer3M=450;
+        p[10].loyer4M=625;
+        p[10].loyer1H=750;
+        p[10].hypo=false;
+        p[10].nbMaison=0;
+        p[10].nbHotel=0;
+
+        //case 11
+        p[11].num=11;
+        strcpy(p[11].nom, "Gare de l amour");
+        p[11].prix=200;
+        p[11].hypotheque=100;
+        strcpy(p[11].proprio, "Banque");
+        p[11].hypo=false;
+
+
+        //case 12
+        p[12].num=12;
+        strcpy(p[12].nom, "Caisse de communaute");
+
+        //case 13
+        p[13].num=13;
+        strcpy(p[13].nom, "Boulevard des Paillettes");
+        p[13].prix=180;
+        p[13].hypotheque=90;
+        strcpy(p[13].proprio, "Banque");
+        p[13].maison=100;
+        p[13].hotel=200;
+        p[13].loyer0M=12;
+        p[13].loyer1M=60;
+        p[13].loyer2M=180;
+        p[13].loyer3M=500;
+        p[13].loyer4M=700;
+        p[13].loyer1H=900;
+        p[13].hypo=false;
+        p[13].nbMaison=0;
+        p[13].nbHotel=0;
+
+        //case 14
+        p[14].num=14;
+        strcpy(p[14].nom, "Rue des meilleurs voeux");
+        p[14].prix=200;
+        p[14].hypotheque=100;
+        strcpy(p[14].proprio, "Banque");
+        p[14].maison=100;
+        p[14].hotel=200;
+        p[14].loyer0M=14;
+        p[14].loyer1M=70;
+        p[14].loyer2M=200;
+        p[14].loyer3M=550;
+        p[14].loyer4M=700;
+        p[14].loyer1H=950;
+        p[14].hypo=false;
+        p[14].nbMaison=0;
+        p[14].nbHotel=0;
+
+        //case 15
+        p[15].num=15;
+        strcpy(p[15].nom, "Stationnement gratuit");
+
+        //case 16
+        p[16].num=16;
+        strcpy(p[16].nom, "Boulevard des Resolutions");
+        p[16].prix=220;
+        p[16].hypotheque=110;
+        strcpy(p[16].proprio, "Banque");
+        p[16].maison=150;
+        p[16].hotel=300;
+        p[16].loyer0M=16;
+        p[16].loyer1M=80;
+        p[16].loyer2M=220;
+        p[16].loyer3M=600;
+        p[16].loyer4M=800;
+        p[16].loyer1H=1000;
+        p[16].hypo=false;
+        p[16].nbMaison=0;
+        p[16].nbHotel=0;
+
+        //case 17
+        p[17].num=17;
+        strcpy(p[17].nom, "Chance");
+
+        //case 18
+        p[18].num=18;
+        strcpy(p[18].nom, "Rue du Regime");
+        p[18].prix=240;
+        p[18].hypotheque=110;
+        strcpy(p[18].proprio, "Banque");
+        p[18].maison=150;
+        p[18].hotel=300;
+        p[18].loyer0M=18;
+        p[18].loyer1M=90;
+        p[18].loyer2M=250;
+        p[18].loyer3M=700;
+        p[18].loyer4M=975;
+        p[18].loyer1H=1050;
+        p[18].hypo=false;
+        p[18].nbMaison=0;
+        p[18].nbHotel=0;
+
+        //case 19
+        p[19].num=19;
+        strcpy(p[19].nom, "Gare de la fortune");
+        p[19].prix=200;
+        p[19].hypotheque=100;
+        strcpy(p[19].proprio, "Banque");
+        p[19].hypo=false;
+
+        //case 20
+        p[20].num=20;
+        strcpy(p[20].nom, "Allee du Changement");
+        p[20].prix=260;
+        p[20].hypotheque=130;
+        strcpy(p[20].proprio, "Banque");
+        p[20].maison=150;
+        p[20].hotel=300;
+        p[20].loyer0M=20;
+        p[20].loyer1M=100;
+        p[20].loyer2M=300;
+        p[20].loyer3M=750;
+        p[20].loyer4M=825;
+        p[20].loyer1H=1100;
+        p[20].hypo=false;
+        p[20].nbMaison=0;
+        p[20].nbHotel=0;
+
+        //case 21
+        p[21].num=21;
+        strcpy(p[21].nom, "Chemin de la sobriete");
+        p[21].prix=280;
+        p[21].hypotheque=140;
+        strcpy(p[21].proprio, "Banque");
+        p[21].maison=150;
+        p[21].hotel=300;
+        p[21].loyer0M=22;
+        p[21].loyer1M=110;
+        p[21].loyer2M=330;
+        p[21].loyer3M=800;
+        p[21].loyer4M=975;
+        p[21].loyer1H=1150;
+        p[21].hypo=false;
+        p[21].nbMaison=0;
+        p[21].nbHotel=0;
+
+        //case 22
+        p[22].num=22;
+        strcpy(p[22].nom, "Prison");
+
+        //case 23
+        p[23].num=23;
+        strcpy(p[23].nom, "Passage de la Nouvelle Annee");
+        p[23].prix=300;
+        p[23].hypotheque=150;
+        strcpy(p[23].proprio, banque);
+        p[23].maison=200;
+        p[23].hotel=400;
+        p[23].loyer0M=24;
+        p[23].loyer1M=120;
+        p[23].loyer2M=360;
+        p[23].loyer3M=850;
+        p[23].loyer4M=1025;
+        p[23].loyer1H=1200;
+        p[23].hypo=false;
+        p[23].nbMaison=0;
+        p[23].nbHotel=0;
+
+        //case 24
+        p[24].num=24;
+        strcpy(p[24].nom, "Caisse de communaute");
+
+        //case 25
+        p[25].num=25;
+        strcpy(p[25].nom, "Boulevard du Reveillon");
+        p[25].prix=320;
+        p[25].hypotheque=160;
+        strcpy(p[25].proprio, "Banque");
+        p[25].maison=200;
+        p[25].hotel=400;
+        p[25].loyer0M=28;
+        p[25].loyer1M=150;
+        p[25].loyer2M=450;
+        p[25].loyer3M=1000;
+        p[25].loyer4M=1200;
+        p[25].loyer1H=1400;
+        p[25].hypo=false;
+        p[25].nbMaison=0;
+        p[25].nbHotel=0;
+
+        //case 26
+        p[26].num=26;
+        strcpy(p[26].nom, "Gare de la chance");
+        p[26].prix=200;
+        p[26].hypotheque=100;
+        strcpy(p[26].proprio, "Banque");
+        p[26].hypo=false;
+
+
+        //case 27
+        p[27].num=27;
+        strcpy(p[27].nom, "Rue du Decompte");
+        p[27].prix=350;
+        p[27].hypotheque=125;
+        strcpy(p[27].proprio, "Banque");
+        p[27].maison=200;
+        p[27].hotel=400;
+        p[27].loyer0M=35;
+        p[27].loyer1M=175;
+        p[27].loyer2M=500;
+        p[27].loyer3M=1100;
+        p[27].loyer4M=1300;
+        p[27].loyer1H=1500;
+        p[27].hypo=false;
+        p[27].nbMaison=0;
+        p[27].nbHotel=0;
+
+        //case 28
+        p[28].num=28;
+        strcpy(p[28].nom, "Rue du Trente et Un");
+        p[28].prix=400;
+        p[28].hypotheque=200;
+        strcpy(p[28].proprio, "Banque");
+        p[28].maison=200;
+        p[28].hotel=400;
+        p[28].loyer0M=50;
+        p[28].loyer1M=200;
+        p[28].loyer2M=600;
+        p[28].loyer3M=1400;
+        p[28].loyer4M=1700;
+        p[28].loyer1H=2000;
+        p[28].hypo=false;
+        p[28].nbMaison=0;
+        p[28].nbHotel=0;
+
+ typedef struct joueur{
+                char nom[14];
+                int argent;
+                int casesBleues;
+                int casesRouges;
+                int casesJaunes;
+                int casesVertes;
+                int maisons;
+                int hotels;
+                int gares;
+                int position;
+                }joueur;
+
+struct joueur j[5];
+
+struct startPlayer;
+
+                system("cls");
+                printf("\n\n\n");
+                printf("***************************** noms des joueurs ************************************************************************\n\n");
+                printf("    VEUILLEZ SAISIR LES NOMS DES JOUEURS  : \n");
+
+                int i=1;
+                ////joueur 1//////////////////////////////////////////////////////////
+                printf("\n      Nom du joueur %d :    ",i);
+                fflush(stdin);
+                scanf("%s", &j[0].nom);
+                strncpy(j[0].nom, j[0].nom, 13);
+                i++;
+
+                ////joueur 2//////////////////////////////////////////////////////////
+                printf("\n      Nom du joueur %d :    ",i);
+                scanf("%s", &j[1].nom);
+
+                while(strcmp(j[0].nom,j[1].nom) == 0)
+                {
+                    printf("    \n      OUPS!\n      Ce nom est deja pris...\n\n");
+                    printf("\n      Nom du joueur %d :    ", i);
+                    fflush(stdin);
+                    scanf("%s",&j[1].nom);
+                     strncpy(j[1].nom, j[1].nom, 13);
+                }
+                i++;
+
+int choix;
+printf("Quelle propriete souhaitez vous hypothequer ? Taper 0 pour quitter\n");
+fflush(stdin);
+scanf("%d", &choix);
+int propH=0;
+int t=0;
+if (choix == 0)
+{
+    return;
+    //retour à la partie
+}
+for (t=0; t<28; t++)
+{
+    if (p[t].nom == choix)//On verifie que la saisie corresponde à une propriété
+    {
+        t=propH;
+    }
+    else
+    {
+        printf("Cette propriete n existe pas, veuillez reessayer\n");
+    }
+}
+
+if (p[propH].proprio != j1.nom) //on vérifie que la propriété appartienne au joueur
+{
+    printf("Cette propriete ne vous appartient pas !/n");
+}
+
+else if (p[propH].hypo == true) //on vérifie que la propriété ne soit pas déja hypothéquée
+{
+    printf("Cette propriete est deja hypothequee !/n");
+}
+
+else if (p[propH].nbMaison != 0) //on vérifie qu'il n'y ait pas de maisons sur la propriété
+{
+    printf("IMPOSSIBLE, enlevez les maisons pour hypothequer !/n");
+}
+
+else if (p[propH].nbHotel != 0) //on vérifie qu'il n'y ait pas d hotels sur la propriété
+{
+    printf("IMPOSSIBLE, enlevez les hotels pour hypothequer !/n");
+}
+
+else{
+    p[propH.hypo=true];
+    printf("La propriete %c est hypothequee, vous recevez %d du Banquier!/n", p[propH].nom, p[propH].hypotheque);
+    j1.argent += p[propH].hypotheque;
+}
