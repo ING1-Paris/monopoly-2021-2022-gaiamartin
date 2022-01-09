@@ -2,6 +2,8 @@
 #include <stdlib.h>
 
 int case4(){
+    system("cls");
+    printf("\n\n");
     printf("**************************************************** REGLES DU JEU ****************************************************\n\n");
     printf("    Le Monopoly est un jeu dans lequel chaque joueur dispose d une meme somme d argent initiale\n");
     printf("    et va tenter de monopoliser le marche immobilier d une ville, en ruinant progressivement ses adversaires...\n\n");

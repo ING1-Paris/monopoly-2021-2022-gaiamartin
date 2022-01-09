@@ -37,8 +37,41 @@
 		<Unit filename="CASE4 - regles du jeu.c">
 			<Option compilerVar="CC" />
 		</Unit>
+		<Unit filename="MENU.c">
+			<Option compilerVar="CC" />
+		</Unit>
 		<Unit filename="bibli_Monopoly.h" />
+		<Unit filename="blindage noms.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="cartes.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="dés.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="effacerCoteDroit.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="goto.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="grille.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="jeu.c">
+			<Option compilerVar="CC" />
+		</Unit>
 		<Unit filename="main.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="optionsCases.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="premierTour.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="prison.c">
 			<Option compilerVar="CC" />
 		</Unit>
 		<Extensions />
