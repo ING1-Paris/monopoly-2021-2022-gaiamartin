@@ -1,0 +1,262 @@
+#include <stdio.h>
+
+void case2()
+{
+
+int nbrsauv = 0;
+if (nbrsauv == 0)
+{
+    FILE* fichier1 = NULL ; // Initialisation fichier txt
+    fichier1 = fopen("./Sauvegardes/Fichiersauvegarde1.txt", "w");
+
+// Verification ouverture du fichier
+    if (fichier1 != NULL)
+    {
+        // Ouverture reussie : on peut lire et ecrire dans ce fichier
+        fputs("Sauvegarde 1 Monopoly :\n", fichier1);
+        fprintf(fichier1,"%d", nbJoueurs);
+        fprintf(fichier1,"% ", variable);
+        fprintf(fichier1,"%c", j1.nom);
+        fprintf(fichier1,"%c", j2.nom);
+        fprintf(fichier1,"%c", j3.nom);
+        fprintf(fichier1,"%c", j4.nom);
+        fprintf(fichier1,"%c", j5.nom);
+        fprintf(fichier1,"%c", j6.nom);
+        fprintf(fichier1,"%d", j1.position);
+        fprintf(fichier1,"%d", j2.position);
+        fprintf(fichier1,"%d", j3.position);
+        fprintf(fichier1,"%d", j4.position);
+        fprintf(fichier1,"%d", j5.position);
+        fprintf(fichier1,"%d", j6.position);
+        fprintf(fichier1,"%d", j1.nbProprietes);
+        fprintf(fichier1,"%d", j2.nbProprietes);
+        fprintf(fichier1,"%d", j3.nbProprietes);
+        fprintf(fichier1,"%d", j4.nbProprietes);
+        fprintf(fichier1,"%d", j5.nbProprietes);
+        fprintf(fichier1,"%d", j6.nbProprietes);
+        fprintf(fichier1,"%d", j1.Maisons);
+        fprintf(fichier1,"%d", j2.Maisons);
+        fprintf(fichier1,"%d", j3.Maisons);
+        fprintf(fichier1,"%d", j4.Maisons);
+        fprintf(fichier1,"%d", j5.Maisons);
+        fprintf(fichier1,"%d", j6.Maisons);
+        fprintf(fichier1,"%d", j1.Hotels);
+        fprintf(fichier1,"%d", j2.Hotels);
+        fprintf(fichier1,"%d", j3.Hotels);
+        fprintf(fichier1,"%d", j4.Hotels);
+        fprintf(fichier1,"%d", j5.Hotels);
+        fprintf(fichier1,"%d", j6.Hotels);
+        fprintf(fichier1,"%c", startPlayer.nom);
+        fprintf(fichier1,"%c", s2.nom);
+        fprintf(fichier1,"%c", s3.nom);
+        fprintf(fichier1,"%c", s4.nom);
+        fprintf(fichier1,"%c", s5.nom);
+        fprintf(fichier1,"%c", s6.nom);
+        fprintf(fichier1,"%d", startPlayer.position);
+        fprintf(fichier1,"%d", s2.position);
+        fprintf(fichier1,"%d", s3.position);
+        fprintf(fichier1,"%d", s4.position);
+        fprintf(fichier1,"%d", s5.position);
+        fprintf(fichier1,"%d", s6.position);
+        fprintf(fichier1,"%d", startPlayer.nbProprietes);
+        fprintf(fichier1,"%d", s2.nbProprietes);
+        fprintf(fichier1,"%d", s3.nbProprietes);
+        fprintf(fichier1,"%d", s4.nbProprietes);
+        fprintf(fichier1,"%d", s5.nbProprietes);
+        fprintf(fichier1,"%d", s6.nbProprietes);
+        fprintf(fichier1,"%d", startPlayer.Maisons);
+        fprintf(fichier1,"%d", s2.Maisons);
+        fprintf(fichier1,"%d", s3.Maisons);
+        fprintf(fichier1,"%d", s4.Maisons);
+        fprintf(fichier1,"%d", s5.Maisons);
+        fprintf(fichier1,"%d", s6.Maisons);
+        fprintf(fichier1,"%d", startPlayer.Hotels);
+        fprintf(fichier1,"%d", s2.Hotels);
+        fprintf(fichier1,"%d", s3.Hotels);
+        fprintf(fichier1,"%d", s4.Hotels);
+        fprintf(fichier1,"%d", s5.Hotels);
+        fprintf(fichier1,"%d", s6.Hotels);
+        printf("Sauvegarde 1 effectuee !/n");
+        fclose(fichier1);
+        fichier1 = NULL ;
+        nbrsauv = nbrsauv + 1;
+    }
+    else
+    {
+        // Ouverture echouee
+        printf("Sauvegarde echouee.txt");
+        return 1;
+    }
+}
+if (nbrsauv == 1)
+{
+    FILE* fichier2 = NULL ; // Initialisation fichier txt
+    fichier2 = fopen("./Sauvegardes/Fichiersauvegarde2.txt", "w");
+    // Verification ouverture du fichier
+    if (fichier2 != NULL)
+    {
+        // Ouverture reussie : on peut lire et ecrire dans ce fichier
+        fputs("Sauvegarde 2 Monopoly :\n", fichier1);
+        fprintf(fichier2,"%d", nbJoueurs);
+        fprintf(fichier2,"% ", variable);
+        fprintf(fichier2,"%c", j1.nom);
+        fprintf(fichier2,"%c", j2.nom);
+        fprintf(fichier2,"%c", j3.nom);
+        fprintf(fichier2,"%c", j4.nom);
+        fprintf(fichier2,"%c", j5.nom);
+        fprintf(fichier2,"%c", j6.nom);
+        fprintf(fichier2,"%d", j1.position);
+        fprintf(fichier2,"%d", j2.position);
+        fprintf(fichier2,"%d", j3.position);
+        fprintf(fichier2,"%d", j4.position);
+        fprintf(fichier2,"%d", j5.position);
+        fprintf(fichier2,"%d", j6.position);
+        fprintf(fichier2,"%d", j1.nbProprietes);
+        fprintf(fichier2,"%d", j2.nbProprietes);
+        fprintf(fichier2,"%d", j3.nbProprietes);
+        fprintf(fichier2,"%d", j4.nbProprietes);
+        fprintf(fichier2,"%d", j5.nbProprietes);
+        fprintf(fichier2,"%d", j6.nbProprietes);
+        fprintf(fichier2,"%d", j1.Maisons);
+        fprintf(fichier2,"%d", j2.Maisons);
+        fprintf(fichier2,"%d", j3.Maisons);
+        fprintf(fichier2,"%d", j4.Maisons);
+        fprintf(fichier2,"%d", j5.Maisons);
+        fprintf(fichier2,"%d", j6.Maisons);
+        fprintf(fichier2,"%d", j1.Hotels);
+        fprintf(fichier2,"%d", j2.Hotels);
+        fprintf(fichier2,"%d", j3.Hotels);
+        fprintf(fichier2,"%d", j4.Hotels);
+        fprintf(fichier2,"%d", j5.Hotels);
+        fprintf(fichier2,"%d", j6.Hotels);
+        fprintf(fichier2,"%c", startPlayer.nom);
+        fprintf(fichier2,"%c", s2.nom);
+        fprintf(fichier2,"%c", s3.nom);
+        fprintf(fichier2,"%c", s4.nom);
+        fprintf(fichier2,"%c", s5.nom);
+        fprintf(fichier2,"%c", s6.nom);
+        fprintf(fichier2,"%d", startPlayer.position);
+        fprintf(fichier2,"%d", s2.position);
+        fprintf(fichier2,"%d", s3.position);
+        fprintf(fichier2,"%d", s4.position);
+        fprintf(fichier2,"%d", s5.position);
+        fprintf(fichier2,"%d", s6.position);
+        fprintf(fichier2,"%d", startPlayer.nbProprietes);
+        fprintf(fichier2,"%d", s2.nbProprietes);
+        fprintf(fichier2,"%d", s3.nbProprietes);
+        fprintf(fichier2,"%d", s4.nbProprietes);
+        fprintf(fichier2,"%d", s5.nbProprietes);
+        fprintf(fichier2,"%d", s6.nbProprietes);
+        fprintf(fichier2,"%d", startPlayer.Maisons);
+        fprintf(fichier2,"%d", s2.Maisons);
+        fprintf(fichier2,"%d", s3.Maisons);
+        fprintf(fichier2,"%d", s4.Maisons);
+        fprintf(fichier2,"%d", s5.Maisons);
+        fprintf(fichier2,"%d", s6.Maisons);
+        fprintf(fichier2,"%d", startPlayer.Hotels);
+        fprintf(fichier2,"%d", s2.Hotels);
+        fprintf(fichier2,"%d", s3.Hotels);
+        fprintf(fichier2,"%d", s4.Hotels);
+        fprintf(fichier2,"%d", s5.Hotels);
+        fprintf(fichier2,"%d", s6.Hotels);
+        printf("Sauvegarde 2 effectuee !/n");
+        fclose(fichier2);
+        fichier2 = NULL ;
+        nbrsauv = nbrsauv + 1;
+    }
+    else
+    {
+        // Ouverture echouee
+        printf("Sauvegarde echouee.txt");
+        return 1;
+    }
+}
+if (nbrsauv == 2)
+{
+    FILE* fichier3 = NULL ; // Initialisation fichier txt
+    fichier3 = fopen("./Sauvegardes/Fichiersauvegarde3.txt", "w");
+    // Verification ouverture du fichier
+    if (fichier3 != NULL)
+    {
+        // Ouverture reussie : on peut lire et ecrire dans ce fichier
+        fputs("Sauvegarde 3 Monopoly :\n", fichier1);
+        fprintf(fichier3,"%d", nbJoueurs);
+        fprintf(fichier3,"% ", variable);
+        fprintf(fichier3,"%c", j1.nom);
+        fprintf(fichier3,"%c", j2.nom);
+        fprintf(fichier3,"%c", j3.nom);
+        fprintf(fichier3,"%c", j4.nom);
+        fprintf(fichier3,"%c", j5.nom);
+        fprintf(fichier3,"%c", j6.nom);
+        fprintf(fichier3,"%d", j1.position);
+        fprintf(fichier3,"%d", j2.position);
+        fprintf(fichier3,"%d", j3.position);
+        fprintf(fichier3,"%d", j4.position);
+        fprintf(fichier3,"%d", j5.position);
+        fprintf(fichier3,"%d", j6.position);
+        fprintf(fichier3,"%d", j1.nbProprietes);
+        fprintf(fichier3,"%d", j2.nbProprietes);
+        fprintf(fichier3,"%d", j3.nbProprietes);
+        fprintf(fichier3,"%d", j4.nbProprietes);
+        fprintf(fichier3,"%d", j5.nbProprietes);
+        fprintf(fichier3,"%d", j6.nbProprietes);
+        fprintf(fichier3,"%d", j1.Maisons);
+        fprintf(fichier3,"%d", j2.Maisons);
+        fprintf(fichier3,"%d", j3.Maisons);
+        fprintf(fichier3,"%d", j4.Maisons);
+        fprintf(fichier3,"%d", j5.Maisons);
+        fprintf(fichier3,"%d", j6.Maisons);
+        fprintf(fichier3,"%d", j1.Hotels);
+        fprintf(fichier3,"%d", j2.Hotels);
+        fprintf(fichier3,"%d", j3.Hotels);
+        fprintf(fichier3,"%d", j4.Hotels);
+        fprintf(fichier3,"%d", j5.Hotels);
+        fprintf(fichier3,"%d", j6.Hotels);
+        fprintf(fichier3,"%c", startPlayer.nom);
+        fprintf(fichier3,"%c", s2.nom);
+        fprintf(fichier3,"%c", s3.nom);
+        fprintf(fichier3,"%c", s4.nom);
+        fprintf(fichier3,"%c", s5.nom);
+        fprintf(fichier3,"%c", s6.nom);
+        fprintf(fichier3,"%d", startPlayer.position);
+        fprintf(fichier3,"%d", s2.position);
+        fprintf(fichier3,"%d", s3.position);
+        fprintf(fichier3,"%d", s4.position);
+        fprintf(fichier3,"%d", s5.position);
+        fprintf(fichier3,"%d", s6.position);
+        fprintf(fichier3,"%d", startPlayer.nbProprietes);
+        fprintf(fichier3,"%d", s2.nbProprietes);
+        fprintf(fichier3,"%d", s3.nbProprietes);
+        fprintf(fichier3,"%d", s4.nbProprietes);
+        fprintf(fichier3,"%d", s5.nbProprietes);
+        fprintf(fichier3,"%d", s6.nbProprietes);
+        fprintf(fichier3,"%d", startPlayer.Maisons);
+        fprintf(fichier3,"%d", s2.Maisons);
+        fprintf(fichier3,"%d", s3.Maisons);
+        fprintf(fichier3,"%d", s4.Maisons);
+        fprintf(fichier3,"%d", s5.Maisons);
+        fprintf(fichier3,"%d", s6.Maisons);
+        fprintf(fichier3,"%d", startPlayer.Hotels);
+        fprintf(fichier3,"%d", s2.Hotels);
+        fprintf(fichier3,"%d", s3.Hotels);
+        fprintf(fichier3,"%d", s4.Hotels);
+        fprintf(fichier3,"%d", s5.Hotels);
+        fprintf(fichier3,"%d", s6.Hotels);
+        printf("Sauvegarde 3 effectuee !/n");
+        fclose(fichier3);
+        fichier3 = NULL ;
+        nbrsauv = nbrsauv + 1;
+    }
+    else
+    {
+        // Ouverture echouee
+        printf("Sauvegarde echouee.txt");
+        return 1;
+    }
+}
+if (nbrsauv == 3)
+{
+    printf("Impossible de faire une sauvegarde supplementaire\n");
+}
+return 0;
+}
