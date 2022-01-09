@@ -1,0 +1,18 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <windows.h>
+
+void afficheCase()
+{
+    int argent=123456789;
+    gotoligcol(25,135);
+    printf("******************************************************************\n");
+    gotoligcol(26,135);
+    printf("*                                                                *\n");
+    gotoligcol(27,135);
+    printf("             %s                                                   \n", p[position].nom);
+    gotoligcol(28,135);
+    printf("*                                                                *\n");
+    gotoligcol(29,135);
+    printf("******************************************************************\n");
+}
