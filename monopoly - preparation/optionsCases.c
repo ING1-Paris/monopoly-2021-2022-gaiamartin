@@ -1,7 +1,7 @@
 #include <string.h>
 #include <stdio.h>
 #include <stdlib.h>
-#include "biblio_Monopoly.h"
+#include "bibli_Monopoly.h"
 
 #include <stdbool.h>
 
@@ -60,6 +60,7 @@ int optionCase( char nom[8], int position, int argent, int nbP, int nbM, int nbH
     p[1].loyer1H=250;
     p[1].hypo=false;
     p[1].nbMaison=0;
+    p[1].nbHotel=0;
 
     //case 3
     p[2].num=3;
@@ -77,6 +78,7 @@ int optionCase( char nom[8], int position, int argent, int nbP, int nbM, int nbH
     p[2].loyer1H=450;
     p[2].hypo=false;
     p[2].nbMaison=0;
+    p[2].nbHotel=0;
 
     //case 4;
     p[3].num=4;
@@ -110,6 +112,7 @@ int optionCase( char nom[8], int position, int argent, int nbP, int nbM, int nbH
     p[6].loyer1H=550;
     p[6].hypo=false;
     p[6].nbMaison=0;
+    p[6].nbHotel=0;
 
     //case 8
     p[7].num=8;
@@ -131,6 +134,7 @@ int optionCase( char nom[8], int position, int argent, int nbP, int nbM, int nbH
     p[8].loyer1H=600;
     p[8].hypo=false;
     p[8].nbMaison=0;
+    p[8].nbHotel=0;
 
     //case 10
     p[9].num=10;
@@ -148,6 +152,7 @@ int optionCase( char nom[8], int position, int argent, int nbP, int nbM, int nbH
     p[9].loyer1H=750;
     p[9].hypo=false;
     p[9].nbMaison=0;
+    p[9].nbHotel=0;
 
     //case 11
     p[10].num=11;
@@ -177,6 +182,7 @@ int optionCase( char nom[8], int position, int argent, int nbP, int nbM, int nbH
     p[12].loyer1H=900;
     p[12].hypo=false;
     p[12].nbMaison=0;
+    p[12].nbHotel=0;
 
     //case 14
     p[13].num=14;
@@ -194,6 +200,7 @@ int optionCase( char nom[8], int position, int argent, int nbP, int nbM, int nbH
     p[13].loyer1H=950;
     p[13].hypo=false;
     p[13].nbMaison=0;
+    p[13].nbHotel=0;
 
     //case 15
     p[14].num=15;
@@ -215,6 +222,7 @@ int optionCase( char nom[8], int position, int argent, int nbP, int nbM, int nbH
     p[15].loyer1H=1000;
     p[15].hypo=false;
     p[15].nbMaison=0;
+    p[15].nbHotel=0;
 
     //case 17
     p[16].num=17;
@@ -236,6 +244,7 @@ int optionCase( char nom[8], int position, int argent, int nbP, int nbM, int nbH
     p[17].loyer1H=1050;
     p[17].hypo=false;
     p[17].nbMaison=0;
+    p[17].nbHotel=0;
 
     //case 19
     p[18].num=19;
@@ -261,6 +270,7 @@ int optionCase( char nom[8], int position, int argent, int nbP, int nbM, int nbH
     p[19].loyer1H=1100;
     p[19].hypo=false;
     p[19].nbMaison=0;
+    p[19].nbHotel=0;
 
     //case 21
     p[20].num=21;
@@ -278,6 +288,7 @@ int optionCase( char nom[8], int position, int argent, int nbP, int nbM, int nbH
     p[20].loyer1H=1150;
     p[20].hypo=false;
     p[20].nbMaison=0;
+    p[20].nbHotel=0;
 
     //case 22
     p[21].num=22;
@@ -299,6 +310,7 @@ int optionCase( char nom[8], int position, int argent, int nbP, int nbM, int nbH
     p[22].loyer1H=1200;
     p[22].hypo=false;
     p[22].nbMaison=0;
+    p[22].nbHotel=0;
 
     //case 24
     p[23].num=24;
@@ -320,6 +332,7 @@ int optionCase( char nom[8], int position, int argent, int nbP, int nbM, int nbH
     p[24].loyer1H=1400;
     p[24].hypo=false;
     p[24].nbMaison=0;
+    p[25].nbHotel=0;
 
     //case 26
     p[25].num=26;
@@ -346,6 +359,7 @@ int optionCase( char nom[8], int position, int argent, int nbP, int nbM, int nbH
     p[26].loyer1H=1500;
     p[26].hypo=false;
     p[26].nbMaison=0;
+    p[26].nbHotel=0;
 
     //case 28
     p[27].num=28;
@@ -363,17 +377,17 @@ int optionCase( char nom[8], int position, int argent, int nbP, int nbM, int nbH
     p[27].loyer1H=2000;
     p[27].hypo=false;
     p[27].nbMaison=0;
+    p[27].nbHotel=0;
 
    ////////////////////////////////////////////////////////////////////////////////////////////////
 
     int choix;
+    int k;
+    k = position;
     int voir;
     int achatP;
     int numMaison;
-    int cptMaison=0;
-    int cptHotel=0;
-    int choixHypoM;
-    int choixHypoH;
+    int numHotel;
     char banque[7] = "Banque";
 
    /// MENU DES OPTIONS D ACTIONS SUR LES CASES /////////////////////////////////////////////////////
@@ -413,6 +427,13 @@ int optionCase( char nom[8], int position, int argent, int nbP, int nbM, int nbH
     fflush(stdin);
     gotoligcol(37,100);
     scanf("%d", &choix);
+    while ((choix != 1)&&(choix != 2)&&(choix != 3)&&(choix != 4)&&(choix != 5)&&(choix != 6)&&(choix != 7)&&(choix != 8)){
+        gotoligcol(38,100);
+        printf("OUPS ! Veillez saisir le numero d une des options du menu joueuer!");
+        Sleep(2500);
+        efface3756();
+        optionCase(nom, position, argent, nbP, nbM, nbH, s2, s3, s4, s5, s6);
+    }
 
     /// CONSULTER LES INFORMATIONS D UNE CASE ///////////////////////////////////////////////////////
        if (choix == 1){
@@ -422,6 +443,13 @@ int optionCase( char nom[8], int position, int argent, int nbP, int nbM, int nbH
         fflush(stdin);
         gotoligcol(39,100);
         scanf("%d", &voir);
+        while ( (voir != 1)&&(voir != 2)&&(voir != 3)&&(voir != 4)&&(voir != 5)&&(voir != 6)&&(voir != 7)&&(voir != 8)&&(voir != 9)&&(voir != 10)&&(voir != 11)&&(voir != 12)&&(voir != 13)&&(voir != 14)&&(voir != 15)&&(voir != 16)&&(voir != 17)&&(voir != 18)&&(voir != 19)&&(voir != 20)&&(voir != 21)&&(voir != 22)&&(voir != 23)&&(voir != 24)&&(voir != 25)&&(voir != 26)&&(voir != 27)&&(voir != 28)){
+            gotoligcol(41,100);
+            printf("OUPS ! Veillez saisir le numero d une case du plateau!");
+            Sleep(2500);
+            efface3756();
+            optionCase(nom, position, argent, nbP, nbM, nbH, s2, s3, s4, s5, s6);
+        }
 
         if ( p[voir-1].Proprio = 2)
             strcpy(p[voir-1].proprio, banque);
@@ -433,8 +461,6 @@ int optionCase( char nom[8], int position, int argent, int nbP, int nbM, int nbH
         {
             gotoligcol(40,100);
             printf("nom: %s", p[voir-1].nom);
-            Sleep(500);
-            gotoligcol(37,100);
         }
         else if ((voir == 2)||(voir == 3)||(voir == 7)||(voir == 9)||(voir == 10)||(voir == 13)||(voir == 14)||(voir == 16)||(voir == 18)||(voir == 20)||(voir == 21)||(voir == 23)||(voir == 25)||(voir == 27)||(voir == 28))
         // si la case que le joueur demande a voir est une rue
@@ -468,10 +494,11 @@ int optionCase( char nom[8], int position, int argent, int nbP, int nbM, int nbH
             gotoligcol(54,100);
             printf(" nombre de maisons : %d", p[voir-1].nbMaison);
             gotoligcol(55,100);
+            printf(" nombre d hotels : %d", p[voir-1].nbHotel);
+            gotoligcol(56,100);
             printf("*****************************************************************\n");
             Sleep (8000);
-            efface3755();
-            gotoligcol(37,100);
+            efface3756();
         }
 
 
@@ -491,8 +518,7 @@ int optionCase( char nom[8], int position, int argent, int nbP, int nbM, int nbH
             gotoligcol(46,100);
             printf("*****************************************************************\n");
             Sleep (6000);
-            efface3755();
-            gotoligcol(37,100);
+            efface3756();
         }
 
         else
@@ -506,73 +532,93 @@ int optionCase( char nom[8], int position, int argent, int nbP, int nbM, int nbH
         }
 
         /// ACHETER UNE PROPRIETE ///////////////////////////////////////////////////////////////////////
-        else if(choix == 2){
+        else if(choix ==2){
 
             gotoligcol(38,100);
-            printf("Quelle case souhaitez vous acheter?");
+            printf("Quelle case souhaitez vous acheter?\n");
             gotoligcol(39,100);
             fflush(stdin);
             scanf("%d", &achatP);
+            while ( (achatP != 1)&&(achatP != 2)&&(achatP != 3)&&(achatP != 4)&&(achatP != 5)&&(achatP != 6)&&(achatP != 7)&&(achatP != 8)&&(achatP != 9)&&(achatP != 10)&&(achatP != 11)&&(achatP != 12)&&(achatP != 13)&&(achatP != 14)&&(achatP != 15)&&(achatP != 16)&&(achatP != 17)&&(achatP != 18)&&(achatP != 19)&&(achatP != 20)&&(achatP != 21)&&(achatP != 22)&&(achatP != 23)&&(achatP != 24)&&(achatP != 25)&&(achatP != 26)&&(achatP != 27)&&(achatP != 28)){
+                gotoligcol(40,100);
+                printf("OUPS ! Veillez saisir le numero d une case du plateau!");
+                Sleep(2500);
+                efface3756();
+                optionCase(nom, position, argent, nbP, nbM, nbH, s2, s3, s4, s5, s6);
+            }
 
             if ( p[achatP-1].Proprio = 2)
                 strcpy(p[achatP-1].proprio, banque);
             else if( p[achatP-1].Proprio = 1)
                 strcpy(p[achatP-1].proprio, p[achatP-1].proprio);
-
-            if ((p[achatP-1].num != 1)&&(p[achatP-1].num != 4)&&(p[achatP-1].num != 6)&&(p[achatP-1].num != 8)&&(p[achatP-1].num != 12)&&(p[achatP-1].num != 15)&&(p[achatP-1].num != 17)&&(p[achatP-1].num != 22)&&(p[achatP-1].num != 24))
-            // si la case que le joueur demande a acheter n'est pas une case speciale( case chance, depart, prison...)
-            {
-                if ((p[achatP-1].proprio != s2)&&(p[achatP-1].proprio != s3)&&(p[achatP-1].proprio != s4)&&(p[achatP-1].proprio != s5)&&(p[achatP-1].proprio != s6))
-                // si la case que le joueur demande a acheter n'appartient pas deja a un autre joueur
+            if (p[achatP-1].num == position){
+                if ((achatP != 1)&&(achatP != 4)&&(achatP != 6)&&(achatP != 8)&&(achatP!= 12)&&(achatP != 15)&&(achatP != 17)&&(achatP != 22)&&(achatP != 24))
+                // si la case que le joueur demande a acheter n'est pas une case speciale( case chance, depart, prison...)
                 {
-                    if ((argent) >= (p[achatP-1].prix))
-                    // si la case que le joueur demande a acheter n'est pas trop chere pour lui
+                    if ((p[achatP-1].proprio != s2)&&(p[achatP-1].proprio != s3)&&(p[achatP-1].proprio != s4)&&(p[achatP-1].proprio != s5)&&(p[achatP-1].proprio != s6))
+                    // si la case que le joueur demande a acheter n'appartient pas deja a un autre joueur
                     {
-                        argent -= p[achatP-1].prix;
-                        p[achatP-1].Proprio = 1;
-                        strcpy(p[achatP-1].proprio, nom);
-                        gotoligcol(41,100);
-                        printf("Transaction effectuee !");
-                        gotoligcol(42,100);
-                        printf("%s possede desormais %s", nom, p[achatP-1].nom);
-                        nbP++;
-                        Sleep(3000);
-                        efface3755();
+                        if ((argent) >= (p[achatP-1].prix))
+                        // si la case que le joueur demande a acheter n'est pas trop chere pour lui
+                        {
+                            argent -= p[achatP-1].prix;
+                            p[achatP-1].Proprio = 1;
+                            strcpy(p[achatP-1].proprio, nom);
+                            gotoligcol(41,100);
+                            printf("Transaction effectuee !\n");
+                            gotoligcol(42,100);
+                            printf("%s possede desormais %s\n", nom, p[achatP-1].nom);
+                            nbP++;
+                            Sleep(3000);
+                            efface3756();
 
-                        optionCase(nom, position, argent, nbP, nbM, nbH, s2, s3, s4, s5, s6);
+                            optionCase(nom, position, argent, nbP, nbM, nbH, s2, s3, s4, s5, s6);
+                        }
+                        else
+                            gotoligcol(41,100);
+                            printf("Vous n'avez pas assez d'argent pour effectuer cette transaction !\n");
+                            Sleep(2500);
+                            efface3756();
+                            optionCase(nom, position, argent, nbP, nbM, nbH, s2, s3, s4, s5, s6);
                     }
                     else
                         gotoligcol(41,100);
-                        printf("Vous n'avez pas assez d'argent pour effectuer cette transaction !");
-                        Sleep(1500);
-                        efface3755();
-                        optionCase(nom, position, argent, nbP, nbM, nbH, s2, s3, s4, s5, s6);
+                        printf("Vous ne pouvez pas acheter cette propriete car elle appartient deja a un autre joueur");
+                        Sleep(2500);
+                        efface3756();
+                        optionCase( nom, position, argent, nbP, nbM, nbH, s2, s3, s4, s5, s6);
                 }
-                else
+                else{
                     gotoligcol(41,100);
-                    printf("Vous ne pouvez pas acheter cette propriete car elle appartient deja a un autre joueur");
-                    Sleep(1500);
-                    efface3755();
-                    optionCase( nom, position, argent, nbP, nbM, nbH, s2, s3, s4, s5, s6);
+                    printf("Vous ne pouvez pas acheter cette case car il ne s'agit pas d'une propriete");
+                    Sleep(2500);
+                    efface3756();
+                    optionCase(nom, position, argent, nbP, nbM, nbH, s2, s3, s4, s5, s6);
+                }
             }
-            else
+            else {
                 gotoligcol(41,100);
-                printf("Vous ne pouvez pas acheter cette case car il ne s'agit pas d'une propriete");
-                Sleep(1500);
-                efface3755();
+                printf("Vous ne pouvez pas acheter une case sur laquelle vous n etes pas");
+                Sleep(2500);
+                efface3756();
                 optionCase(nom, position, argent, nbP, nbM, nbH, s2, s3, s4, s5, s6);
+            }
         }
 
         /// ACHETER UNE MAISON //////////////////////////////////////////////////////////////////////////
         else if (choix == 3){
-
-            if (cptMaison <= 32)
-            {
-                gotoligcol(38,100);
-            printf("Sur quel numero de case souhaitez vous placer la maison?");
+            gotoligcol(38,100);
+            printf("Sur quel numero de case souhaitez vous placer la maison?\n");
             fflush(stdin);
             gotoligcol(39,100);
             scanf("%d", &numMaison);
+            while ( (numMaison != 1)&&(numMaison != 2)&&(numMaison != 3)&&(numMaison != 4)&&(numMaison != 5)&&(numMaison != 6)&&(numMaison != 7)&&(numMaison != 8)&&(numMaison != 9)&&(numMaison != 10)&&(numMaison != 11)&&(numMaison != 12)&&(numMaison != 13)&&(numMaison != 14)&&(numMaison != 15)&&(numMaison != 16)&&(numMaison != 17)&&(numMaison != 18)&&(numMaison != 19)&&(numMaison != 20)&&(numMaison != 21)&&(numMaison != 22)&&(numMaison != 23)&&(numMaison != 24)&&(numMaison != 25)&&(numMaison != 26)&&(numMaison != 27)&&(numMaison != 28)){
+                gotoligcol(40,100);
+                printf("OUPS ! Veillez saisir le numero d une case du plateau!");
+                Sleep(2500);
+                efface3756();
+                optionCase(nom, position, argent, nbP, nbM, nbH, s2, s3, s4, s5, s6);
+            }
 
             if ( p[numMaison-1].Proprio = 2){
                 strcpy(p[numMaison-1].proprio, banque);
@@ -580,8 +626,7 @@ int optionCase( char nom[8], int position, int argent, int nbP, int nbM, int nbH
             else if( p[numMaison-1].Proprio = 1){
                 strcpy(p[numMaison-1].proprio, p[numMaison-1].proprio);
             }
-            gotoligcol(40,100);
-            printf("%s", p[numMaison-1].proprio);
+
             if (strcmp(p[numMaison-1].proprio , nom) == 0){
             // si la propriete sur laquelle le joueur veut poser sa maison lui appartient bien
                 if((numMaison != 1)&&(numMaison != 4)&&(numMaison != 6)&&(numMaison != 8)&&(numMaison != 12)&&(numMaison != 15)&&(numMaison != 17)&&(numMaison != 22)&&(numMaison != 24)&&(numMaison != 5)&&(numMaison != 11)&&(numMaison != 19)&&(numMaison != 26)){
@@ -595,16 +640,15 @@ int optionCase( char nom[8], int position, int argent, int nbP, int nbM, int nbH
                         gotoligcol(42,100);
                         printf("%s possede desormais une maison a %s\n", nom, p[numMaison-1].nom);
                         nbM++;
-                        cptMaison++;
-                        Sleep(3000);
-                        efface3755();
+                        Sleep(3500);
+                        efface3756();
                         optionCase(nom, position, argent, nbP, nbM, nbH, s2, s3, s4, s5, s6);
                     }
                     else{
                         gotoligcol(41,100);
                         printf("Vous n'avez pas assez d'argent pour effectuer cette transaction !\n");
-                        Sleep(2000);
-                        efface3755();
+                        Sleep(2500);
+                        efface3756();
                         optionCase(nom, position, argent, nbP, nbM, nbH, s2, s3, s4, s5, s6);
                     }
                 }
@@ -613,8 +657,8 @@ int optionCase( char nom[8], int position, int argent, int nbP, int nbM, int nbH
                     printf("Vous ne pouvez pas acheter de maison sur cette case");
                     gotoligcol(42,100);
                     printf("car ce n'est pas une propriete");
-                    Sleep(2500);
-                    efface3755();
+                    Sleep(3500);
+                    efface3756();
                     optionCase(nom, position, argent, nbP, nbM, nbH, s2, s3, s4, s5, s6);
                 }
             }
@@ -623,29 +667,94 @@ int optionCase( char nom[8], int position, int argent, int nbP, int nbM, int nbH
                 printf("Vous ne pouvez pas acheter de maison sur cette propriete");
                 gotoligcol(42,100);
                 printf("car elle ne vous appartient pas");
-                Sleep(2500);
-                efface3755();
+                Sleep(3500);
+                efface3756();
                 optionCase(nom, position, argent, nbP, nbM, nbH, s2, s3, s4, s5, s6);
             }
-            }
-            if (cptMaison >= 32)
-            {
-                gotoligcol(41,100);
-                printf("Il y a trop de maisons sur le plateau de jeu");
-                gotoligcol(42,100);
-                printf("Retentez votre chance un autre tour");
-                Sleep(2500);
-                efface3755();
-                optionCase(nom, position, argent, nbP, nbM, nbH, s2, s3, s4, s5, s6);
-            }
-
 
         }
 
         /// ACHETER UN HOTEL //////////////////////////////////////////////////////////////////
         else if (choix == 4){
-            cptHotel=0;
-            cptHotel++;
+            gotoligcol(38,100);
+            printf("Sur quel numero de case souhaitez vous placer l hotel?\n");
+            fflush(stdin);
+            gotoligcol(39,100);
+            scanf("%d", &numHotel);
+            while ( (numHotel != 1)&&(numHotel != 2)&&(numHotel != 3)&&(numHotel != 4)&&(numHotel != 5)&&(numHotel != 6)&&(numHotel != 7)&&(numHotel != 8)&&(numHotel != 9)&&(numHotel != 10)&&(numHotel != 11)&&(numHotel != 12)&&(numHotel != 13)&&(numHotel != 14)&&(numHotel != 15)&&(numHotel != 16)&&(numHotel != 17)&&(numHotel != 18)&&(numHotel != 19)&&(numHotel != 20)&&(numHotel != 21)&&(numHotel != 22)&&(numHotel != 23)&&(numHotel != 24)&&(numHotel != 25)&&(numHotel != 26)&&(numHotel != 27)&&(numHotel != 28)){
+                gotoligcol(40,100);
+                printf("OUPS ! Veillez saisir le numero d une case du plateau!");
+                Sleep(2500);
+                efface3756();
+                optionCase(nom, position, argent, nbP, nbM, nbH, s2, s3, s4, s5, s6);
+            }
+
+            if ( p[numHotel-1].Proprio = 2){
+                strcpy(p[numHotel-1].proprio, banque);
+            }
+            else if( p[numHotel-1].Proprio = 1){
+                strcpy(p[numHotel-1].proprio, p[numHotel-1].proprio);
+            }
+
+            if (strcmp(p[numHotel-1].proprio , nom) == 0){
+            // si la propriete sur laquelle le joueur veut poser sa maison lui appartient bien
+                if((numHotel != 1)&&(numHotel != 4)&&(numHotel != 6)&&(numHotel != 8)&&(numHotel != 12)&&(numHotel != 15)&&(numHotel != 17)&&(numHotel != 22)&&(numHotel != 24)&&(numHotel != 5)&&(numHotel != 11)&&(numHotel != 19)&&(numHotel != 26)){
+                // si la case sur laquelle le joueur veux poser une maison est bien une propriete
+                    if (nbM ==4){
+                    // si le joueur possede 4 maisons sur la propriete
+                        if ((argent) >= (p[numHotel].prix)){
+                        // si le joueur a assez d'argent pour acheter la maison
+                            argent -= p[numHotel].prix;
+                            strcpy(p[numHotel].proprio, nom);
+                            gotoligcol(41,100);
+                            printf("Transaction effectuee !\n");
+                            gotoligcol(42,100);
+                            printf("%s possede desormais un hotel a %s\n", nom, p[numHotel-1].nom);
+                            gotoligcol(43,100);
+                            printf("%s a donc rendu ses 4 maisons a %s\n", nom, p[numHotel-1].nom);
+                            nbH++;
+                            nbM = 0;
+                            Sleep(3500);
+                            efface3756();
+                            optionCase(nom, position, argent, nbP, nbM, nbH, s2, s3, s4, s5, s6);
+                        }
+                        else{
+                            gotoligcol(41,100);
+                            printf("Vous n'avez pas assez d'argent pour effectuer cette transaction !\n");
+                            Sleep(2500);
+                            efface3756();
+                            optionCase(nom, position, argent, nbP, nbM, nbH, s2, s3, s4, s5, s6);
+                        }
+                    }
+                    else {
+                        gotoligcol(41,100);
+                        printf("Vous ne pouvez pas acheter d hotel sur cette propriete");
+                        gotoligcol(42,100);
+                        printf("car il faut posseder 4 maisons pour les echanger contre un hotel");
+                        Sleep(3500);
+                        efface3756();
+                        optionCase(nom, position, argent, nbP, nbM, nbH, s2, s3, s4, s5, s6);
+                    }
+                }
+                else {
+                    gotoligcol(41,100);
+                    printf("Vous ne pouvez pas acheter d hotel sur cette case");
+                    gotoligcol(42,100);
+                    printf("car ce n'est pas une propriete");
+                    Sleep(3500);
+                    efface3756();
+                    optionCase(nom, position, argent, nbP, nbM, nbH, s2, s3, s4, s5, s6);
+                }
+            }
+            else{
+                gotoligcol(41,100);
+                printf("Vous ne pouvez pas acheter d hotel sur cette propriete");
+                gotoligcol(42,100);
+                printf("car elle ne vous appartient pas");
+                Sleep(3500);
+                efface3756();
+                optionCase(nom, position, argent, nbP, nbM, nbH, s2, s3, s4, s5, s6);
+            }
 
         }
         /// HYPOTHEQUER UNE PROPRIETE /////////////////////////////////////////////////////////
@@ -672,7 +781,7 @@ int optionCase( char nom[8], int position, int argent, int nbP, int nbM, int nbH
                 if((numH!= 1)&&(numH != 4)&&(numH != 6)&&(numH != 8)&&(numH != 12)&&(numH != 15)&&(numH != 17)&&(numH != 22)&&(numH != 24)){
                 // si la case que le joueur veux hypothequer n'est pas une case speciale ( case chance, depart, prison...)
                     if (p[numH-1].hypo == false){
-                    //si la propriÃ©tÃ© n'a pas dÃ©ja Ã©tÃ© hypothÃ©quÃ©e
+                    //si la propriété n'a pas déja été hypothéquée
                         if (p[numH-1].nbMaison == 0){
                         //si il n'y a pas de maison sur la propriete que le joueur veut hypothequer
                             if (p[numH-1].nbHotel == 0){
@@ -797,7 +906,7 @@ int optionCase( char nom[8], int position, int argent, int nbP, int nbM, int nbH
             gotoligcol(48,100);
             printf("*****************************************************************\n");
             Sleep (6000);
-            efface3755();
+            efface3756();
             optionCase(nom, position, argent, nbP, nbM, nbH, s2, s3, s4, s5, s6);
         }
         /// QUITTER LE MENU JOUEUR ////////////////////////////////////////////////////////////

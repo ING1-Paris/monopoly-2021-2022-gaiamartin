@@ -21,9 +21,9 @@
 
 
 
-           void fctnJeu( char nom[14], int position, int argent, int nbJoueurs){
+           int fctnJeu(  char nom[8], int position, int argent, int nbJoueurs, int nbP, int nbM, int nbH, char s2[8],char s3[8],char s4[8],char s5[8],char s6[8]){
 
-                    void gotoligcol( int lig, int col )
+                     void gotoligcol( int lig, int col )
                     {   COORD mycoord;
                         mycoord.X = col;
                         mycoord.Y = lig;
@@ -37,7 +37,9 @@
                             if(position==1)
                             {
                                 gotoligcol(25,100);
-                                printf("\n    JOUR DE PAYE !\n     vous recevez 200 euros de la banque...");
+                                printf("    JOUR DE PAYE !");
+                                gotoligcol(26,100);
+                                printf("vous recevez 200 euros de la banque...");
                                 gotoligcol(37,71);
                                 printf("%s", nom );
                                 position = 1;
@@ -56,7 +58,9 @@
                             }
                             else if(position==4){
                                 gotoligcol(25,100);
-                                printf("\n    IMPOT SURLE REVENU !\n     vous devez 200 euros a la banque...");
+                                printf("\n    IMPOT SUR LE REVENU !\n");
+                                gotoligcol(26, 130);
+                                printf("Vous devez 200 euros a la banque...");
                                 gotoligcol(37,41);
                                 printf("%s", nom);
                                 position = 4;
@@ -200,11 +204,10 @@
                             }
                         }
 
-                    if (position >=28)
-                    {
+                    if (position >=28){
                         position=0;
-
                     }
-
+                    optionCase( nom, position, argent, nbP, nbM, nbH, s2, s3, s4, s5, s6);
+                    return position;
                 }
 

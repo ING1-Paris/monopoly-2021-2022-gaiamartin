@@ -480,38 +480,31 @@ printf("\n\n\n**************************************************** NOUVELLE PART
 
             //premier tour
 
-            premierTour( startPlayer.nom, startPlayer.position, startPlayer.argent, nbJoueurs,startPlayer.nbProprietes, startPlayer.Maisons, startPlayer.Hotels, s2.nom, s3.nom, s4.nom, s5.nom, s6.nom );
-            //optionCase( startPlayer.nom, startPlayer.position, startPlayer.argent, startPlayer.nbProprietes, startPlayer.Maisons, startPlayer.Hotels, s2.nom, s3.nom, s4.nom, s5.nom, s6.nom );
-            printf("p %d", startPlayer.position);
-            /*premierTour( s2.nom, s2.position, s2.argent, nbJoueurs);
-            optionCase( s2.nom, s2.position, s2.argent,s2.nbProprietes, s2.Maisons, s2.Hotels, startPlayer.nom, s3.nom, s4.nom, s5.nom, s6.nom);
+            premierTour( startPlayer.nom, startPlayer.position, startPlayer.argent, nbJoueurs, startPlayer.nbProprietes, startPlayer.Maisons, startPlayer.Hotels, s2.nom, s3.nom, s4.nom, s5.nom, s6.nom );
+            premierTour( s2.nom, s2.position, s2.argent, nbJoueurs, s2.nbProprietes, s2.Maisons, s2.Hotels, s2.nom, s3.nom, s4.nom, s5.nom, s6.nom );
             if (nbJoueurs > 2){
-                premierTour(s3.nom, s3.position, s3.argent, nbJoueurs);
-                optionCase( s3.nom, s3.position, s3.argent, s3.nbProprietes, s3.Maisons, s3.Hotels, startPlayer.nom, s2.nom, s4.nom, s5.nom, s6.nom);
+                premierTour(s3.nom, s3.position, s3.argent, nbJoueurs, s3.nbProprietes, s3.Maisons, s3.Hotels, s2.nom, s3.nom, s4.nom, s5.nom, s6.nom );
                 if (nbJoueurs > 3)
-                    premierTour(s4.nom, s4.position, s4.argent, nbJoueurs);
-                    optionCase( s4.nom, s4.position, s4.argent, s4.nbProprietes, s4.Maisons, s4.Hotels, startPlayer.nom, s2.nom, s3.nom, s5.nom, s6.nom);
+                    premierTour(s4.nom, s4.position, s4.argent, nbJoueurs, s4.nbProprietes, s4.Maisons, s4.Hotels, s2.nom, s3.nom, s4.nom, s5.nom, s6.nom );
                     if (nbJoueurs > 4)
-                        premierTour(s5.nom, s5.position, s5.argent, nbJoueurs);
-                        optionCase( s5.nom, s5.position, s5.argent, s5.nbProprietes, s5.Maisons, s5.Hotels, startPlayer.nom, s2.nom, s3.nom, s4.nom, s6.nom);
+                        premierTour(s5.nom, s5.position, s5.argent, nbJoueurs, s5.nbProprietes, s5.Maisons, s5.Hotels, s2.nom, s3.nom, s4.nom, s5.nom, s6.nom );
                         if (nbJoueurs > 5)
-                            premierTour(s6.nom, s6.position, s6.argent, nbJoueurs);
-                            optionCase( s6.nom, s6.position, s6.argent, s6.nbProprietes, s6.Maisons, s6.Hotels, startPlayer.nom, s2.nom, s3.nom, s4.nom, s5.nom);
+                            premierTour(s6.nom, s6.position, s6.argent, nbJoueurs, s6.nbProprietes, s6.Maisons, s6.Hotels, s2.nom, s3.nom, s4.nom, s5.nom, s6.nom );
             }
 
             //tours
             while (nbJoueurs != 1){
-                fctnJeu( startPlayer.nom, startPlayer.position, startPlayer.argent, nbJoueurs);
-                fctnJeu( s2.nom, s2.position, s2.argent, nbJoueurs);
+                fctnJeu(  startPlayer.nom, startPlayer.position, startPlayer.argent, nbJoueurs, startPlayer.nbProprietes, startPlayer.Maisons, startPlayer.Hotels, s2.nom, s3.nom, s4.nom, s5.nom, s6.nom );
+                fctnJeu( s2.nom, s2.position, s2.argent, nbJoueurs, s2.nbProprietes, s2.Maisons, s2.Hotels, s2.nom, s3.nom, s4.nom, s5.nom, s6.nom );
                 if (nbJoueurs > 2)
-                    fctnJeu(s3.nom, s3.position, s3.argent, nbJoueurs);
+                    fctnJeu(s3.nom, s3.position, s3.argent, nbJoueurs, s3.nbProprietes, s3.Maisons, s3.Hotels, s2.nom, s3.nom, s4.nom, s5.nom, s6.nom );
                     if (nbJoueurs > 3)
-                        fctnJeu(s4.nom, s4.position, s4.argent, nbJoueurs);
+                        fctnJeu(s4.nom, s4.position, s4.argent, nbJoueurs, s4.nbProprietes, s4.Maisons, s4.Hotels, s2.nom, s3.nom, s4.nom, s5.nom, s6.nom );
                         if (nbJoueurs > 4)
-                            fctnJeu(s5.nom, s5.position, s5.argent, nbJoueurs);
+                            fctnJeu(s5.nom, s5.position, s5.argent, nbJoueurs, s5.nbProprietes, s5.Maisons, s5.Hotels, s2.nom, s3.nom, s4.nom, s5.nom, s6.nom );
                             if (nbJoueurs > 5)
-                                fctnJeu(s6.nom, s6.position, s6.argent, nbJoueurs);
-            }*/
+                                fctnJeu(s6.nom, s6.position, s6.argent, nbJoueurs, s6.nbProprietes, s6.Maisons, s6.Hotels, s2.nom, s3.nom, s4.nom, s5.nom, s6.nom );
+            }
 
 
     }
