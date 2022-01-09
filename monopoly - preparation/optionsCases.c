@@ -371,6 +371,9 @@ int optionCase( char nom[8], int position, int argent, int nbP, int nbM, int nbH
     int achatP;
     int numMaison;
     int cptMaison=0;
+    int cptHotel=0;
+    int choixHypoM;
+    int choixHypoH;
     char banque[7] = "Banque";
 
    /// MENU DES OPTIONS D ACTIONS SUR LES CASES /////////////////////////////////////////////////////
@@ -641,13 +644,14 @@ int optionCase( char nom[8], int position, int argent, int nbP, int nbM, int nbH
 
         /// ACHETER UN HOTEL //////////////////////////////////////////////////////////////////
         else if (choix == 4){
+            cptHotel=0;
+            cptHotel++;
 
         }
         /// HYPOTHEQUER UNE PROPRIETE /////////////////////////////////////////////////////////
         else if (choix == 5){
 
             int numH;
-            int choixHypoM;
             gotoligcol(38,100);
             printf("Quelle propriete souhaitez vous hypothequer ?");
             gotoligcol(39,100);
@@ -684,13 +688,33 @@ int optionCase( char nom[8], int position, int argent, int nbP, int nbM, int nbH
                             optionCase(nom, position, argent, nbP, nbM, nbH, s2, s3, s4, s5, s6);
                             }
                             else {
-                                gotoligcol(41, 100);
-                                printf("Vous ne pouvez pas hypothequer cette propriete");
-                                gotoligcol(42, 100);
-                                printf("car il y a un hotel dessus");
-                                Sleep(2500);
-                                efface3755();
-                                optionCase(nom, position, argent, nbP, nbM, nbH, s2, s3, s4, s5, s6);
+                            gotoligcol(41, 100);
+                            printf("Vous ne pouvez pas hypothequer cette propriete");
+                            gotoligcol(42, 100);
+                            printf("car il y a un hotel dessus");
+                            gotoligcol(43,100);
+                            printf("Souhaitez vous vendre l hotel sur la propriete?");
+                            gotoligcol(44,100);
+                            printf("Tapez 1 pour vendre votre hotel et 2 pour ne pas le vendre");
+                            gotoligcol(45,100);
+                            scanf("%d", &choixHypoH);
+                            if (choixHypoH == 1)
+                            {
+                                argent -= (p[numH-1].hotel);
+                                int euros=p[numH-1].hotel;
+                                cptHotel-= 1;
+                                gotoligcol(46,100);
+                                printf("Vous vendez alors votre hotel et recevez %d euros", euros);
+
+                            }
+                            if (choixHypoH == 2)
+                            {
+                                gotoligcol(46,100);
+                                printf("Vous avez choisi de ne pas vendre vos maisons");
+                            }
+                            Sleep(2500);
+                            efface3755();
+                            optionCase(nom, position, argent, nbP, nbM, nbH, s2, s3, s4, s5, s6);
                             }
                         }
                         else{
@@ -699,15 +723,16 @@ int optionCase( char nom[8], int position, int argent, int nbP, int nbM, int nbH
                             gotoligcol(42, 100);
                             printf("car il y a une maison dessus");
                             gotoligcol(43,100);
-                            printf("Souhaitez vous vendre les maisons sur la propriete pour la vendre?");
+                            printf("Souhaitez vous vendre les maisons sur la propriete ?");
                             gotoligcol(44,100);
-                            printf("Tapez 1 pour vendre vos maisons et 2 pour ne pas vendre");
+                            printf("Tapez 1 pour vendre vos maisons et 2 pour ne pas les vendre");
                             gotoligcol(45,100);
                             scanf("%d", &choixHypoM);
                             if (choixHypoM == 1)
                             {
                                 argent -= (p[numH-1].nbMaison)*((p[numH-1].maison)/2);
                                 int euros=(p[numH-1].nbMaison)*((p[numH-1].maison)/2);
+                                cptMaison-=p[numH-1].nbMaison;
                                 gotoligcol(46,100);
                                 printf("Vous vendez alors vos maisons et recevez %d euros", euros);
 
@@ -772,8 +797,7 @@ int optionCase( char nom[8], int position, int argent, int nbP, int nbM, int nbH
             gotoligcol(48,100);
             printf("*****************************************************************\n");
             Sleep (6000);
-            efface3755
-            ();
+            efface3755();
             optionCase(nom, position, argent, nbP, nbM, nbH, s2, s3, s4, s5, s6);
         }
         /// QUITTER LE MENU JOUEUR ////////////////////////////////////////////////////////////
