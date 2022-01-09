@@ -3,21 +3,27 @@
 #include <time.h>
 
 
-int carteChance(int argentJ, int positionJ, int nbJoueurs){
+int carteChance(int argent, int position, int nbJoueurs, int cartePrison){
 
        int numeroCarteChance = 0;
        numeroCarteChance =1+rand()%16;
 
        if (numeroCarteChance == 1){
-            printf("\n                ******************************\n");
-            printf("                *                            *\n");
-            printf("                *   C A R T E   C H A N C E  *\n");
-            printf("                *                            *\n");
-            printf("                ******************************\n");
-            printf("                *                            *\n");
-            printf("                *                            *\n");
-            printf("                *      MAMIE EST MORTE...    *\n");
-            printf("                *                            *\n");
+           gotoligcol(13,30);
+            printf("******************************");
+            gotoligcol(14,30);
+            printf("*                            *");
+            gotoligcol(15,30);
+            printf("*   C A R T E   C H A N C E  *");
+            gotoligcol(16,30);
+            printf("*                            *");
+            gotoligcol(17,30);
+            printf("******************************");
+            gotoligcol(18,30);
+            printf("*                            *");
+            printf("*                            *\n");
+            printf("*      MAMIE EST MORTE...    *\n");
+            printf("*                            *\n");
             printf("                *                            *\n");
             printf("                *        VOUS TOUCHEZ        *\n");
             printf("                *                            *\n");
@@ -29,15 +35,21 @@ int carteChance(int argentJ, int positionJ, int nbJoueurs){
             printf("                *                            *\n");
             printf("                *                            *\n");
             printf("                ******************************\n");
-            argentJ=argentJ+150;
+            argent=argent+150;
        }
        if (numeroCarteChance == 2){
-            printf("\n                ******************************\n");
-            printf("                *                            *\n");
-            printf("                *   C A R T E   C H A N C E  *\n");
-            printf("                *                            *\n");
-            printf("                ******************************\n");
-            printf("                *                            *\n");
+           gotoligcol(13,30);
+            printf("******************************");
+            gotoligcol(14,30);
+            printf("*                            *");
+            gotoligcol(15,30);
+            printf("*   C A R T E   C H A N C E  *");
+            gotoligcol(16,30);
+            printf("*                            *");
+            gotoligcol(17,30);
+            printf("******************************");
+            gotoligcol(18,30);
+            printf("*                            *");
             printf("                *                            *\n");
             printf("                *         RENDEZ-VOUS        *\n");
             printf("                *                            *\n");
@@ -52,39 +64,50 @@ int carteChance(int argentJ, int positionJ, int nbJoueurs){
             printf("                *                            *\n");
             printf("                *                            *\n");
             printf("                ******************************\n");
-           // positionJ =  ;// Case Boulevard des Paillettes
+            position = 13 ;
        }
        if (numeroCarteChance == 3){
-            printf("\n                ******************************\n");
+           gotoligcol(13,30);
+            printf("******************************");
+            gotoligcol(14,30);
+            printf("*                            *");
+            gotoligcol(15,30);
+            printf("*   C A R T E   C H A N C E  *");
+            gotoligcol(16,30);
+            printf("*                            *");
+            gotoligcol(17,30);
+            printf("******************************");
+            gotoligcol(18,30);
+            printf("*                            *");
             printf("                *                            *\n");
-            printf("                *   C A R T E   C H A N C E  *\n");
+            printf("                *  VOTRE COUP D UN SOIR DU   *\n");
+            printf("                *                            *\n");
+            printf("                *                            *\n");
+            printf("                *  NOUVEL AN EST PARTIT AU   *\n");
+            printf("                *                            *\n");
+            printf("                *                            *\n");
+            printf("                *PETIT MATIN EN VOUS LAISSANT*\n");
+            printf("                *                            *\n");
+            printf("                *                            *\n");
+            printf("                *  20euros SUR L OREILLER... *\n");
+            printf("                *                            *\n");
             printf("                *                            *\n");
             printf("                ******************************\n");
-            printf("                *                            *\n");
-            printf("                *                            *\n");
-            printf("                *     BON ANNIVERSAIRE !!!   *\n");
-            printf("                *                            *\n");
-            printf("                *                            *\n");
-            printf("                *     CHAQUE JOUEUR DOIT     *\n");
-            printf("                *                            *\n");
-            printf("                *                            *\n");
-            printf("                *    VOUS DONNER 20 euros    *\n");
-            printf("                *                            *\n");
-            printf("                *                            *\n");
-            printf("                *                            *\n");
-            printf("                *                            *\n");
-            printf("                *                            *\n");
-            printf("                ******************************\n");
-            argentJ = argentJ+((nbJoueurs-1)*20);
-            //Faire perdre 20 euros aux autres joueurs !!
+            argent = argent+20;
        }
        if (numeroCarteChance == 4){
-            printf("\n                ******************************\n");
-            printf("                *                            *\n");
-            printf("                *   C A R T E   C H A N C E  *\n");
-            printf("                *                            *\n");
-            printf("                ******************************\n");
-            printf("                *                            *\n");
+            gotoligcol(13,30);
+            printf("******************************");
+            gotoligcol(14,30);
+            printf("*                            *");
+            gotoligcol(15,30);
+            printf("*   C A R T E   C H A N C E  *");
+            gotoligcol(16,30);
+            printf("*                            *");
+            gotoligcol(17,30);
+            printf("******************************");
+            gotoligcol(18,30);
+            printf("*                            *");
             printf("                *                            *\n");
             printf("                *  VOUS TOUCHEZ VOTRE BONUS  *\n");
             printf("                *                            *\n");
@@ -99,15 +122,21 @@ int carteChance(int argentJ, int positionJ, int nbJoueurs){
             printf("                *                            *\n");
             printf("                *                            *\n");
             printf("                ******************************\n");
-            argentJ=argentJ+200;
+            argent =argent +200;
        }
        if (numeroCarteChance == 5){
-            printf("\n                ******************************\n");
-            printf("                *                            *\n");
-            printf("                *   C A R T E   C H A N C E  *\n");
-            printf("                *                            *\n");
-            printf("                ******************************\n");
-            printf("                *                            *\n");
+           gotoligcol(13,30);
+            printf("******************************");
+            gotoligcol(14,30);
+            printf("*                            *");
+            gotoligcol(15,30);
+            printf("*   C A R T E   C H A N C E  *");
+            gotoligcol(16,30);
+            printf("*                            *");
+            gotoligcol(17,30);
+            printf("******************************");
+            gotoligcol(18,30);
+            printf("*                            *");
             printf("                *                            *\n");
             printf("                *   VOUS PARTEZ EN VOYAGE !  *\n");
             printf("                *                            *\n");
@@ -122,27 +151,34 @@ int carteChance(int argentJ, int positionJ, int nbJoueurs){
             printf("                *                            *\n");
             printf("                *                            *\n");
             printf("                ******************************\n");
-           /* if (1 <=positionJ<= 7){
-                positionJ = gare1;   //case 5
+            if (1 <= position <= 7){
+                position = 5 ;
             }
-            if (8 <= positionJ <= 14){
-                positionJ = gare2;  // case 11
+            if (8 <= position <= 14){
+                position = 11;
             }
-            if (15 <= positionJ <= 21){
-                positionJ = gare3;  //case19
+            if (15 <= position <= 21){
+                position = 19;
             }
-            if (22 <= positionJ <= 28){
-                positionJ = gare4;  //case 26
-            }*/
+            if (22 <= position <= 28){
+                position = 26;
+            }
        }
 
        if (numeroCarteChance == 6){
-            printf("\n                ******************************\n");
-            printf("                *                            *\n");
-            printf("                *   C A R T E   C H A N C E  *\n");
-            printf("                *                            *\n");
-            printf("                ******************************\n");
-            printf("                *                            *\n");
+            gotoligcol(13,30);
+            gotoligcol(13,30);
+            printf("******************************");
+            gotoligcol(14,30);
+            printf("*                            *");
+            gotoligcol(15,30);
+            printf("*   C A R T E   C H A N C E  *");
+            gotoligcol(16,30);
+            printf("*                            *");
+            gotoligcol(17,30);
+            printf("******************************");
+            gotoligcol(18,30);
+            printf("*                            *");
             printf("                *                            *\n");
             printf("                *      ALCOOL AU VOLANT      *\n");
             printf("                *                            *\n");
@@ -157,15 +193,21 @@ int carteChance(int argentJ, int positionJ, int nbJoueurs){
             printf("                *                            *\n");
             printf("                *                            *\n");
             printf("                ******************************\n");
-            argentJ=argentJ-40;
+            argent =argent -40;
        }
         if (numeroCarteChance == 7){
-            printf("\n                ******************************\n");
-            printf("                *                            *\n");
-            printf("                *   C A R T E   C H A N C E  *\n");
-            printf("                *                            *\n");
-            printf("                ******************************\n");
-            printf("                *                            *\n");
+            gotoligcol(13,30);
+            printf("******************************");
+            gotoligcol(14,30);
+            printf("*                            *");
+            gotoligcol(15,30);
+            printf("*   C A R T E   C H A N C E  *");
+            gotoligcol(16,30);
+            printf("*                            *");
+            gotoligcol(17,30);
+            printf("******************************");
+            gotoligcol(18,30);
+            printf("*                            *");
             printf("                *                            *\n");
             printf("                *  FACTURE EDF DE DECEMBRE : *\n");
             printf("                *                            *\n");
@@ -180,15 +222,21 @@ int carteChance(int argentJ, int positionJ, int nbJoueurs){
             printf("                *                            *\n");
             printf("                *                            *\n");
             printf("                ******************************\n");
-            argentJ = argentJ - 60;
+            argent = argent - 60;
        }
        if (numeroCarteChance == 8){
-            printf("\n                ******************************\n");
-            printf("                *                            *\n");
-            printf("                *   C A R T E   C H A N C E  *\n");
-            printf("                *                            *\n");
-            printf("                ******************************\n");
-            printf("                *                            *\n");
+            gotoligcol(13,30);
+            printf("******************************");
+            gotoligcol(14,30);
+            printf("*                            *");
+            gotoligcol(15,30);
+            printf("*   C A R T E   C H A N C E  *");
+            gotoligcol(16,30);
+            printf("*                            *");
+            gotoligcol(17,30);
+            printf("******************************");
+            gotoligcol(18,30);
+            printf("*                            *");
             printf("                *                            *\n");
             printf("                *BONNE RESOLUTION DE L'ANNEE!*\n");
             printf("                *                            *\n");
@@ -203,194 +251,359 @@ int carteChance(int argentJ, int positionJ, int nbJoueurs){
             printf("                *                            *\n");
             printf("                *                            *\n");
             printf("                ******************************\n");
-            argentJ=argentJ-75;
+            argent =argent -75;
        }
        if (numeroCarteChance == 9){
-            printf("\n                ******************************\n");
-            printf("                *                            *\n");
-            printf("                *   C A R T E   C H A N C E  *\n");
-            printf("                *                            *\n");
-            printf("                ******************************\n");
-            printf("                *                            *\n");
-            printf("                *                            *\n");
-            printf("                *  VOUS VENEZ D'ETRE DEBITE  *\n");
-            printf("                *                            *\n");
-            printf("                *    DES 80 euros DEPENSES   *\n");
-            printf("                *                            *\n");
-            printf("                * EN BOITE SAMEDI DERNIER... *\n");
-            printf("                *                            *\n");
-            printf("                *          OUI OUI...        *\n");
-            printf("                *                            *\n");
-            printf("                *      C'ETAIT BIEN VOUS     *\n");
-            printf("                *                            *\n");
-            printf("                *                            *\n");
-            printf("                *                            *\n");
-            printf("                ******************************\n");
-            argentJ=argentJ-80;
+
+             gotoligcol(10,27);
+            printf("******************************");
+            gotoligcol(11,27);
+            printf("*                            *");
+            gotoligcol(12,27);
+            printf("*   C A R T E   C H A N C E  *");
+            gotoligcol(13,27);
+            printf("*                            *");
+            gotoligcol(14,27);
+            printf("******************************");
+            gotoligcol(15,27);
+            printf("*                            *");
+            gotoligcol(16,27);
+            printf("*                            *");
+            gotoligcol(17,27);
+            printf("*  VOUS VENEZ D'ETRE DEBITE  *");
+            gotoligcol(18,27);
+            printf("*                            *");
+            gotoligcol(19,27);
+            printf("*    DES 80 euros DEPENSES   *");
+            gotoligcol(20,27);
+            printf("*                            *");
+            gotoligcol(21,27);
+            printf("* EN BOITE SAMEDI DERNIER... *");
+            gotoligcol(22,27);
+            printf("*                            *");
+            gotoligcol(23,27);
+            printf("*          OUI OUI...        *");
+            gotoligcol(24,27);
+            printf("*                            *");
+            gotoligcol(25,27);
+            printf("*      C'ETAIT BIEN VOUS     *");
+            gotoligcol(26,27);
+            printf("*                            *");
+            gotoligcol(27,27);
+            printf("*                            *");
+            gotoligcol(28,27);
+            printf("*                            *");
+            gotoligcol(29,27);
+            printf("******************************");
+            argent =argent -80;
        }
        if (numeroCarteChance == 10){
-            printf("\n                ******************************\n");
-            printf("                *                            *\n");
-            printf("                *   C A R T E   C H A N C E  *\n");
-            printf("                *                            *\n");
-            printf("                ******************************\n");
-            printf("                *                            *\n");
-            printf("                *                            *\n");
-            printf("                *    VOS COMPTES OFFSHORE    *\n");
-            printf("                *                            *\n");
-            printf("                *                            *\n");
-            printf("                *     ONT ETE DECOUVERTS,    *\n");
-            printf("                *                            *\n");
-            printf("                *                            *\n");
-            printf("                *  TROP TARD POUR S'ENFUIR,  *\n");
-            printf("                *                            *\n");
-            printf("                *                            *\n");
-            printf("                *    DIRECTION LA PRISON !   *\n");
-            printf("                *                            *\n");
-            printf("                *                            *\n");
-            printf("                ******************************\n");
-           // positionJ = prison ;   // case 22
+            gotoligcol(10,27);
+            printf("******************************");
+            gotoligcol(11,27);
+            printf("*                            *");
+            gotoligcol(12,27);
+            printf("*   C A R T E   C H A N C E  *");
+            gotoligcol(13,27);
+            printf("*                            *");
+            gotoligcol(14,27);
+            printf("******************************");
+            gotoligcol(15,27);
+            printf("*                            *");
+            gotoligcol(16,27);
+            printf("*                            *");
+            gotoligcol(17,27);
+            printf("*    VOS COMPTES OFFSHORE    *");
+            gotoligcol(18,27);
+            printf("*                            *");
+            gotoligcol(19,27);
+            printf("*                            *");
+            gotoligcol(20,27);
+            printf("*     ONT ETE DECOUVERTS,    *");
+            gotoligcol(21,27);
+            printf("*                            *");
+            gotoligcol(22,27);
+            printf("*                            *");
+            gotoligcol(23,27);
+            printf("*  TROP TARD POUR S'ENFUIR,  *");
+            gotoligcol(24,27);
+            printf("*                            *");
+            gotoligcol(25,27);
+            printf("*                            *");
+            gotoligcol(26,27);
+            printf("*    DIRECTION LA PRISON !   *");
+            gotoligcol(27,27);
+            printf("*                            *");
+            gotoligcol(28,27);
+            printf("*                            *");
+            gotoligcol(29,27);
+            printf("******************************");
+            position = 22 ;
        }
        if (numeroCarteChance == 11){
-            printf("\n                ******************************\n");
-            printf("                *                            *\n");
-            printf("                *   C A R T E   C H A N C E  *\n");
-            printf("                *                            *\n");
-            printf("                ******************************\n");
-            printf("                *                            *\n");
-            printf("                *                            *\n");
-            printf("                *       VOUS ETES LIBERE     *\n");
-            printf("                *                            *\n");
-            printf("                *                            *\n");
-            printf("                *          DE PRISON         *\n");
-            printf("                *                            *\n");
-            printf("                *                            *\n");
-            printf("                *    POUR BONNE CONDUITE !   *\n");
-            printf("                *                            *\n");
-            printf("                *                            *\n");
-            printf("                *                            *\n");
-            printf("                *                            *\n");
-            printf("                *                            *\n");
-            printf("                ******************************\n");
-            // a garder et a utiliserulterieurement
+            gotoligcol(10,27);
+            printf("******************************");
+            gotoligcol(11,27);
+            printf("*                            *");
+            gotoligcol(12,27);
+            printf("*   C A R T E   C H A N C E  *");
+            gotoligcol(13,27);
+            printf("*                            *");
+            gotoligcol(14,27);
+            printf("******************************");
+            gotoligcol(15,27);
+            printf("*                            *");
+            gotoligcol(16,27);
+            printf("*                            *");
+            gotoligcol(17,27);
+            printf("*       VOUS ETES LIBERE     *");
+            gotoligcol(18,27);
+            printf("*                            *");
+            gotoligcol(19,27);
+            printf("*                            *");
+            gotoligcol(20,27);
+            printf("*          DE PRISON         *");
+            gotoligcol(21,27);
+            printf("*                            *");
+            gotoligcol(22,27);
+            printf("*                            *");
+            gotoligcol(23,27);
+            printf("*    POUR BONNE CONDUITE !   *");
+            gotoligcol(24,27);
+            printf("*                            *");
+            gotoligcol(25,27);
+            printf("*                            *");
+            gotoligcol(26,27);
+            printf("*                            *");
+            gotoligcol(27,27);
+            printf("*                            *");
+            gotoligcol(28,27);
+            printf("*                            *");
+            gotoligcol(29,27);
+            printf("******************************");
+
+            cartePrison = 1;
        }
        if (numeroCarteChance == 12){
-            printf("\n                ******************************\n");
-            printf("                *                            *\n");
-            printf("                *   C A R T E   C H A N C E  *\n");
-            printf("                *                            *\n");
-            printf("                ******************************\n");
-            printf("                *                            *\n");
-            printf("                *                            *\n");
-            printf("                *    VOTRE ENFANT RECLAME    *\n");
-            printf("                *                            *\n");
-            printf("                *   UNE CONSOLE POUR NOEL :  *\n");
-            printf("                *                            *\n");
-            printf("                *      DEPENSEZ 30 euros     *\n");
-            printf("                *                            *\n");
-            printf("                *   AVANT QU'IL NE SE METTE  *\n");
-            printf("                *                            *\n");
-            printf("                *         A CRIER !!!        *\n");
-            printf("                *                            *\n");
-            printf("                *                            *\n");
-            printf("                *                            *\n");
-            printf("                ******************************\n");
-            argentJ=argentJ-30;
+
+            gotoligcol(10,27);
+            printf("******************************");
+            gotoligcol(11,27);
+            printf("*                            *");
+            gotoligcol(12,27);
+            printf("*   C A R T E   C H A N C E  *");
+            gotoligcol(13,27);
+            printf("*                            *");
+            gotoligcol(14,27);
+            printf("******************************");
+            gotoligcol(15,27);
+            printf("*                            *");
+            gotoligcol(16,27);
+            printf("*                            *");
+            gotoligcol(17,27);
+            printf("*    VOTRE ENFANT RECLAME    *");
+            gotoligcol(18,27);
+            printf("*                            *");
+            gotoligcol(19,27);
+            printf("*   UNE CONSOLE POUR NOEL :  *");
+            gotoligcol(20,27);
+            printf("*                            *");
+            gotoligcol(21,27);
+            printf("*      DEPENSEZ 30 euros     *");
+            gotoligcol(22,27);
+            printf("*                            *");
+            gotoligcol(23,27);
+            printf("*   AVANT QU'IL NE SE METTE  *");
+            gotoligcol(24,27);
+            printf("*                            *");
+            gotoligcol(25,27);
+            printf("*         A CRIER !!!        *");
+            gotoligcol(26,27);
+            printf("*                            *");
+            gotoligcol(27,27);
+            printf("*                            *");
+            gotoligcol(28,27);
+            printf("*                            *");
+            gotoligcol(29,27);
+            printf("******************************");
+            argent =argent -30;
        }
        if (numeroCarteChance == 13){
-            printf("\n                ******************************\n");
-            printf("                *                            *\n");
-            printf("                *   C A R T E   C H A N C E  *\n");
-            printf("                *                            *\n");
-            printf("                ******************************\n");
-            printf("                *                            *\n");
-            printf("                *                            *\n");
-            printf("                *                            *\n");
-            printf("                *    VOUS AVEZ FAIT TOMBER   *\n");
-            printf("                *                            *\n");
-            printf("                *    VOTRE PORTE-FEUILLE !   *\n");
-            printf("                *                            *\n");
-            printf("                *      RECULEZ DE 3 CASES    *\n");
-            printf("                *                            *\n");
-            printf("                *      POUR LE RETROUVER !   *\n");
-            printf("                *                            *\n");
-            printf("                *                            *\n");
-            printf("                *                            *\n");
-            printf("                *                            *\n");
-            printf("                ******************************\n");
-            positionJ= positionJ -3;
+            gotoligcol(10,27);
+            printf("******************************");
+            gotoligcol(11,27);
+            printf("*                            *");
+            gotoligcol(12,27);
+            printf("*   C A R T E   C H A N C E  *");
+            gotoligcol(13,27);
+            printf("*                            *");
+            gotoligcol(14,27);
+            printf("******************************");
+            gotoligcol(15,27);
+            printf("*                            *");
+            gotoligcol(16,27);
+            printf("*                            *");
+            gotoligcol(17,27);
+            printf("*    VOUS AVEZ FAIT TOMBER   *");
+            gotoligcol(18,27);
+            printf("*                            *");
+            gotoligcol(19,27);
+            printf("*    VOTRE PORTE-FEUILLE !   *");
+            gotoligcol(20,27);
+            printf("*                            *");
+            gotoligcol(21,27);
+            printf("*      RECULEZ DE 3 CASES    *");
+            gotoligcol(22,27);
+            printf("*                            *");
+            gotoligcol(23,27);
+            printf("*      POUR LE RETROUVER !   *");
+            gotoligcol(24,27);
+            printf("*                            *");
+            gotoligcol(25,27);
+            printf("*                            *");
+            gotoligcol(26,27);
+            printf("*                            *");
+            gotoligcol(27,27);
+            printf("*                            *");
+            gotoligcol(28,27);
+            printf("*                            *");
+            gotoligcol(29,27);
+            printf("******************************");
+            position = position -3;
        }
        if (numeroCarteChance == 14){
-            printf("\n                ******************************\n");
-            printf("                *                            *\n");
-            printf("                *   C A R T E   C H A N C E  *\n");
-            printf("                *                            *\n");
-            printf("                ******************************\n");
-            printf("                *                            *\n");
-            printf("                *                            *\n");
-            printf("                *                            *\n");
-            printf("                *   VOUS AVEZ FAIT BEAUCOUP  *\n");
-            printf("                *                            *\n");
-            printf("                *   D'HEURES SUP CE MOIS-CI  *\n");
-            printf("                *                            *\n");
-            printf("                *      TOUCHEZ UE PRIME      *\n");
-            printf("                *                            *\n");
-            printf("                *         DE 80 euros        *\n");
-            printf("                *                            *\n");
-            printf("                *                            *\n");
-            printf("                *                            *\n");
-            printf("                *                            *\n");
-            printf("                ******************************\n");
-            argentJ=argentJ+80;
+
+            gotoligcol(10,27);
+            printf("******************************");
+            gotoligcol(11,27);
+            printf("*                            *");
+            gotoligcol(12,27);
+            printf("*   C A R T E   C H A N C E  *");
+            gotoligcol(13,27);
+            printf("*                            *");
+            gotoligcol(14,27);
+            printf("******************************");
+            gotoligcol(15,27);
+            printf("*                            *");
+            gotoligcol(16,27);
+            printf("*                            *");
+            gotoligcol(17,27);
+            printf("*   VOUS AVEZ FAIT BEAUCOUP  *");
+            gotoligcol(18,27);
+            printf("*                            *");
+            gotoligcol(19,27);
+            printf("*   D'HEURES SUP CE MOIS-CI  *");
+            gotoligcol(20,27);
+            printf("*                            *");
+            gotoligcol(21,27);
+            printf("*      TOUCHEZ UE PRIME      *");
+            gotoligcol(22,27);
+            printf("*                            *");
+            gotoligcol(23,27);
+            printf("*         DE 80 euros        *");
+            gotoligcol(24,27);
+            printf("*                            *");
+            gotoligcol(25,27);
+            printf("*                            *");
+            gotoligcol(26,27);
+            printf("*                            *");
+            gotoligcol(27,27);
+            printf("*                            *");
+            gotoligcol(28,27);
+            printf("*                            *");
+            gotoligcol(29,27);
+            printf("******************************");
+            argent =argent +80;
         }
        if (numeroCarteChance == 15){
-            printf("\n                ******************************\n");
-            printf("                *                            *\n");
-            printf("                *  C A R T E   C H A N C E   *\n");
-            printf("                *                            *\n");
-            printf("                ******************************\n");
-            printf("                *                            *\n");
-            printf("                *                            *\n");
-            printf("                *                            *\n");
-            printf("                *       PAPI EST TOMBE       *\n");
-            printf("                *                            *\n");
-            printf("                *     DANS LES ESCALIERS !   *\n");
-            printf("                *                            *\n");
-            printf("                *  FRAIS D'HOSPITALISATION : *\n");
-            printf("                *                            *\n");
-            printf("                *          65 euros...       *\n");
-            printf("                *                            *\n");
-            printf("                *                            *\n");
-            printf("                *                            *\n");
-            printf("                *                            *\n");
-            printf("                ******************************\n");
-            argentJ = argentJ - 65;
+
+            gotoligcol(10,27);
+            printf("******************************");
+            gotoligcol(11,27);
+            printf("*                            *");
+            gotoligcol(12,27);
+            printf("*   C A R T E   C H A N C E  *");
+            gotoligcol(13,27);
+            printf("*                            *");
+            gotoligcol(14,27);
+            printf("******************************");
+            gotoligcol(15,27);
+            printf("*                            *");
+            gotoligcol(16,27);
+            printf("*                            *");
+            gotoligcol(17,27);
+            printf("*       PAPI EST TOMBE       *");
+            gotoligcol(18,27);
+            printf("*                            *");
+            gotoligcol(19,27);
+            printf("*     DANS LES ESCALIERS !   *");
+            gotoligcol(20,27);
+            printf("*                            *");
+            gotoligcol(21,27);
+            printf("*  FRAIS D'HOSPITALISATION : *");
+            gotoligcol(22,27);
+            printf("*                            *");
+            gotoligcol(23,27);
+            printf("*          65 euros...       *");
+            gotoligcol(24,27);
+            printf("*                            *");
+            gotoligcol(25,27);
+            printf("*                            *");
+            gotoligcol(26,27);
+            printf("*                            *");
+            gotoligcol(27,27);
+            printf("*                            *");
+            gotoligcol(28,27);
+            printf("*                            *");
+            gotoligcol(29,27);
+            printf("******************************");
+            argent  = argent - 65;
        }
        if (numeroCarteChance == 16){
-            printf("\n                ******************************\n");
-            printf("                *                            *\n");
-            printf("                *   C A R T E   C H A N C E  *\n");
-            printf("                *                            *\n");
-            printf("                ******************************\n");
-            printf("                *                            *\n");
-            printf("                *                            *\n");
-            printf("                *             HOP !          *\n");
-            printf("                *                            *\n");
-            printf("                *    UN BILLET DE 50 euros   *\n");
-            printf("                *                            *\n");
-            printf("                *      TROUVE PAR TERRE :    *\n");
-            printf("                *                            *\n");
-            printf("                *       VOUS LE GARDEZ,      *\n");
-            printf("                *                            *\n");
-            printf("                *      BIEN EVIDEMMENT...    *\n");
-            printf("                *                            *\n");
-            printf("                *                            *\n");
-            printf("                *                            *\n");
-            printf("                ******************************\n");
-            argentJ = argentJ + 50;
+            gotoligcol(10,27);
+            printf("******************************");
+            gotoligcol(11,27);
+            printf("*                            *");
+            gotoligcol(12,27);
+            printf("*   C A R T E   C H A N C E  *");
+            gotoligcol(13,27);
+            printf("*                            *");
+            gotoligcol(14,27);
+            printf("******************************");
+            gotoligcol(15,27);
+            printf("*                            *");
+            gotoligcol(16,27);
+            printf("*                            *");
+            gotoligcol(17,27);
+            printf("*             HOP !          *");
+            gotoligcol(18,27);
+            printf("*                            *");
+            gotoligcol(19,27);
+            printf("*    UN BILLET DE 50 euros   *");
+            gotoligcol(20,27);
+            printf("*                            *");
+            gotoligcol(21,27);
+            printf("*      TROUVE PAR TERRE :    *");
+            gotoligcol(22,27);
+            printf("*                            *");
+            gotoligcol(23,27);
+            printf("*       VOUS LE GARDEZ,      *");
+            gotoligcol(24,27);
+            printf("*                            *");
+            gotoligcol(25,27);
+            printf("*      BIEN EVIDEMMENT...    *");
+            gotoligcol(26,27);
+            printf("*                            *");
+            gotoligcol(27,27);
+            printf("*                            *");
+            gotoligcol(28,27);
+            printf("*                            *");
+            gotoligcol(29,27);
+            printf("******************************");
+            argent = argent + 50;
        }
 
-        return 0;
+        return argent;
 }
 
 
@@ -618,7 +831,7 @@ void carteCommunaute(int argentJ, int positionJ, int nbJoueurs){
             printf("                *                            *\n");
             printf("                *     JOUES ET VOUS ETES     *\n");
             printf("                *                            *\n");
-            printf("                *     LIBERES DE PRISON !    *\n");
+            printf("                *      LIBERE DE PRISON !    *\n");
             printf("                *                            *\n");
             printf("                *                            *\n");
             printf("                *                            *\n");
@@ -796,5 +1009,5 @@ void carteCommunaute(int argentJ, int positionJ, int nbJoueurs){
             argentJ = argentJ + 10;
        }
 
-       return argentJ, positionJ;
+       return argentJ;
 }
