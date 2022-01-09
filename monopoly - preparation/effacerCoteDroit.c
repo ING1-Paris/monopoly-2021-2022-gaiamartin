@@ -1,4 +1,4 @@
-void efface3754(){
+void efface3755(){
 
     gotoligcol(37,100);
     printf("                                                                            \n");
@@ -35,5 +35,7 @@ void efface3754(){
     gotoligcol(53,100);
     printf("                                                                            \n");
     gotoligcol(54,100);
+    printf("                                                                            \n");
+    gotoligcol(55,100);
     printf("                                                                            \n");
 }

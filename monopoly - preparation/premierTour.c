@@ -6,12 +6,14 @@
 #include "bibli_Monopoly.h"
 
 
-    int premierTour( char nom[14], int position, int argent, int nbJoueurs){
+    int premierTour( char nom[8], int position, int argent, int nbJoueurs, int nbP, int nbM, int nbH, char s2[8],char s3[8],char s4[8],char s5[8],char s6[8]){
 
                     gotoligcol(37,71);
                     printf("%s", nom );
-                    position = 1;
-                    argent = 1500;
+                    //position = 1;
+                    //argent = 1500;
+                    int nvArgent;
+                    int nvPosition;
 
                     int nbCasesAvancees = fctnDD( nom, position, argent, nbJoueurs);
                     nbCasesAvancees = 1 + nbCasesAvancees;
@@ -27,14 +29,16 @@
                         printf("        ");
                         gotoligcol(37,61);
                         printf("%s", nom);
-                        position == 2;
+                        nvPosition = 2;
+                        position = nvPosition;
                     }
                     if(position==3){
                         gotoligcol(37,71);
                         printf("        ");
                         gotoligcol(37,51);
                         printf("%s", nom);
-                        position == 3;
+                        nvPosition = 3;
+                        position = nvPosition;
                     }
                     if(position==4){
                         gotoligcol(37,71);
@@ -43,21 +47,24 @@
                         gotoligcol(37,41);
                         printf("%s", nom);
                         argent = argent - 200;
-                        position == 4;
+                        nvPosition = 4;
+                        position = nvPosition;
                     }
                     if(position==5){
                         gotoligcol(37,71);
                         printf("        ");
                         gotoligcol(37,31);
                         printf("%s", nom);
-                        position == 5;
+                        nvPosition = 5;
+                        position = nvPosition;
                     }
                     if(position==6){
                         gotoligcol(37,71);
                         printf("        ");
                         gotoligcol(37,21);
                         printf("%s", nom);
-                        position == 6;
+                        nvPosition = 6;
+                        position = nvPosition;
                         int carteC = 0;
                         carteChance(argent, position, nbJoueurs);
                     }
@@ -67,7 +74,8 @@
                         printf("        ");
                         gotoligcol(37,11);
                         printf("%s", nom);
-                        position == 7;
+                        nvPosition =7;
+                        position = nvPosition;
                     }
                     if(position==8){
                         gotoligcol(37,71);
@@ -80,35 +88,40 @@
                         printf("        ");
                         gotoligcol(2,71);
                         printf("%s", nom);
-                        position == 22;
+                        nvPosition = 22;
+                        position = nvPosition;
                     }
                     if(position==9){
                         gotoligcol(37,71);
                         printf("        ");
                         gotoligcol(31,3);
                         printf("%s", nom);
-                        position == 9;
+                        nvPosition = 9;
+                        position = nvPosition;
                     }
                     if(position==10){
                         gotoligcol(37,71);
                         printf("        ");
                         gotoligcol(26,3);
                         printf("%s", nom);
-                        position == 10;
+                        nvPosition = 10;
+                        position = nvPosition;;
                     }
                     if(position==11){
                         gotoligcol(37,71);
                         printf("        ");
                         gotoligcol(21,3);
                         printf("%s", nom);
-                        position == 11;
+                        nvPosition = 11;
+                        position = nvPosition;
                     }
                     if(position==12){
                         gotoligcol(37,71);
                         printf("        ");
                         gotoligcol(16,3);
                         printf("%s", nom);
-                        position == 12;
+                        nvPosition = 12;
+                        position = nvPosition;
                     }
                     if(position==13){
                         gotoligcol(37,71);
@@ -227,6 +240,8 @@
                         printf("%s", nom);
                         position = 28;
                     }
+
+                    optionCase( nom, position, argent, nbP, nbM, nbH, s2, s3, s4, s5, s6);
             return position;
       }
 

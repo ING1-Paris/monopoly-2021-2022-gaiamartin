@@ -184,288 +184,288 @@ printf("\n\n\n**************************************************** NOUVELLE PART
 
                 if (quiCommence== 1){ // si le joueur 1 est le premier a jouer
                     printf("\n\n    %s ! A vous de commencer !\n\n", j1.nom);
-                    startPlayer.argent== j1.argent;
+                    startPlayer.argent = j1.argent;
                     strcpy(startPlayer.nom , j1.nom);
-                    startPlayer.position == j1.position;
-                    startPlayer.nbProprietes == j1.nbProprietes;
-                    startPlayer.Maisons == j1.Maisons;
-                    startPlayer.Hotels == j1.Hotels;
+                    startPlayer.position = j1.position;
+                    startPlayer.nbProprietes = j1.nbProprietes;
+                    startPlayer.Maisons = j1.Maisons;
+                    startPlayer.Hotels = j1.Hotels;
 
-                    s2.argent == j2.argent;
+                    s2.argent = j2.argent;
                     strcpy(s2.nom , j2.nom);
-                    s2.position == j2.position;
-                    s2.nbProprietes == j2.nbProprietes;
-                    s2.Maisons == j2.Maisons;
-                    s2.Hotels == j2.Hotels;
+                    s2.position = j2.position;
+                    s2.nbProprietes = j2.nbProprietes;
+                    s2.Maisons = j2.Maisons;
+                    s2.Hotels = j2.Hotels;
 
                     if(nbJoueurs >2){
-                        s3.argent == j3.argent;
+                        s3.argent = j3.argent;
                         strcpy(s3.nom, j3.nom);
-                        s3.position == j3.position;
-                        s3.nbProprietes == j3.nbProprietes;
-                        s3.Maisons == j3.Maisons;
-                        s3.Hotels == j3.Hotels;
+                        s3.position = j3.position;
+                        s3.nbProprietes = j3.nbProprietes;
+                        s3.Maisons = j3.Maisons;
+                        s3.Hotels = j3.Hotels;
                     }
                     if(nbJoueurs >= 4){
-                        s4.argent == j4.argent;
+                        s4.argent = j4.argent;
                         strcpy(s4.nom, j4.nom);
-                        s4.position ==j4.position;
-                        s4.nbProprietes == j4.nbProprietes;
-                        s4.Maisons == j4.Maisons;
-                        s4.Hotels == j4.Hotels;
+                        s4.position =j4.position;
+                        s4.nbProprietes = j4.nbProprietes;
+                        s4.Maisons = j4.Maisons;
+                        s4.Hotels = j4.Hotels;
                     }
                     if(nbJoueurs >= 5){
-                        s5.argent == j5.argent;
+                        s5.argent = j5.argent;
                         strcpy(s5.nom, j5.nom);
-                        s5.position == j5.position;
+                        s5.position = j5.position;
                         s5.nbProprietes = j5.nbProprietes;
-                        s5.Maisons == j5.Maisons;
-                        s5.Hotels == j5.Hotels;
+                        s5.Maisons = j5.Maisons;
+                        s5.Hotels = j5.Hotels;
                     }
                     if(nbJoueurs >= 6){
-                        s6.argent == j6.argent;
+                        s6.argent = j6.argent;
                         strcpy(s6.nom, j6.nom);
-                        s6.position == j6.position;
-                        s6.nbProprietes == j6.nbProprietes;
-                        s6.Maisons == j6.Maisons;
-                        s6.Hotels == j6.Hotels;
+                        s6.position = j6.position;
+                        s6.nbProprietes = j6.nbProprietes;
+                        s6.Maisons = j6.Maisons;
+                        s6.Hotels = j6.Hotels;
                     }
                 }
                 if (quiCommence == 2){// si le joueur 2 est le premier a jouer (meme logique que si joueur 1 commence)
                     printf("\n\n    %s ! A vous de commencer !\n\n", j2.nom);
-                    startPlayer.argent == j2.argent;
+                    startPlayer.argent= j2.argent;
                     strcpy(startPlayer.nom, j2.nom);
-                    startPlayer.position == j2.position;
-                    startPlayer.nbProprietes == j2.nbProprietes;
-                    startPlayer.Maisons == j2.Maisons;
-                    startPlayer.Hotels == j2.Hotels;
+                    startPlayer.position = j2.position;
+                    startPlayer.nbProprietes = j2.nbProprietes;
+                    startPlayer.Maisons = j2.Maisons;
+                    startPlayer.Hotels = j2.Hotels;
 
-                    s2.argent == j3.argent;
+                    s2.argent = j3.argent;
                     strcpy(s2.nom, j3.nom);
-                    s2.position == j3.position;
-                    s2.nbProprietes == j3.nbProprietes;
-                    s2.Maisons == j3.Maisons;
-                    s2.Hotels == j3.Hotels;
+                    s2.position = j3.position;
+                    s2.nbProprietes = j3.nbProprietes;
+                    s2.Maisons = j3.Maisons;
+                    s2.Hotels = j3.Hotels;
                     if(nbJoueurs >2){
-                        s3.argent == j4.argent;
+                        s3.argent = j4.argent;
                         strcpy(s3.nom, j4.nom);
-                        s3.position == j4.position;
-                        s3.nbProprietes == j4.nbProprietes;
-                        s3.Maisons == j4.Maisons;
-                        s3.Hotels == j4.Hotels;
+                        s3.position = j4.position;
+                        s3.nbProprietes = j4.nbProprietes;
+                        s3.Maisons = j4.Maisons;
+                        s3.Hotels = j4.Hotels;
                     }
                     if(nbJoueurs >= 4){
-                        s4.argent == j5.argent;
+                        s4.argent = j5.argent;
                         strcpy(s4.nom, j5.nom);
-                        s4.position == j5.position;
-                        s4.nbProprietes == j5.nbProprietes;
-                        s4.Maisons == j5.Maisons;
-                        s4.Hotels == j5.Hotels;
+                        s4.position = j5.position;
+                        s4.nbProprietes = j5.nbProprietes;
+                        s4.Maisons = j5.Maisons;
+                        s4.Hotels = j5.Hotels;
                     }
                     if(nbJoueurs >= 5){
-                        s5.argent == j6.argent;
+                        s5.argent = j6.argent;
                         strcpy(s5.nom, j6.nom);
-                        s5.position == j6.position;
-                        s5.nbProprietes == j6.nbProprietes;
-                        s5.Maisons == j6.Maisons;
-                        s5.Hotels == j6.Hotels;
+                        s5.position = j6.position;
+                        s5.nbProprietes = j6.nbProprietes;
+                        s5.Maisons = j6.Maisons;
+                        s5.Hotels = j6.Hotels;
                     }
                     if(nbJoueurs >= 6){
-                        s6.argent == j1.argent;
+                        s6.argent = j1.argent;
                         strcpy(s6.nom, j1.nom);
-                        s6.position == j1.position;
-                        s6.nbProprietes == j1.nbProprietes;
-                        s6.Maisons == j1.Maisons;
-                        s6.Hotels == j1.Hotels;
+                        s6.position = j1.position;
+                        s6.nbProprietes = j1.nbProprietes;
+                        s6.Maisons = j1.Maisons;
+                        s6.Hotels = j1.Hotels;
                     }
                 }
                 if (quiCommence == 3){// si le joueur 3 est le premier a jouer(meme logique que si joueur 1 commence)
                     printf("\n\n    %s ! A vous de commencer !\n\n", j3.nom);
-                    startPlayer.argent == j3.argent;
+                    startPlayer.argent= j3.argent;
                     strcpy(startPlayer.nom, j3.nom);
-                    startPlayer.position == j3.position;
-                    startPlayer.nbProprietes == j3.nbProprietes;
-                    startPlayer.Maisons == j3.Maisons;
-                    startPlayer.Hotels == j3.Hotels;
+                    startPlayer.position = j3.position;
+                    startPlayer.nbProprietes = j3.nbProprietes;
+                    startPlayer.Maisons = j3.Maisons;
+                    startPlayer.Hotels = j3.Hotels;
 
-                    s2.argent == j4.argent;
+                    s2.argent = j4.argent;
                     strcpy(s2.nom,j4.nom);
-                    s2.position == j4.position;
-                    s2.nbProprietes == j4.nbProprietes;
-                    s2.Maisons == j4.Maisons;
-                    s2.Hotels == j4.Hotels;
+                    s2.position = j4.position;
+                    s2.nbProprietes = j4.nbProprietes;
+                    s2.Maisons = j4.Maisons;
+                    s2.Hotels = j4.Hotels;
 
                     if(nbJoueurs >2){
-                        s3.argent == j5.argent;
+                        s3.argent = j5.argent;
                         strcpy(s3.nom,j5.nom);
-                        s3.position == j5.position;
-                        s3.nbProprietes == j5.nbProprietes;
-                        s3.Maisons == j5.Maisons;
-                        s3.Hotels == j5.Hotels;
+                        s3.position = j5.position;
+                        s3.nbProprietes = j5.nbProprietes;
+                        s3.Maisons = j5.Maisons;
+                        s3.Hotels = j5.Hotels;
                     }
                     if(nbJoueurs >= 4){
-                        s4.argent == j6.argent;
+                        s4.argent = j6.argent;
                         strcpy(s4.nom, j6.nom);
-                        s4.position == j6.position;
-                        s4.nbProprietes == j6.nbProprietes;
-                        s4.Maisons == j6.Maisons;
-                        s4.Hotels == j6.Hotels;
+                        s4.position = j6.position;
+                        s4.nbProprietes = j6.nbProprietes;
+                        s4.Maisons = j6.Maisons;
+                        s4.Hotels = j6.Hotels;
                     }
                     if(nbJoueurs >= 5){
-                        s5.argent == j1.argent;
+                        s5.argent = j1.argent;
                         strcpy(s5.nom,j1.nom);
-                        s5.position == j1.position;
-                        s5.nbProprietes == j1.nbProprietes;
-                        s5.Maisons == j1.Maisons;
-                        s5.Hotels == j1.Hotels;
+                        s5.position = j1.position;
+                        s5.nbProprietes = j1.nbProprietes;
+                        s5.Maisons = j1.Maisons;
+                        s5.Hotels = j1.Hotels;
                     }
                     if(nbJoueurs >= 6){
-                        s6.argent == j2.argent;
+                        s6.argent = j2.argent;
                         strcpy(s6.nom, j2.nom);
-                        s6.position == j2.position;
-                        s6.nbProprietes == j2.nbProprietes;
-                        s6.Maisons == j2.Maisons;
-                        s6.Hotels == j2.Hotels;
+                        s6.position = j2.position;
+                        s6.nbProprietes = j2.nbProprietes;
+                        s6.Maisons = j2.Maisons;
+                        s6.Hotels = j2.Hotels;
                     }
                 }
                 if(quiCommence == 4){// si le joueur 4 est le premier a jouer(meme logique que si joueur 1 commence)
                     printf("\n\n    %s ! A vous de commencer !\n\n", j4.nom);
-                    startPlayer.argent == j4.argent;
+                    startPlayer.argent= j4.argent;
                     strcpy(startPlayer.nom,j4.nom);
-                    startPlayer.position == j4.position;
-                    startPlayer.nbProprietes == j4.nbProprietes;
-                    startPlayer.Maisons == j4.Maisons;
-                    startPlayer.Hotels == j4.Hotels;
+                    startPlayer.position = j4.position;
+                    startPlayer.nbProprietes = j4.nbProprietes;
+                    startPlayer.Maisons = j4.Maisons;
+                    startPlayer.Hotels = j4.Hotels;
 
-                    s2.argent == j5.argent;
+                    s2.argent = j5.argent;
                     strcpy(s2.nom, j5.nom);
-                    s2.position == j5.position;
-                    s2.nbProprietes == j5.nbProprietes;
-                    s2.Maisons == j5.Maisons;
-                    s2.Hotels == j5.Hotels;
+                    s2.position = j5.position;
+                    s2.nbProprietes = j5.nbProprietes;
+                    s2.Maisons = j5.Maisons;
+                    s2.Hotels = j5.Hotels;
 
-                    s3.argent == j6.argent;
+                    s3.argent = j6.argent;
                     strcpy(s3.nom, j6.nom);
-                    s3.position == j6.position;
-                    s3.nbProprietes == j6.nbProprietes;
-                    s3.Maisons == j6.Maisons;
-                    s3.Hotels == j6.Hotels;
+                    s3.position = j6.position;
+                    s3.nbProprietes = j6.nbProprietes;
+                    s3.Maisons = j6.Maisons;
+                    s3.Hotels = j6.Hotels;
 
                     if(nbJoueurs >= 4){
-                        s4.argent == j1.argent;
+                        s4.argent = j1.argent;
                         strcpy(s4.nom, j1.nom);
-                        s4.position == j1.position;
-                        s4.nbProprietes == j1.nbProprietes;
-                        s4.Maisons == j1.Maisons;
-                        s4.Hotels == j1.Hotels;
+                        s4.position = j1.position;
+                        s4.nbProprietes = j1.nbProprietes;
+                        s4.Maisons = j1.Maisons;
+                        s4.Hotels = j1.Hotels;
                     }
                     if(nbJoueurs >= 5){
-                        s5.argent == j2.argent;
+                        s5.argent = j2.argent;
                         strcpy(s5.nom, j2.nom);
-                        s5.position == j2.position;
-                        s5.nbProprietes == j2.nbProprietes;
-                        s5.Maisons == j2.Maisons;
-                        s5.Hotels == j2.Hotels;
+                        s5.position = j2.position;
+                        s5.nbProprietes = j2.nbProprietes;
+                        s5.Maisons = j2.Maisons;
+                        s5.Hotels = j2.Hotels;
                     }
                     if(nbJoueurs >= 6){
-                        s6.argent == j3.argent;
+                        s6.argent = j3.argent;
                         strcpy(s6.nom, j3.nom);
-                        s6.position == j3.position;
-                        s6.nbProprietes == j3.nbProprietes;
-                        s6.Maisons == j3.Maisons;
-                        s6.Hotels == j3.Hotels;
+                        s6.position = j3.position;
+                        s6.nbProprietes = j3.nbProprietes;
+                        s6.Maisons = j3.Maisons;
+                        s6.Hotels = j3.Hotels;
                     }
                 }
                 if (quiCommence == 5){// si le joueur 5 est le premier a jouer(meme logique que si joueur 1 commence)
                     printf("\n\n    %s ! A vous de commencer !\n\n", j5.nom);
-                    startPlayer.argent == j5.argent;
+                    startPlayer.argent= j5.argent;
                     strcpy(startPlayer.nom, j5.nom);
-                    startPlayer.position == j5.position;
-                    startPlayer.nbProprietes == j5.nbProprietes;
-                    startPlayer.Maisons == j5.Maisons;
-                    startPlayer.Hotels == j5.Hotels;
+                    startPlayer.position = j5.position;
+                    startPlayer.nbProprietes = j5.nbProprietes;
+                    startPlayer.Maisons = j5.Maisons;
+                    startPlayer.Hotels = j5.Hotels;
 
                     s2.argent = j6.argent;
                     strcpy(s2.nom, j6.nom);
-                    s2.position == j6.position;
-                    s2.nbProprietes == j6.nbProprietes;
-                    s2.Maisons == j6.Maisons;
-                    s2.Hotels == j6.Hotels;
+                    s2.position = j6.position;
+                    s2.nbProprietes = j6.nbProprietes;
+                    s2.Maisons = j6.Maisons;
+                    s2.Hotels = j6.Hotels;
 
-                    s3.argent == j1.argent;
+                    s3.argent = j1.argent;
                     strcpy(s3.nom, j1.nom);
-                    s3.position == j1.position;
-                    s3.nbProprietes == j1.nbProprietes;
-                    s3.Maisons == j1.Maisons;
-                    s3.Hotels == j1.Hotels;
+                    s3.position = j1.position;
+                    s3.nbProprietes = j1.nbProprietes;
+                    s3.Maisons = j1.Maisons;
+                    s3.Hotels = j1.Hotels;
 
-                    s4.argent == j2.argent;
+                    s4.argent = j2.argent;
                     strcpy(s4.nom, j2.nom);
-                    s4.position == j2.position;
-                    s4.nbProprietes == j2.nbProprietes;
-                    s4.Maisons == j2.Maisons;
-                    s4.Hotels == j2.Hotels;
+                    s4.position = j2.position;
+                    s4.nbProprietes = j2.nbProprietes;
+                    s4.Maisons = j2.Maisons;
+                    s4.Hotels = j2.Hotels;
 
                     if(nbJoueurs >= 5){
-                        s5.argent == j3.argent;
+                        s5.argent = j3.argent;
                         strcpy(s5.nom, j3.nom);
-                        s5.position == j3.position;
-                        s5.nbProprietes == j3.nbProprietes;
-                        s5.Maisons == j3.Maisons;
-                        s5.Hotels == j3.Hotels;
+                        s5.position = j3.position;
+                        s5.nbProprietes = j3.nbProprietes;
+                        s5.Maisons = j3.Maisons;
+                        s5.Hotels = j3.Hotels;
                     }
                     if(nbJoueurs >= 6){
-                        s6.argent == j4.argent;
+                        s6.argent = j4.argent;
                         strcpy(s6.nom, j4.nom);
-                        s6.position == j4.position;
-                        s6.nbProprietes == j4.nbProprietes;
-                        s6.Maisons == j4.Maisons;
-                        s6.Hotels == j4.Hotels;
+                        s6.position = j4.position;
+                        s6.nbProprietes = j4.nbProprietes;
+                        s6.Maisons = j4.Maisons;
+                        s6.Hotels = j4.Hotels;
                     }
                 }
                 if (quiCommence == 6){ // si le joueur 6 est le premier a jouer(meme logique que si joueur 1 commence)
                     printf("\n\n    %s ! A vous de commencer !\n\n", j6.nom);
-                    startPlayer.argent == j6.argent;
+                    startPlayer.argent= j6.argent;
                     strcpy(startPlayer.nom, j6.nom);
-                    startPlayer.position == j6.position;
-                    startPlayer.nbProprietes == j6.nbProprietes;
-                    startPlayer.Maisons == j6.Maisons;
-                    startPlayer.Hotels == j6.Hotels;
+                    startPlayer.position = j6.position;
+                    startPlayer.nbProprietes = j6.nbProprietes;
+                    startPlayer.Maisons = j6.Maisons;
+                    startPlayer.Hotels = j6.Hotels;
 
-                    s2.argent == j1.argent;
+                    s2.argent = j1.argent;
                     strcpy(s2.nom, j1.nom);
-                    s2.position == j1.position;
-                    s2.nbProprietes == j1.nbProprietes;
-                    s2.Maisons == j1.Maisons;
-                    s2.Hotels == j1.Hotels;
+                    s2.position = j1.position;
+                    s2.nbProprietes = j1.nbProprietes;
+                    s2.Maisons = j1.Maisons;
+                    s2.Hotels = j1.Hotels;
 
-                    s3.argent == j2.argent;
+                    s3.argent = j2.argent;
                     strcpy(s3.nom, j2.nom);
-                    s3.position == j2.position;
-                    s3.nbProprietes == j2.nbProprietes;
-                    s3.Maisons == j2.Maisons;
-                    s3.Hotels == j2.Hotels;
+                    s3.position = j2.position;
+                    s3.nbProprietes = j2.nbProprietes;
+                    s3.Maisons = j2.Maisons;
+                    s3.Hotels = j2.Hotels;
 
-                    s4.argent == j3.argent;
+                    s4.argent = j3.argent;
                     strcpy(s4.nom, j3.nom);
-                    s4.position == j3.position;
-                    s4.nbProprietes == j3.nbProprietes;
-                    s4.Maisons == j3.Maisons;
-                    s4.Hotels == j3.Hotels;
+                    s4.position = j3.position;
+                    s4.nbProprietes = j3.nbProprietes;
+                    s4.Maisons = j3.Maisons;
+                    s4.Hotels = j3.Hotels;
 
-                    s5.argent == j4.argent;
+                    s5.argent = j4.argent;
                     strcpy(s5.nom, j4.nom);
-                    s5.position == j4.position;
-                    s5.nbProprietes == j4.nbProprietes;
-                    s5.Maisons == j4.Maisons;
-                    s5.Hotels == j4.Hotels;
+                    s5.position = j4.position;
+                    s5.nbProprietes = j4.nbProprietes;
+                    s5.Maisons = j4.Maisons;
+                    s5.Hotels = j4.Hotels;
 
-                    s6.argent == j5.argent;
+                    s6.argent = j5.argent;
                     strcpy(s6.nom, j5.nom);
-                    s6.position == j5.position;
-                    s6.nbProprietes == j5.nbProprietes;
-                    s6.Maisons == j5.Maisons;
-                    s6.Hotels == j5.Hotels;
+                    s6.position = j5.position;
+                    s6.nbProprietes = j5.nbProprietes;
+                    s6.Maisons = j5.Maisons;
+                    s6.Hotels = j5.Hotels;
                 }
 
             //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -480,10 +480,10 @@ printf("\n\n\n**************************************************** NOUVELLE PART
 
             //premier tour
 
-            premierTour( startPlayer.nom, startPlayer.position, startPlayer.argent, nbJoueurs);
+            premierTour( startPlayer.nom, startPlayer.position, startPlayer.argent, nbJoueurs,startPlayer.nbProprietes, startPlayer.Maisons, startPlayer.Hotels, s2.nom, s3.nom, s4.nom, s5.nom, s6.nom );
+            //optionCase( startPlayer.nom, startPlayer.position, startPlayer.argent, startPlayer.nbProprietes, startPlayer.Maisons, startPlayer.Hotels, s2.nom, s3.nom, s4.nom, s5.nom, s6.nom );
             printf("p %d", startPlayer.position);
-            optionCase( startPlayer.nom, startPlayer.position, startPlayer.argent, startPlayer.nbProprietes, startPlayer.Maisons, startPlayer.Hotels, s2.nom, s3.nom, s4.nom, s5.nom, s6.nom );
-            premierTour( s2.nom, s2.position, s2.argent, nbJoueurs);
+            /*premierTour( s2.nom, s2.position, s2.argent, nbJoueurs);
             optionCase( s2.nom, s2.position, s2.argent,s2.nbProprietes, s2.Maisons, s2.Hotels, startPlayer.nom, s3.nom, s4.nom, s5.nom, s6.nom);
             if (nbJoueurs > 2){
                 premierTour(s3.nom, s3.position, s3.argent, nbJoueurs);
@@ -511,7 +511,7 @@ printf("\n\n\n**************************************************** NOUVELLE PART
                             fctnJeu(s5.nom, s5.position, s5.argent, nbJoueurs);
                             if (nbJoueurs > 5)
                                 fctnJeu(s6.nom, s6.position, s6.argent, nbJoueurs);
-            }
+            }*/
 
 
     }
