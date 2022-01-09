@@ -1,0 +1,237 @@
+#include <stdio.h>
+
+int case3()
+{
+    int SauvegardeChoisi = 0;
+    printf("    **************************** SAUVEGARDES ****************************************\n"); // Menu Sauvegardes
+    printf("    *                                                                               *\n");
+    printf("    * Veuillez choisir une sauvegarde :                                             *\n");
+    printf("    *  - Sauvegarde 1 : 1                                                           *\n");
+    printf("    *  - Sauvegarde 2 : 2                                                           *\n");
+    printf("    *  - Sauvegarde 3 : 3                                                           *\n");
+    printf("    *                                                                               *\n");
+    printf("    *********************************************************************************\n");
+    scanf("%d",&SauvegardeChoisi);
+
+    if (SauvegardeChoisi == 1) //Boucle If choix de Sauvegarde
+{
+    printf("Chargement en cours de la sauvegarde ...");
+    FILE* fichier1 = NULL;
+    fichier1 = fopen("./Sauvegardes/Fichiersauvegarde1.txt","r");
+    if (fichier1 == NULL) { 
+        printf("Erreur d'ouverture de la sauvegarde."); // Le fichier n'a pas pu s'ouvrir
+        return 1;
+    }
+    if (fichier1 != NULL){
+        fscanf(fichier1,"%d", nbJoueurs); // On recupere les valeurs des variables du jeu inscrites dans le fichier de sauvegarde
+        fscanf(fichier1,"%c", j1.nom);
+        fscanf(fichier1,"%c", j2.nom);
+        fscanf(fichier1,"%c", j3.nom);
+        fscanf(fichier1,"%c", j4.nom);
+        fscanf(fichier1,"%c", j5.nom);
+        fscanf(fichier1,"%c", j6.nom);
+        fscanf(fichier1,"%d", j1.position);
+        fscanf(fichier1,"%d", j2.position);
+        fscanf(fichier1,"%d", j3.position);
+        fscanf(fichier1,"%d", j4.position);
+        fscanf(fichier1,"%d", j5.position);
+        fscanf(fichier1,"%d", j6.position);
+        fscanf(fichier1,"%d", j1.nbProprietes);
+        fscanf(fichier1,"%d", j2.nbProprietes);
+        fscanf(fichier1,"%d", j3.nbProprietes);
+        fscanf(fichier1,"%d", j4.nbProprietes);
+        fscanf(fichier1,"%d", j5.nbProprietes);
+        fscanf(fichier1,"%d", j6.nbProprietes);
+        fscanf(fichier1,"%d", j1.Maisons);
+        fscanf(fichier1,"%d", j2.Maisons);
+        fscanf(fichier1,"%d", j3.Maisons);
+        fscanf(fichier1,"%d", j4.Maisons);
+        fscanf(fichier1,"%d", j5.Maisons);
+        fscanf(fichier1,"%d", j6.Maisons);
+        fscanf(fichier1,"%d", j1.Hotels);
+        fscanf(fichier1,"%d", j2.Hotels);
+        fscanf(fichier1,"%d", j3.Hotels);
+        fscanf(fichier1,"%d", j4.Hotels);
+        fscanf(fichier1,"%d", j5.Hotels);
+        fscanf(fichier1,"%d", j6.Hotels);
+        fscanf(fichier1,"%c", startPlayer.nom);
+        fscanf(fichier1,"%c", s2.nom);
+        fscanf(fichier1,"%c", s3.nom);
+        fscanf(fichier1,"%c", s4.nom);
+        fscanf(fichier1,"%c", s5.nom);
+        fscanf(fichier1,"%c", s6.nom);
+        fscanf(fichier1,"%d", startPlayer.position);
+        fscanf(fichier1,"%d", s2.position);
+        fscanf(fichier1,"%d", s3.position);
+        fscanf(fichier1,"%d", s4.position);
+        fscanf(fichier1,"%d", s5.position);
+        fscanf(fichier1,"%d", s6.position);
+        fscanf(fichier1,"%d", startPlayer.nbProprietes);
+        fscanf(fichier1,"%d", s2.nbProprietes);
+        fscanf(fichier1,"%d", s3.nbProprietes);
+        fscanf(fichier1,"%d", s4.nbProprietes);
+        fscanf(fichier1,"%d", s5.nbProprietes);
+        fscanf(fichier1,"%d", s6.nbProprietes);
+        fscanf(fichier1,"%d", startPlayer.Maisons);
+        fscanf(fichier1,"%d", s2.Maisons);
+        fscanf(fichier1,"%d", s3.Maisons);
+        fscanf(fichier1,"%d", s4.Maisons);
+        fscanf(fichier1,"%d", s5.Maisons);
+        fscanf(fichier1,"%d", s6.Maisons);
+        fscanf(fichier1,"%d", startPlayer.Hotels);
+        fscanf(fichier1,"%d", s2.Hotels);
+        fscanf(fichier1,"%d", s3.Hotels);
+        fscanf(fichier1,"%d", s4.Hotels);
+        fscanf(fichier1,"%d", s5.Hotels);
+        fscanf(fichier1,"%d", s6.Hotels);
+        fclose(fichier1); // Fermeture du fichier
+    }
+  
+}
+    if (SauvegardeChoisi == 2)
+        printf("Chargement en cours de la sauvegarde ...");
+    FILE* fichier2 = NULL;
+    fichier2 = fopen("./Sauvegardes/Fichiersauvegarde2.txt","r"); 
+    if (fichier2 == NULL) {
+        printf("Erreur d'ouverture de la sauvegarde.");
+        return 1;
+    }
+    if (fichier2 != NULL){
+        fscanf(fichier2,"%d", nbJoueurs);
+        fscanf(fichier2,"%c", j1.nom);
+        fscanf(fichier2,"%c", j2.nom);
+        fscanf(fichier2,"%c", j3.nom);
+        fscanf(fichier2,"%c", j4.nom);
+        fscanf(fichier2,"%c", j5.nom);
+        fscanf(fichier2,"%c", j6.nom);
+        fscanf(fichier2,"%d", j1.position);
+        fscanf(fichier2,"%d", j2.position);
+        fscanf(fichier2,"%d", j3.position);
+        fscanf(fichier2,"%d", j4.position);
+        fscanf(fichier2,"%d", j5.position);
+        fscanf(fichier2,"%d", j6.position);
+        fscanf(fichier2,"%d", j1.nbProprietes);
+        fscanf(fichier2,"%d", j2.nbProprietes);
+        fscanf(fichier2,"%d", j3.nbProprietes);
+        fscanf(fichier2,"%d", j4.nbProprietes);
+        fscanf(fichier2,"%d", j5.nbProprietes);
+        fscanf(fichier2,"%d", j6.nbProprietes);
+        fscanf(fichier2,"%d", j1.Maisons);
+        fscanf(fichier2,"%d", j2.Maisons);
+        fscanf(fichier2,"%d", j3.Maisons);
+        fscanf(fichier2,"%d", j4.Maisons);
+        fscanf(fichier2,"%d", j5.Maisons);
+        fscanf(fichier2,"%d", j6.Maisons);
+        fscanf(fichier2,"%d", j1.Hotels);
+        fscanf(fichier2,"%d", j2.Hotels);
+        fscanf(fichier2,"%d", j3.Hotels);
+        fscanf(fichier2,"%d", j4.Hotels);
+        fscanf(fichier2,"%d", j5.Hotels);
+        fscanf(fichier2,"%d", j6.Hotels);
+        fscanf(fichier2,"%c", startPlayer.nom);
+        fscanf(fichier2,"%c", s2.nom);
+        fscanf(fichier2,"%c", s3.nom);
+        fscanf(fichier2,"%c", s4.nom);
+        fscanf(fichier2,"%c", s5.nom);
+        fscanf(fichier2,"%c", s6.nom);
+        fscanf(fichier2,"%d", startPlayer.position);
+        fscanf(fichier2,"%d", s2.position);
+        fscanf(fichier2,"%d", s3.position);
+        fscanf(fichier2,"%d", s4.position);
+        fscanf(fichier2,"%d", s5.position);
+        fscanf(fichier2,"%d", s6.position);
+        fscanf(fichier2,"%d", startPlayer.nbProprietes);
+        fscanf(fichier2,"%d", s2.nbProprietes);
+        fscanf(fichier2,"%d", s3.nbProprietes);
+        fscanf(fichier2,"%d", s4.nbProprietes);
+        fscanf(fichier2,"%d", s5.nbProprietes);
+        fscanf(fichier2,"%d", s6.nbProprietes);
+        fscanf(fichier2,"%d", startPlayer.Maisons);
+        fscanf(fichier2,"%d", s2.Maisons);
+        fscanf(fichier2,"%d", s3.Maisons);
+        fscanf(fichier2,"%d", s4.Maisons);
+        fscanf(fichier2,"%d", s5.Maisons);
+        fscanf(fichier2,"%d", s6.Maisons);
+        fscanf(fichier2,"%d", startPlayer.Hotels);
+        fscanf(fichier2,"%d", s2.Hotels);
+        fscanf(fichier2,"%d", s3.Hotels);
+        fscanf(fichier2,"%d", s4.Hotels);
+        fscanf(fichier2,"%d", s5.Hotels);
+        fscanf(fichier2,"%d", s6.Hotels);
+        fclose(fichier2);
+    }
+    
+     if (SauvegardeChoisi == 3)
+        printf("Chargement en cours de la sauvegarde ...");
+    FILE* fichier3 = NULL;
+    fichier3 = fopen("./Sauvegardes/Fichiersauvegarde3.txt","r");
+    if (fichier3 == NULL) {
+        printf("Erreur d'ouverture de la sauvegarde.");
+        return 1;
+    }
+    if (fichier3 != NULL){
+        fscanf(fichier3,"%d", nbJoueurs);
+        fscanf(fichier3,"%c", j1.nom);
+        fscanf(fichier3,"%c", j2.nom);
+        fscanf(fichier3,"%c", j3.nom);
+        fscanf(fichier3,"%c", j4.nom);
+        fscanf(fichier3,"%c", j5.nom);
+        fscanf(fichier3,"%c", j6.nom);
+        fscanf(fichier3,"%d", j1.position);
+        fscanf(fichier3,"%d", j2.position);
+        fscanf(fichier3,"%d", j3.position);
+        fscanf(fichier3,"%d", j4.position);
+        fscanf(fichier3,"%d", j5.position);
+        fscanf(fichier3,"%d", j6.position);
+        fscanf(fichier3,"%d", j1.nbProprietes);
+        fscanf(fichier3,"%d", j2.nbProprietes);
+        fscanf(fichier3,"%d", j3.nbProprietes);
+        fscanf(fichier3,"%d", j4.nbProprietes);
+        fscanf(fichier3,"%d", j5.nbProprietes);
+        fscanf(fichier3,"%d", j6.nbProprietes);
+        fscanf(fichier3,"%d", j1.Maisons);
+        fscanf(fichier3,"%d", j2.Maisons);
+        fscanf(fichier3,"%d", j3.Maisons);
+        fscanf(fichier3,"%d", j4.Maisons);
+        fscanf(fichier3,"%d", j5.Maisons);
+        fscanf(fichier3,"%d", j6.Maisons);
+        fscanf(fichier3,"%d", j1.Hotels);
+        fscanf(fichier3,"%d", j2.Hotels);
+        fscanf(fichier3,"%d", j3.Hotels);
+        fscanf(fichier3,"%d", j4.Hotels);
+        fscanf(fichier3,"%d", j5.Hotels);
+        fscanf(fichier3,"%d", j6.Hotels);
+        fscanf(fichier3,"%c", startPlayer.nom);
+        fscanf(fichier3,"%c", s2.nom);
+        fscanf(fichier3,"%c", s3.nom);
+        fscanf(fichier3,"%c", s4.nom);
+        fscanf(fichier3,"%c", s5.nom);
+        fscanf(fichier3,"%c", s6.nom);
+        fscanf(fichier3,"%d", startPlayer.position);
+        fscanf(fichier3,"%d", s2.position);
+        fscanf(fichier3,"%d", s3.position);
+        fscanf(fichier3,"%d", s4.position);
+        fscanf(fichier3,"%d", s5.position);
+        fscanf(fichier3,"%d", s6.position);
+        fscanf(fichier3,"%d", startPlayer.nbProprietes);
+        fscanf(fichier3,"%d", s2.nbProprietes);
+        fscanf(fichier3,"%d", s3.nbProprietes);
+        fscanf(fichier3,"%d", s4.nbProprietes);
+        fscanf(fichier3,"%d", s5.nbProprietes);
+        fscanf(fichier3,"%d", s6.nbProprietes);
+        fscanf(fichier3,"%d", startPlayer.Maisons);
+        fscanf(fichier3,"%d", s2.Maisons);
+        fscanf(fichier3,"%d", s3.Maisons);
+        fscanf(fichier3,"%d", s4.Maisons);
+        fscanf(fichier3,"%d", s5.Maisons);
+        fscanf(fichier3,"%d", s6.Maisons);
+        fscanf(fichier3,"%d", startPlayer.Hotels);
+        fscanf(fichier3,"%d", s2.Hotels);
+        fscanf(fichier3,"%d", s3.Hotels);
+        fscanf(fichier3,"%d", s4.Hotels);
+        fscanf(fichier3,"%d", s5.Hotels);
+        fscanf(fichier3,"%d", s6.Hotels);
+        fclose(fichier3);
+    }
+    return 0;
+}
